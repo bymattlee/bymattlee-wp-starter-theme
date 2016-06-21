@@ -9,21 +9,21 @@ var src = 'assets/src',
 // Contains all main configurations for Gulp
 module.exports = {
 	fileHeader: [
-				'/*',
-				'**',
-				'**',
-				'**',
-				'**',
-				'**',
-				'**              {{ @bymattlee }}',
-				'**              {{ bymattlee.com }}',
-				'**              {{ front_end_thuggin }}',
-				'**',
-				'**',
-				'**',
-				'**',
-				'**',
-				'*/\n'
+		'/*',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**              {{ @bymattlee }}',
+		'**              {{ bymattlee.com }}',
+		'**              {{ front_end_thuggin }}',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'*/\n'
 	],
 	styles: {
 		src: src + '/scss/**/*.scss',
@@ -61,12 +61,6 @@ module.exports = {
 	browserSync: {
 		files: '**/*.php',
 		proxy: 'local.test-wp.dev'
-	},
-	sizereport: {
-		dest: [
-			dest + '/css/*',
-			dest + '/js/*'
-		]
 	},
 	deploy: {
 		src: '.',
