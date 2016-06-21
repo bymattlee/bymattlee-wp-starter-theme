@@ -2,6 +2,8 @@
   "name": "bymattlee-wp-starter-theme",
   "version": "1.0.0",
   "description": "ByMattLee WP Starter Theme",
+  "homepage" : "http://bymattlee.com",
+  "author" : "Matt Lee <matt@bymattlee.com>",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
@@ -12,8 +14,14 @@
     "Starter",
     "Theme"
   ],
-  "author": "ByMattLee",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bymattlee/bymattlee-wp-starter-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bymattlee/bymattlee-wp-starter-theme/issues"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",

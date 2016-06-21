@@ -74,6 +74,7 @@ module.exports = {
 			'.DS_Store',
 			'node_modules',
 			'acf-export.json',
+			'LICENSE.md',
 			'README.md',
 			'hostSettings.json'
 		]
