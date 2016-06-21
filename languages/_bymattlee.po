@@ -1,0 +1,243 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ByMattLee\n"
+"POT-Creation-Date: 2016-02-24 20:55-0500\n"
+"PO-Revision-Date: 2016-02-24 20:55-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _x;__;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: 404.php:6
+msgid "Page Not Found"
+msgstr ""
+
+#: 404.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: includes/cpt-books.php:7 includes/cpt-books.php:9
+msgid "Books"
+msgstr ""
+
+#: includes/cpt-books.php:8 includes/cpt-books.php:10
+msgid "Book"
+msgstr ""
+
+#: includes/cpt-books.php:11
+msgid "Add New"
+msgstr ""
+
+#: includes/cpt-books.php:12
+msgid "Add New Book"
+msgstr ""
+
+#: includes/cpt-books.php:13
+msgid "New Book"
+msgstr ""
+
+#: includes/cpt-books.php:14
+msgid "Edit Book"
+msgstr ""
+
+#: includes/cpt-books.php:15
+msgid "View Book"
+msgstr ""
+
+#: includes/cpt-books.php:16
+msgid "All Books"
+msgstr ""
+
+#: includes/cpt-books.php:17
+msgid "Search Books"
+msgstr ""
+
+#: includes/cpt-books.php:18
+msgid "Parent Books:"
+msgstr ""
+
+#: includes/cpt-books.php:19
+msgid "No books found."
+msgstr ""
+
+#: includes/cpt-books.php:20
+msgid "No books found in Trash."
+msgstr ""
+
+#: includes/cpt-books.php:25
+msgid "Description."
+msgstr ""
+
+#: includes/cpt-books.php:49
+msgid "Genres"
+msgstr ""
+
+#: includes/cpt-books.php:50 includes/cpt-books.php:59
+msgid "Genre"
+msgstr ""
+
+#: includes/cpt-books.php:51
+msgid "Search Genres"
+msgstr ""
+
+#: includes/cpt-books.php:52
+msgid "All Genres"
+msgstr ""
+
+#: includes/cpt-books.php:53
+msgid "Parent Genre"
+msgstr ""
+
+#: includes/cpt-books.php:54
+msgid "Parent Genre:"
+msgstr ""
+
+#: includes/cpt-books.php:55
+msgid "Edit Genre"
+msgstr ""
+
+#: includes/cpt-books.php:56
+msgid "Update Genre"
+msgstr ""
+
+#: includes/cpt-books.php:57
+msgid "Add New Genre"
+msgstr ""
+
+#: includes/cpt-books.php:58
+msgid "New Genre Name"
+msgstr ""
+
+#: includes/cpt-books.php:75 includes/cpt-books.php:90
+msgid "Writers"
+msgstr ""
+
+#: includes/cpt-books.php:76
+msgid "Writer"
+msgstr ""
+
+#: includes/cpt-books.php:77
+msgid "Search Writers"
+msgstr ""
+
+#: includes/cpt-books.php:78
+msgid "Popular Writers"
+msgstr ""
+
+#: includes/cpt-books.php:79
+msgid "All Writers"
+msgstr ""
+
+#: includes/cpt-books.php:82
+msgid "Edit Writer"
+msgstr ""
+
+#: includes/cpt-books.php:83
+msgid "Update Writer"
+msgstr ""
+
+#: includes/cpt-books.php:84
+msgid "Add New Writer"
+msgstr ""
+
+#: includes/cpt-books.php:85
+msgid "New Writer Name"
+msgstr ""
+
+#: includes/cpt-books.php:86
+msgid "Separate writers with commas"
+msgstr ""
+
+#: includes/cpt-books.php:87
+msgid "Add or remove writers"
+msgstr ""
+
+#: includes/cpt-books.php:88
+msgid "Choose from the most used writers"
+msgstr ""
+
+#: includes/cpt-books.php:89
+msgid "No writers found."
+msgstr ""
+
+#: includes/theme_setup.php:139
+msgid "Main Menu"
+msgstr ""
+
+#: includes/theme_setup.php:140
+msgid "Footer Menu"
+msgstr ""
+
+#: includes/theme_setup.php:148
+msgid "Default Sidebar"
+msgstr ""
+
+#: includes/theme_setup.php:150
+msgid "Widgets will appear on the default sidebar."
+msgstr ""
+
+#: includes/theme_setup.php:165
+msgid "Image"
+msgstr ""
+
+#: partials/item-content.php:12 partials/single-content.php:12
+#, php-format
+msgid "By: %s"
+msgstr ""
+
+#: partials/item-content.php:13 partials/single-content.php:13
+#, php-format
+msgid "Categories: %s"
+msgstr ""
+
+#: partials/item-content.php:14 partials/single-content.php:14
+#, php-format
+msgid "Tags: %s"
+msgstr ""
+
+#: partials/item-not_found.php:5
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: partials/item-not_found.php:9
+msgid "Sorry, there is nothing to display here."
+msgstr ""
+
+#: partials/pagination-page.php:5
+msgid "&laquo; Older Posts"
+msgstr ""
+
+#: partials/pagination-page.php:11
+msgid "Newer Posts &raquo;"
+msgstr ""
+
+#: partials/pagination-single.php:11
+msgid "&lsaquo; Older"
+msgstr ""
+
+#: partials/pagination-single.php:23
+msgid "Newer &rsaquo;"
+msgstr ""
+
+#: search.php:6
+#, php-format
+msgid "Search: %s"
+msgstr ""
+
+#: searchform.php:2
+msgid "Search"
+msgstr ""
+
+#: searchform.php:3
+msgid "Go"
+msgstr ""

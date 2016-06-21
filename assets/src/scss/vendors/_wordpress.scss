@@ -1,0 +1,118 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Wordpress Generated Class Styles
+** ***** ----------------------------------------------- ***** */
+
+
+.alignnone {
+	margin: 0.5rem 2rem 2rem 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 0.5rem auto 0.5rem auto;
+}
+
+.alignright {
+	float: right;
+	margin: 0.5rem 0 2rem 2rem;
+}
+
+.alignleft {
+	float: left;
+	margin: 0.5rem 2rem 2rem 0;
+}
+
+a img.alignright {
+	float: right;
+	margin: 0.5rem 0 2rem 2rem;
+}
+
+a img.alignnone {
+	margin: 0.5rem 2rem 2rem 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 0.5rem 2rem 2rem 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	margin-bottom: 1.5rem;
+	max-width: 100%;
+}
+
+.wp-caption img {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+
+.wp-caption .wp-caption-text {
+	font-size: 1.2rem;
+	font-style: italic;
+	margin: 1rem 0 0 0;
+}
+
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1rem;
+}
+
+.gallery dl {
+	margin: 0;
+}
+
+.gallery-caption {
+	margin: -1.5rem 0 0 0;
+}
+
+blockquote.left {
+	float: left;
+	margin-left: 0;
+	margin-right: 2rem;
+	text-align: right;
+	width: 33%;
+}
+
+blockquote.right {
+	float: right;
+	margin-left: 2rem;
+	margin-right: 0;
+	text-align: left;
+	width: 33%;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+	height: 0.1rem;
+	overflow: hidden;
+	position: absolute !important;
+	width: 0.1rem;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 0.3rem;
+	box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 1.4rem;
+	font-weight: bold;
+	height: auto;
+	left: 0.5rem;
+	line-height: normal;
+	padding: 1.5rem 2.3rem 1.4rem;
+	text-decoration: none;
+	top: 0.5rem;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
