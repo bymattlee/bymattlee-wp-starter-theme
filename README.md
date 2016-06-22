@@ -15,9 +15,16 @@ All Gulp settings can be found in `gulp/config.js`. To connect BrowserSync to th
 To enable deployment, create `hostSettings.json` and store in the `gulp` directory. This file should not be checked in as it contains sensitive information. Sample `hostSettings.json`:
 ```
 {
-	"hostname": "X",
-	"username": "X",
-	"destination": "X"
+	"staging": {
+		"hostname": "X",
+		"username": "X",
+		"destination": "X"
+	},
+	"production": {
+		"hostname": "X",
+		"username": "X",
+		"destination": "X"
+	}
 }
 ```
 
@@ -26,17 +33,21 @@ To enable deployment, create `hostSettings.json` and store in the `gulp` directo
 ```
 gulp watch
 ```
-##### Development Build - Build project
+##### Development Build - Build Project
 ```
 gulp
 ```
-##### Production Build - Build project without sourcemaps
+##### Production Build - Build Project Without Sourcemaps
 ```
 gulp --production
 ```
-##### Deployment
+##### Deploy To Staging
 ```
-gulp deploy
+gulp deploy --staging
+```
+##### Deploy To Production
+```
+gulp deploy --production
 ```
 
 ## General Features

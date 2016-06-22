@@ -2,8 +2,8 @@
   "name": "bymattlee-wp-starter-theme",
   "version": "1.0.0",
   "description": "ByMattLee WP Starter Theme",
-  "homepage" : "http://bymattlee.com",
-  "author" : "Matt Lee <matt@bymattlee.com>",
+  "homepage": "http://bymattlee.com",
+  "author": "Matt Lee <matt@bymattlee.com>",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
@@ -35,6 +35,7 @@
     "gulp-header": "^1.8.2",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^2.4.0",
+    "gulp-notify": "^2.2.0",
     "gulp-order": "^1.1.1",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.1.0",
