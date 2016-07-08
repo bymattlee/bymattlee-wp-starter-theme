@@ -30,17 +30,27 @@ module.exports = {
 		dest: dest + '/css'
 	},
 	scripts: {
-		src: src + '/js/**/*.js',
-		dest:  dest + '/js',
-		order: [
+		src: [
 			src + '/js/vendors/**/*.js',
 			src + '/js/main.js',
 			src + '/js/modules/**/*.js'
 		],
+		dest:  dest + '/js',
 		filter: [
 			src + '/js/main.js',
 			src + '/js/modules/**/*.js'
-		]
+		],
+		modernizr: {
+			src: [
+				src + '/scss/**/*',
+				src + '/js/**/*',
+			],
+			options: {
+				'options' : [
+					'setClasses'
+				]
+			}
+		}
 	},
 	images: {
 		src: src + '/images/**/*',
