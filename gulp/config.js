@@ -37,7 +37,10 @@ module.exports = {
 			src + '/js/main.js',
 			src + '/js/modules/**/*.js'
 		],
-		filter: '!' + src + '/js/vendors/**/*'
+		filter: [
+			src + '/js/main.js',
+			src + '/js/modules/**/*.js'
+		]
 	},
 	images: {
 		src: src + '/images/**/*',
