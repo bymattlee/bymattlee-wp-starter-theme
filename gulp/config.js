@@ -53,7 +53,7 @@ module.exports = {
 	},
 	copy: {
 		src: [
-			src + '/**/*.+(eot|svg|ttf|woff|woff2|swf|m4a|webm)',
+			src + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
 			'!' + src + '/svgs/*.svg'
 		],
 		dest:  dest
