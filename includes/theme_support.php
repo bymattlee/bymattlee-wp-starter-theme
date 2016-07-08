@@ -5,9 +5,9 @@
 	** ***** ----------------------------------------------- ***** */
 
 	// Localisation Support
-    load_theme_textdomain( 'bymattlee', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'bymattlee', get_template_directory() . '/languages' );
 
-    // Add RSS links to head
+	// Add RSS links to head
 	add_theme_support( 'automatic-feed-links' );
 
 	// Allow WordPress to manage the document title
