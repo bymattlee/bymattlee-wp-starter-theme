@@ -31,7 +31,6 @@ module.exports = {
 	},
 	scripts: {
 		src: [
-			src + '/js/vendors/**/*.js',
 			src + '/js/main.js',
 			src + '/js/modules/**/*.js'
 		],
@@ -64,7 +63,8 @@ module.exports = {
 	copy: {
 		src: [
 			src + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
-			'!' + src + '/svgs/*.svg'
+			'!' + src + '/svgs/*.svg',
+			'!' + src + '/vendors'
 		],
 		dest:  dest
 	},

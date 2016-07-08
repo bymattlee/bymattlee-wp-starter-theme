@@ -1,13 +1,13 @@
 # ByMattLee WP Starter Theme
 * A starter Wordpress theme that includes base Wordpress template files and optimized theme setup
 * Theme is stripped down and does not contain any styles
-* Uses Gulp as the build tool
+* Uses Gulp as the build tool and Bower to manage front-end packages
 
 ## Installation
 ##### 1. Install Node: <https://nodejs.org/en/download/>
-##### 2. Install all dependencies in theme directory
+##### 2. Install all dependencies and build project
 ```
-npm install
+$ npm install
 ```
 ##### 3. Update Gulp Config
 All Gulp settings can be found in `gulp/config.js`. To connect BrowserSync to the local development environment to enable browser reload, update `line 63` to local development address
@@ -31,23 +31,23 @@ To enable deployment, create `hostSettings.json` and store in the `gulp` directo
 ## Use
 ##### Initialize Gulp watch
 ```
-gulp watch
+$ gulp watch
 ```
 ##### Development Build - Build Project
 ```
-gulp
+$ gulp
 ```
 ##### Production Build - Build Project Without Sourcemaps
 ```
-gulp --production
+$ gulp --production
 ```
 ##### Deploy To Staging
 ```
-gulp deploy --staging
+$ gulp deploy --staging
 ```
 ##### Deploy To Production
 ```
-gulp deploy --production
+$ gulp deploy --production
 ```
 
 ## General Features
@@ -60,15 +60,15 @@ gulp deploy --production
 * SCSS files are located in `assets/src/scss`
 * `main.scss` in `assets/src/scss` serves as the base that includes the other dependent SASS files
 * `main.scss` gets compiled to `assets/dist/css/main.min.css`
+* All vendor CSS are managed by Bower in `assets/src/vendors` and are compiled to `main.min.css`
 * `.stylelintrc` contains the settings for Stylelint
 
 ##### Scripts
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
-* JS files are located in the `assets/src/js` directory will be bundled into `assets/dist/js/main.min.js` when built
+* JS files located in the `assets/src/js` directory will be bundled into `assets/dist/js/main.min.js` when built
 * `main.js` in `assets/src/js` serves as the main JS file that runs all modules
-* All vendor libraries should be placed in `assets/src/js/vendors` so they can be bundled in `main.min.js`
 * All modules should be placed in `assets/src/js/modules` so they can be bundled in `main.min.js`
-* `svgxuse.js` serves as the polyfill for SVG icons in IE browsers
+* All vendor JS are managed by Bower in `assets/src/vendors` and are bundled in `main.min.js`
 
 ##### Images
 * Place all unoptimized images in the `assets/src/images` directory

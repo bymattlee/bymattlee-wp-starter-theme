@@ -3,14 +3,17 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var autoprefixer = require('gulp-autoprefixer'),
+var addSrc = require('gulp-add-src'),
+	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync'),
 	cleanCSS = require('gulp-clean-css'),
+	concat = require('gulp-concat'),
 	config = require('../config'),
 	gif = require('gulp-if'),
 	gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	header = require('gulp-header'),
+	mainBowerFiles = require('main-bower-files'),
 	plumber = require('gulp-plumber'),
 	postcss = require('gulp-postcss'),
 	rename = require('gulp-rename'),
@@ -24,6 +27,7 @@ var autoprefixer = require('gulp-autoprefixer'),
 
 /*
 ** -- Lint scss files with Stylelint
+** -- Add Bower files to the build
 ** -- Create sourcemaps if in development mode (use --production to disable soucemaps)
 ** -- Compile scss files
 ** -- Autoprefix necessary properties
@@ -34,6 +38,12 @@ var autoprefixer = require('gulp-autoprefixer'),
 */
 gulp.task('styles', function () {
 
+	var bowerFiles = mainBowerFiles({
+		filter: '**/*.css',
+		includeDev: true
+	});
+	console.log('Bower Files: ', bowerFiles);
+	
 	return gulp.src(config.styles.src)
 		.pipe(plumber())
 		.pipe(
@@ -47,12 +57,14 @@ gulp.task('styles', function () {
 			})
 		)
 		.pipe(gif(!isProduction, sourcemaps.init()))
+			.pipe(addSrc.prepend(bowerFiles))
 			.pipe(sass().on('error', sass.logError))
 			.pipe(autoprefixer({
 				browsers: ['last 2 versions'],
 				cascade: false
 			}))
 			.pipe(cleanCSS())
+			.pipe(concat('main.css'))
 			.pipe(rename({
 				suffix: '.min'
 			}))
