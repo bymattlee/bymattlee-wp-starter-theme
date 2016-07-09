@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
 			'extends': 'eslint:recommended',
 			'env': {
 				'browser': true,
-			},
+			}
 		}))
 		.pipe(eslint.format())
 		.pipe(filterPipe.restore)
