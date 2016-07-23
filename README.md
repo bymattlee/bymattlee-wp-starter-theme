@@ -1,3 +1,5 @@
+[![ByMattLee](http://hosted.bymattlee.com/github/bymattlee-logo.png)](http://bymattlee.com)
+
 # ByMattLee WP Starter Theme
 * A starter Wordpress theme that includes base Wordpress template files and optimized theme setup
 * Theme is stripped down and does not contain any styles
