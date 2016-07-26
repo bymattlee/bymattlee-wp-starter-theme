@@ -76,7 +76,7 @@ module.exports = {
 		proxy: 'local.test-wp.dev'
 	},
 	deploy: {
-		src: '.',
+		src: './',
 		exclude: [
 			'.DS_Store',
 			'node_modules',
