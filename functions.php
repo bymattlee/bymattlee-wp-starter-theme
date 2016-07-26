@@ -5,16 +5,30 @@
 	** ***** ----------------------------------------------- ***** */
 
 	// Load custom post types
-	// require_once( 'includes/cpt-books.php' );
+	// require_once( get_template_directory() . '/includes/cpt-books.php' );
 
-	// Load theme related functions/hooks
-	require_once( 'includes/cleanup.php' );
-	require_once( 'includes/theme_support.php' );
-	require_once( 'includes/menus.php' );
-	require_once( 'includes/enqueue.php' );
-	require_once( 'includes/sidebars.php' );
-	require_once( 'includes/acf.php' );
-	require_once( 'includes/admin_display.php' );
-	require_once( 'includes/utilities.php' );
+	// Clean up Wordpress from unnecessary bloat
+	require_once( get_template_directory() . '/includes/cleanup.php' );
+
+	// Set up all theme features
+	require_once( get_template_directory() . '/includes/theme_setup.php' );
+
+	// Register menu and customize menu output
+	require_once( get_template_directory() . '/includes/menus.php' );
+
+	// Enqueue styles and scripts
+	require_once( get_template_directory() . '/includes/enqueue.php' );
+
+	// Register sidebars and widgets
+	require_once( get_template_directory() . '/includes/sidebars.php' );
+
+	// Enable Advanced Custom Fields theme option pages
+	require_once( get_template_directory() . '/includes/acf.php' );
+
+	// Optimize admin display options
+	require_once( get_template_directory() . '/includes/admin_display.php' );
+
+	// Utility classes used by theme
+	require_once( get_template_directory() . '/includes/utilities.php' );
 
 ?>

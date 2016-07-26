@@ -1,5 +1,9 @@
 <?php
 
+	/* ***** ----------------------------------------------- ***** **
+	** ***** Books Custom Post Type (example)
+	** ***** ----------------------------------------------- ***** */
+
 	// Create custom post type
 	function create_book_cpt() {
 

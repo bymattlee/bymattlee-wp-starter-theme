@@ -19,13 +19,19 @@
 	}
 	add_action( 'manage_posts_custom_column', 'posts_custom_columns', 5, 2 );
 
-	// Remove columns from post, page, and author screens
-	function remove_yoast_seo_columns( $columns ) {
+	// Remove comments column from post and page screens
+	function remove_comments_column( $columns ) {
 
-		// Remove comments
 		unset( $columns[ 'comments' ] );
 
-		// Remove Yoast SEO columns
+		return $columns;
+	}
+	add_filter( 'manage_edit-post_columns', 'remove_comments_column' );
+	add_filter( 'manage_edit-page_columns', 'remove_comments_column' );
+
+	// Remove Yoast SEO columns from post and page screens
+	function remove_yoast_seo_columns( $columns ) {
+
 		unset( $columns[ 'wpseo-score' ] );
 		unset( $columns[ 'wpseo-title' ] );
 		unset( $columns[ 'wpseo-metadesc' ] );

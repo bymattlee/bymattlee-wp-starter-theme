@@ -12,7 +12,7 @@
 		)
 	);
 
-	// Custom walker for slideout menu
+	// Custom walker for slideout menu that removes all unnecessary classes
 	class Site_Nav_Walker extends Walker_Nav_Menu {
 
 		// add main/sub classes to li's and links

@@ -28,7 +28,7 @@
 	function remove_rss_version() { 
 		return '';
 	}
-	add_filter('the_generator', 'remove_rss_version');
+	add_filter( 'the_generator', 'remove_rss_version' );
 
 	// Remove WP version from scripts
 	function remove_wp_version_scripts( $src ) {
@@ -43,7 +43,7 @@
 	function style_remove($tag) {
 	    return preg_replace( '~\s+type=["\'][^"\']++["\']~', '', $tag );
 	}
-	add_filter('style_loader_tag', 'style_remove');
+	add_filter( 'style_loader_tag', 'style_remove' );
 
 	// Remove the <div> surrounding the dynamic navigation to cleanup markup
 	function my_wp_nav_menu_args( $args = '' ) {
@@ -78,7 +78,7 @@
 	add_action( 'widgets_init', 'remove_recent_comments_style' );
 
 	// Removes the [...] after an excerpt
-	function custom_excerpt_more($more) {
+	function custom_excerpt_more( $more ) {
 		global $post;
 		return '...';
 	}

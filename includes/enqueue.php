@@ -4,14 +4,18 @@
 	** ***** Enqueue styles and scripts
 	** ***** ----------------------------------------------- ***** */
 
-	function enqueue_scripts() {
+	function enqueue_styles() {
 
-		// Styles
 		wp_enqueue_style( 'style_main', get_template_directory_uri() . '/assets/dist/css/main.min.css' );
+
+	}
+	add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
+
+	function enqueue_scripts() {
 
 		// Replace jQuery
 		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.0.0.min.js', '', '', true );
+		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.1.0.min.js', '', '', true );
 
 		// Scripts
 		wp_enqueue_script( 'script_main', get_template_directory_uri() . '/assets/dist/js/main.min.js', '', '', true );
