@@ -1,7 +1,10 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Wordpress Generated Class Styles
+** ***** Wordpress Related Styles
 ** ***** ----------------------------------------------- ***** */
 
+
+/* ***** Wordpress Generated Class Styles
+** ***** ----------------------------------------------- ***** */
 
 .alignnone {
 	margin: 0.5rem 2rem 2rem 0;
@@ -116,3 +119,81 @@ blockquote.right {
 	width: auto;
 	z-index: 100000; /* Above WP toolbar. */
 }
+
+
+/* ***** Custom Login Page Styles
+** ***** ----------------------------------------------- ***** */
+
+body {
+	&.login {
+		background: $grey-dark--2;
+		font-family: "Open Sans", sans-serif;
+
+		h1 {
+			a {
+				background-image: url("../images/logo-bymattlee-login.svg");
+				background-size: cover;
+				height: 8.8rem;
+				width: 8.5rem;
+			}
+		}
+
+		.message,
+		form {
+			background: $grey-dark--3;
+			color: $grey-light--a;
+		}
+
+		#login_error {
+			background: $grey-dark--3;
+		}
+
+		label {
+			color: $grey-light--a;
+		}
+
+		#backtoblog a:hover,
+		#nav a:hover {
+			color: $white;
+
+		}
+
+		form {
+			.input,
+			input[type=checkbox] {
+				background: $grey-dark--6;
+				border: none;
+				box-shadow: none;
+			}
+
+			input[type=checkbox] {
+				&:checked {
+					&::before {
+						color: $white;
+					}
+				}
+			}
+
+			input {
+				&:-webkit-autofill {
+					-webkit-box-shadow: 0 0 0 1000px $grey-dark--6 inset !important;
+				}
+			}
+		}
+	}
+}
+
+.wp-core-ui .button {
+	background: $grey-dark--4;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	text-shadow: none;
+
+	@include transition-background-color-normal;
+
+	&:hover {
+		background: $black;
+	}
+}
+

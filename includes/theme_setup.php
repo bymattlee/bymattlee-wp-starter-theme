@@ -38,6 +38,18 @@
 	}
 	add_action( 'after_setup_theme' , 'theme_setup' );
 
+	// On login page, update logo URL to site URL
+	function update_login_logo_url() {
+		return get_bloginfo( 'url' );
+	}
+	add_filter( 'login_headerurl', 'update_login_logo_url' );
+
+	// On login page, update logo title to site title
+	function update_login_logo_title() {
+		return get_bloginfo();
+	}
+	add_filter( 'login_headertitle', 'update_login_logo_title' );
+
 	// Add page slug to body class, love this - Credit: Starkers Wordpress Theme
 	function add_slug_to_body_class( $classes ) {
 	    global $post;

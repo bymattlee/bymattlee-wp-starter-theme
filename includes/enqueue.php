@@ -23,4 +23,9 @@
 	}
 	add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
+	function custom_login_style() {
+		wp_enqueue_style( 'custom_login_style', get_template_directory_uri() . '/assets/dist/css/main.min.css' );
+	}
+	add_action( 'login_enqueue_scripts', 'custom_login_style' );
+
 ?>
