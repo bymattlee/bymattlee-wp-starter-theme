@@ -3,14 +3,6 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.l-content {
-
-}
-
-.l-main {
-
-}
-
 .l-container {
 	margin: 0 auto;
 	padding: 0 2rem;
@@ -19,10 +11,18 @@
 
 	@include mq($mq-xlarge) {
 		padding: 0;
-		width: 124rem;
+		width: 120rem;
 	}
 }
 
 .l-row {
 	width: 100%;
+}
+
+.l-content {
+
+}
+
+.l-main {
+
 }
