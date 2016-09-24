@@ -109,7 +109,7 @@ blockquote.right {
 	color: #21759b;
 	display: block;
 	font-size: 1.4rem;
-	font-weight: bold;
+	font-weight: 700;
 	height: auto;
 	left: 0.5rem;
 	line-height: normal;
@@ -160,13 +160,13 @@ body {
 
 		form {
 			.input,
-			input[type=checkbox] {
+			input[type="checkbox"] {
 				background: $grey-dark--6;
 				border: none;
 				box-shadow: none;
 			}
 
-			input[type=checkbox] {
+			input[type="checkbox"] {
 				&:checked {
 					&::before {
 						color: $white;
