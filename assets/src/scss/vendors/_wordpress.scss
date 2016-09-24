@@ -183,17 +183,20 @@ body {
 	}
 }
 
-.wp-core-ui .button {
-	background: $grey-dark--4;
-	border: none;
-	border-radius: 0;
-	box-shadow: none;
-	text-shadow: none;
+.wp-core-ui {
+	.button,
+	.button-primary:active,
+	.button-primary:focus {
+		background: $grey-dark--4;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		text-shadow: none;
 
-	@include transition-background-color-normal;
+		@include transition-background-color-normal;
 
-	&:hover {
-		background: $black;
+		&:hover {
+			background: $black;
+		}
 	}
 }
-
