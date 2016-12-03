@@ -20,6 +20,8 @@
 
 		<?php get_template_part( 'partials/item', 'not_found' );  ?>
 
+		<?php get_search_form(); ?>
+
 	<?php endif; ?>
 
 </main>
