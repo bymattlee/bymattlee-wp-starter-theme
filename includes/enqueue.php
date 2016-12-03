@@ -5,9 +5,7 @@
 	** ***** ----------------------------------------------- ***** */
 
 	function enqueue_styles() {
-
 		wp_enqueue_style( 'style_main', get_template_directory_uri() . '/assets/dist/css/main.min.css' );
-
 	}
 	add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 

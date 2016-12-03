@@ -33,7 +33,8 @@
 	// Remove WP version from scripts
 	function remove_wp_version_scripts( $src ) {
 		if ( strpos( $src, 'ver=' ) ) {
-			$src = remove_query_arg( 'ver', $src ); }
+			$src = remove_query_arg( 'ver', $src );
+		}
 		return $src;
 	}
 	add_filter( 'style_loader_src', 'remove_wp_version_scripts', 9999 );
@@ -41,20 +42,20 @@
 
 	// Remove 'text/css' from our enqueued stylesheet
 	function style_remove($tag) {
-	    return preg_replace( '~\s+type=["\'][^"\']++["\']~', '', $tag );
+		return preg_replace( '~\s+type=["\'][^"\']++["\']~', '', $tag );
 	}
 	add_filter( 'style_loader_tag', 'style_remove' );
 
 	// Remove the <div> surrounding the dynamic navigation to cleanup markup
 	function my_wp_nav_menu_args( $args = '' ) {
-	    $args[ 'container' ] = false;
-	    return $args;
+		$args[ 'container' ] = false;
+		return $args;
 	}
 	add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
 
 	// Remove invalid rel attribute values in the category list
 	function remove_category_rel_from_category_list( $thelist ) {
-	    return str_replace( 'rel="category tag"', 'rel="tag"', $thelist );
+		return str_replace( 'rel="category tag"', 'rel="tag"', $thelist );
 	}
 	add_filter( 'the_category', 'remove_category_rel_from_category_list' );
 
@@ -68,12 +69,12 @@
 
 	// Remove wp_head() injected Recent Comment styles
 	function remove_recent_comments_style(){
-	    global $wp_widget_factory;
+		global $wp_widget_factory;
 
-	    remove_action( 'wp_head', array(
-	        $wp_widget_factory->widgets[ 'WP_Widget_Recent_Comments' ],
-	        'recent_comments_style'
-	    ));
+		remove_action( 'wp_head', array(
+			$wp_widget_factory->widgets[ 'WP_Widget_Recent_Comments' ],
+			'recent_comments_style'
+		));
 	}
 	add_action( 'widgets_init', 'remove_recent_comments_style' );
 
