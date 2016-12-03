@@ -29,7 +29,7 @@
 		if ( !isset( $content_width ) ) $content_width = 580;
 
 		// Remove admin bar when logged in
-		show_admin_bar( false );
+		// show_admin_bar( false );
 
 		// Enable featured post and thumbnail sizes
 		add_theme_support( 'post-thumbnails' );
@@ -40,7 +40,7 @@
 
 	// On login page, update logo URL to site URL
 	function update_login_logo_url() {
-		return get_bloginfo( 'url' );
+		return home_url();
 	}
 	add_filter( 'login_headerurl', 'update_login_logo_url' );
 
