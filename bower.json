@@ -23,7 +23,7 @@
     "tests"
   ],
   "devDependencies": {
-    "svgxuse": "^1.1.22",
+    "svgxuse": "^1.1.23",
     "sanitize-css": "^4.1.0"
   }
 }
