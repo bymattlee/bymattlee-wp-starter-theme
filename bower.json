@@ -23,7 +23,9 @@
     "tests"
   ],
   "devDependencies": {
-    "svgxuse": "^1.1.23",
-    "sanitize-css": "^4.1.0"
+    "svgxuse": "^1.2.4",
+    "sanitize-css": "^5.0.0",
+    "gsap": "^1.19.1",
+    "fastclick": "^1.0.6"
   }
 }
