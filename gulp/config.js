@@ -35,10 +35,6 @@ module.exports = {
 			src + '/js/modules/**/*.js'
 		],
 		dest:  dest + '/js',
-		filter: [
-			src + '/js/main.js',
-			src + '/js/modules/**/*.js'
-		],
 		modernizr: {
 			src: [
 				src + '/scss/**/*',

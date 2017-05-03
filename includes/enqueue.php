@@ -16,6 +16,7 @@
 		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.1.1.min.js', '', '', true );
 
 		// Scripts
+		wp_enqueue_script( 'script_vendors', get_template_directory_uri() . '/assets/dist/js/vendors.min.js', '', '', true );
 		wp_enqueue_script( 'script_main', get_template_directory_uri() . '/assets/dist/js/main.min.js', '', '', true );
 
 	}

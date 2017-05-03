@@ -17,7 +17,7 @@ var browserSync = require('browser-sync'),
 gulp.task('watch', ['browserSync'], function() {
 
 	gulp.watch(config.styles.src, ['styles']);
-	gulp.watch(config.scripts.src, ['scripts']);
+	gulp.watch(config.scripts.src, ['scripts:main']);
 	gulp.watch(config.images.src, ['images']).on('change', reload);
 	gulp.watch(config.svgs.src, ['svgs']).on('change', reload);
 	gulp.watch(config.copy.src, ['copy']).on('change', reload);
