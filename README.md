@@ -70,7 +70,7 @@ $ gulp deploy --production
 * JS files located in the `assets/src/js` directory will be bundled into `assets/dist/js/main.min.js` when built
 * `main.js` in `assets/src/js` serves as the main JS file that runs all modules
 * All modules should be placed in `assets/src/js/modules` so they can be bundled in `main.min.js`
-* All vendor JS are managed by Bower in `assets/src/vendors` and are bundled in `main.min.js`
+* All vendor JS are managed by Bower in `assets/src/vendors` and are bundled in `vendors.min.js`
 * `.eslintrc` contains the settings for ESLint
 
 ##### Images
