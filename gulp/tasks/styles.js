@@ -23,12 +23,14 @@ var addSrc = require('gulp-add-src'),
 	size = require('gulp-size'),
 	sourcemaps = require('gulp-sourcemaps'),
 	stylelint = require('stylelint'),
-	isProduction = !!gutil.env.production;
+	isProduction = !!gutil.env.production,
+	isStaging = !!gutil.env.staging,
+	isDevelopment = !isProduction && !isStaging;
 
 /*
 ** -- Lint scss files with Stylelint
 ** -- Add Bower files to the build
-** -- Create sourcemaps if in development mode (use --production to disable soucemaps)
+** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
 ** -- Compile scss files
 ** -- Autoprefix necessary properties
 ** -- Minify
@@ -43,7 +45,7 @@ gulp.task('styles', function () {
 		includeDev: true
 	});
 	console.log('Bower Files: ', bowerFiles);
-	
+
 	return gulp.src(config.styles.src)
 		.pipe(plumber())
 		.pipe(
@@ -57,7 +59,7 @@ gulp.task('styles', function () {
 			})
 		)
 		.pipe(addSrc.prepend(bowerFiles))
-		.pipe(gif(!isProduction, sourcemaps.init()))
+		.pipe(gif(isDevelopment, sourcemaps.init()))
 			.pipe(sass().on('error', sass.logError))
 			.pipe(autoprefixer())
 			.pipe(cleanCSS())
@@ -70,7 +72,7 @@ gulp.task('styles', function () {
 				title: 'Compressed File Size:',
 				showFiles: true
 			}))
-		.pipe(gif(!isProduction, sourcemaps.write('./')))
+		.pipe(gif(isDevelopment, sourcemaps.write('./')))
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(browserSync.stream({
 			match: '**/*.css'
