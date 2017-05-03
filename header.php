@@ -24,8 +24,9 @@
 
 <?php
 
-	// Google Analytics
+	// Header variables
 	$google_analytics_tracking_id = get_field( 'google_analytics_tracking_id', 'option' );
+	$header_tags = get_field( 'header_tags', 'option' );
 
 	if ( $google_analytics_tracking_id ) :
 
@@ -40,6 +41,8 @@
 	ga('send', 'pageview');
 </script>
 <?php endif; ?>
+
+<?php echo ( $header_tags ? $header_tags : '' ); ?>
 
 </head>
 

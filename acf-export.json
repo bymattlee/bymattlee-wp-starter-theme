@@ -23,6 +23,48 @@
                 "maxlength": "",
                 "readonly": 0,
                 "disabled": 0
+            },
+            {
+                "key": "field_590969adf9bad",
+                "label": "Header Tags",
+                "name": "header_tags",
+                "type": "textarea",
+                "instructions": "Paste your header tracking codes here (ie. Facebook Pixel). Code will appear between the &#60;head&#62; and &#60;\/head&#62; tags.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "",
+                "readonly": 0,
+                "disabled": 0
+            },
+            {
+                "key": "field_590969e4f9bae",
+                "label": "Footer Tags",
+                "name": "footer_tags",
+                "type": "textarea",
+                "instructions": "Paste your footer tracking codes here (ie. Twitter conversion tag). Code will appear before the &#60;\/body&#62; tag at the bottom of the page.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": "",
+                "readonly": 0,
+                "disabled": 0
             }
         ],
         "location": [
@@ -99,6 +141,22 @@
                 "key": "field_555d00d94d792",
                 "label": "YouTube URL",
                 "name": "youtube_url",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5909693e2eed5",
+                "label": "SoundCloud URL",
+                "name": "soundcloud_url",
                 "type": "url",
                 "instructions": "",
                 "required": 0,

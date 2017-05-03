@@ -10,15 +10,15 @@
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'partials/item', 'content' );  ?>
+			<?php get_template_part( 'partials/item', 'content' ); ?>
 
 		<?php endwhile; ?>
 
-		<?php get_template_part( 'partials/pagination', 'page' );  ?>
+		<?php the_archive_pagination(); ?>
 
 	<?php else : ?>
 
-		<?php get_template_part( 'partials/item', 'not_found' );  ?>
+		<?php get_template_part( 'partials/item', 'not_found' ); ?>
 
 	<?php endif; ?>
 

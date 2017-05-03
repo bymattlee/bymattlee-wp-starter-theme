@@ -6,7 +6,7 @@
 
 		<?php get_template_part( 'partials/single', 'content' );  ?>
 
-		<?php get_template_part( 'partials/pagination', 'single' );  ?>
+		<?php the_post_pagination(); ?>
 
 	<?php endwhile; ?>
 

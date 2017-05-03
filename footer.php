@@ -16,6 +16,9 @@
 	</footer>
 
 <?php wp_footer(); ?>
+
+<?php $footer_tags = get_field( 'footer_tags', 'option' ); ?>
+<?php echo ( $footer_tags ? $footer_tags : '' ); ?>
 	
 </body>
 </html>
