@@ -46,7 +46,7 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( 'js-body' ); ?>>
 	<header class="c-header" role="banner">
 		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo(); ?></a></h1>
 		<nav class="o-site_nav" role="navigation">
