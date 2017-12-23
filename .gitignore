@@ -1,5 +1,5 @@
 .DS_Store
-node_modules
-assets/dist/
-vendors
 hostSettings.json
+node_modules
+/assets/dist
+/assets/src/vendors
