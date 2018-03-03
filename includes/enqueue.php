@@ -13,7 +13,7 @@
 
 		// Replace jQuery
 		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.2.1.min.js', '', '', true );
+		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.3.1.min.js', '', '', true );
 
 		// Scripts
 		wp_enqueue_script( 'script_vendors', get_template_directory_uri() . '/assets/dist/js/vendors.min.js', '', '', true );
