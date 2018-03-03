@@ -69,7 +69,7 @@ module.exports = {
 	},
 	browserSync: {
 		files: '**/*.php',
-		proxy: 'local.test-wp.dev'
+		proxy: 'local.bymattleedev.test'
 	},
 	deploy: {
 		src: './',
