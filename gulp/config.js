@@ -31,8 +31,9 @@ module.exports = {
 	},
 	scripts: {
 		src: [
-			src + '/js/main.js',
-			src + '/js/modules/**/*.js'
+			src + '/js/define.js',
+			src + '/js/modules/**/*.js',
+			src + '/js/main.js'
 		],
 		srcVendors: src + '/js/vendors/*.js',
 		dest:  dest + '/js',
