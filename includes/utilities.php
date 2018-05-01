@@ -5,7 +5,7 @@
 	** ***** ----------------------------------------------- ***** */
 
 	// Archive pagination
-	function the_archive_pagination() {
+	function bml_the_archive_pagination() {
 
 		// If there is a next or previous page, display archive pagination block
 		if ( get_next_posts_link() || get_previous_posts_link() ) {
@@ -16,7 +16,7 @@
 				$next_posts_page_link = get_next_posts_page_link();
 
 				$markup .= '<div>';
-				$markup .= '<a href="' . $next_posts_page_link . '">' . __( '&laquo; Older Posts', 'bymattlee' ) . '</a>';
+				$markup .= '<a href="' . $next_posts_page_link . '">' . __( 'Next Page &raquo;', 'bymattlee' ) . '</a>';
 				$markup .= '</div>';
 			}
 
@@ -24,7 +24,7 @@
 				$previous_posts_page_link = get_previous_posts_page_link();
 
 				$markup .= '<div>';
-				$markup .= '<a href="' . $previous_posts_page_link . '">' . __( 'Newer Posts &raquo;', 'bymattlee' ) . '</a>';
+				$markup .= '<a href="' . $previous_posts_page_link . '">' . __( '&laquo; Previous Page', 'bymattlee' ) . '</a>';
 				$markup .= '</div>';
 			}
 
@@ -36,7 +36,7 @@
 	}
 
 	// Post pagination
-	function the_post_pagination() {
+	function bml_the_post_pagination() {
 
 		// If there is a next or previous post, display post pagination block
 		if ( get_previous_post() || get_next_post() ) {

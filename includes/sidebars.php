@@ -5,7 +5,7 @@
 	** ***** ----------------------------------------------- ***** */
 
 	// Register and enable sidebars
-	function register_default_sidebar() {
+	function bml_register_default_sidebar() {
 
 		register_sidebar( array(
 			'name' => __( 'Default Sidebar', 'bymattlee' ),
@@ -18,7 +18,7 @@
 		));
 
 	}
-	add_action( 'widgets_init', 'register_default_sidebar' );
+	add_action( 'widgets_init', 'bml_register_default_sidebar' );
 
 	// Widget - ByMattLee Widget
 	class widget_bymattlee_widget extends WP_Widget {

@@ -127,23 +127,32 @@ blockquote.right {
 body {
 	&.login {
 		background: $grey-dark--2;
-		font-family: "Open Sans", sans-serif;
+
+		#login {
+			max-width: 36rem;
+			padding: 10vh 2rem 0;
+			width: auto;
+		}
 
 		h1 {
+			margin-bottom: 4rem;
+
 			a {
 				background-image: url("../images/logo-bymattlee-login.svg");
 				background-size: cover;
-				height: 8.8rem;
-				width: 8.5rem;
+				height: 10rem;
+				width: 10rem;
 			}
 		}
 
 		.message,
 		form {
-			background: $grey-dark--3;
+			background: transparent;
+			box-shadow: none;
 			color: $grey-light--a;
 		}
 
+		.message,
 		#login_error {
 			background: $grey-dark--3;
 		}
@@ -152,31 +161,49 @@ body {
 			color: $grey-light--a;
 		}
 
-		#backtoblog a:hover,
-		#nav a:hover {
-			color: $white;
+		#nav a {
+			color: $grey-dark--6;
 
+			&:hover {
+				color: $white;
+
+			}
 		}
 
 		form {
+			margin-top: 20px;
+			padding: 0;
+
 			.input,
 			input[type="checkbox"] {
-				background: $grey-dark--6;
-				border: none;
+				background: transparent;
+				border: 0.1rem solid $grey-dark--4;
 				box-shadow: none;
+				color: $grey-light--c;
+				padding: 5px 10px;
 			}
 
 			input[type="checkbox"] {
 				&:checked {
 					&::before {
-						color: $white;
+						color: $grey-light--c;
 					}
 				}
 			}
 
 			input {
-				&:-webkit-autofill {
-					-webkit-box-shadow: 0 0 0 1000px $grey-dark--6 inset !important;
+				@include autofill($grey-dark--4, $grey-light--c, $grey-dark--2);
+			}
+		}
+
+		#backtoblog {
+			display: none;
+		}
+
+		&.interim-login {
+			h1 {
+				a {
+					width: 10rem;
 				}
 			}
 		}
@@ -198,5 +225,10 @@ body {
 		&:hover {
 			background: $black;
 		}
+	}
+
+	.button.button-large {
+		height: auto;
+		padding: 0.4rem 1.5rem 0.4rem;
 	}
 }

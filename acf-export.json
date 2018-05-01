@@ -26,10 +26,10 @@
             },
             {
                 "key": "field_590969adf9bad",
-                "label": "Header Tags",
-                "name": "header_tags",
+                "label": "Head Tags",
+                "name": "head_tags",
                 "type": "textarea",
-                "instructions": "Paste your header tracking codes here (ie. Facebook Pixel). Code will appear between the &#60;head&#62; and &#60;\/head&#62; tags.",
+                "instructions": "Paste your tracking codes here (ie. Facebook Pixel). Code will appear between the &#60;head&#62; and &#60;\/head&#62; tags.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

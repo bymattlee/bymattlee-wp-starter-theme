@@ -18,7 +18,7 @@
 		// Rename sub menu class name
 		function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$indent = str_repeat("\t", $depth);
-			$output .= "\n$indent<ul class=\"o-site_nav-sub_menu\">\n";
+			$output .= "\n$indent<ul class=\"o-site_nav-sub_menu\">";
 		}
 
 		// Add main/sub classes to li's and links
@@ -30,30 +30,37 @@
 
 			// Passed classes
 			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-			$anchor_classes = array( 'o-site_nav-menu_item' );
 
-			// If custom classes are used, add to anchor tag
+			// Define new array of classes with new naming structure
+			$list_classes = array( 'o-site_nav-menu_list_item', 'js-site_nav-menu_list_item' );
+
+			// If custom classes are used, add to the list tag class array
 			if ( $classes[0] != '' ) {
-				$anchor_classes[] = $classes[0];
+				$list_classes[] = $classes[0];
 			}
 
-			// If array contains 'current-menu-item', rename to 'current' and add to anchor tag class array
+			// If initial class array contains 'current-menu-item', add current marker to the list tag class array
 			if ( in_array( 'current-menu-item', $classes ) ) {
-				$anchor_classes[] = 'o-site_nav-menu_item--current';
+				$list_classes[] = 'o-site_nav-menu_list_item--current';
 			}
 
-			$anchor_classes = esc_attr( implode( ' ', $anchor_classes ) );
+			// If class array contains 'menu-item-has-children', rename to 'has_submenu' and add to the list tag class array
+			if ( in_array( 'menu-item-has-children', $classes ) ) {
+				$list_classes[] = 'o-site_nav-menu_list_item--has_submenu';
+			}
+
+			$list_classes = esc_attr( implode( ' ', $list_classes ) );
 
 			// Build html
 			// If current item has a submenu, add class to list item
-			$output .= $indent . '<li class="o-site_nav-menu_list_item' . ( ( in_array( 'menu-item-has-children', $classes ) ) ? " o-site_nav-menu_list_item--has_submenu" : "" ) . '">';
+			$output .= $indent . "\n<li class=\"" . $list_classes . "\">\n";
 
 			// Link attributes
 			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
 			$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
 			$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
 			$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-			$attributes .= ' class="' . $anchor_classes . '"';
+			$attributes .= ' class="o-site_nav-menu_item"';
 
 			// Build content inside of anchor tag
 			$anchor_content = apply_filters( 'the_title', $item->title, $item->ID );

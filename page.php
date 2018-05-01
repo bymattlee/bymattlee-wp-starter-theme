@@ -4,7 +4,7 @@
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php get_template_part( 'partials/page', 'content' );  ?>
+		<?php get_template_part( 'partials/page/default' ); ?>
 
 	<?php endwhile; ?>
 

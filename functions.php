@@ -7,8 +7,11 @@
 	// Load custom post types
 	// require_once( get_template_directory() . '/includes/cpt-books.php' );
 
-	// Clean up Wordpress from unnecessary bloat
-	require_once( get_template_directory() . '/includes/cleanup.php' );
+	// Require specific plugins in theme
+	require_once( get_template_directory() . '/includes/require_plugins.php' );
+
+	// Clean up Wordpress markup from unnecessary bloat
+	require_once( get_template_directory() . '/includes/markup_cleanup.php' );
 
 	// Set up all theme features
 	require_once( get_template_directory() . '/includes/theme_setup.php' );
@@ -25,7 +28,7 @@
 	// Enable Advanced Custom Fields theme option pages
 	require_once( get_template_directory() . '/includes/acf.php' );
 
-	// Optimize admin display options
+	// Optimize front-end admin display options
 	require_once( get_template_directory() . '/includes/admin_display.php' );
 
 	// Utility classes used by theme

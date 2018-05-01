@@ -4,27 +4,39 @@
 	** ***** Enqueue styles and scripts
 	** ***** ----------------------------------------------- ***** */
 
-	function enqueue_styles() {
-		wp_enqueue_style( 'style_main', get_template_directory_uri() . '/assets/dist/css/main.min.css' );
-	}
-	add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
+	// Enqueue theme stylesheet
+	function bml_enqueue_styles() {
+		$styles_uri = get_stylesheet_directory_uri() . '/assets/dist/css/main.min.css';
+		$styles_path = get_stylesheet_directory() . '/assets/dist/css/main.min.css';
 
-	function enqueue_scripts() {
+		wp_enqueue_style( 'style_main', $styles_uri, false, filemtime( $styles_path ) );
+	}
+	add_action( 'wp_enqueue_scripts', 'bml_enqueue_styles' );
+
+	// Enqueue theme scripts
+	function bml_enqueue_scripts() {
+		$vendors_uri = get_stylesheet_directory_uri() . '/assets/dist/js/vendors.min.js';
+		$vendors_path = get_stylesheet_directory() . '/assets/dist/js/vendors.min.js';
+		$scripts_uri = get_stylesheet_directory_uri() . '/assets/dist/js/main.min.js';
+		$scripts_path = get_stylesheet_directory() . '/assets/dist/js/main.min.js';
 
 		// Replace jQuery
 		wp_deregister_script( 'jquery' );
 		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.3.1.min.js', '', '', true );
 
 		// Scripts
-		wp_enqueue_script( 'script_vendors', get_template_directory_uri() . '/assets/dist/js/vendors.min.js', '', '', true );
-		wp_enqueue_script( 'script_main', get_template_directory_uri() . '/assets/dist/js/main.min.js', '', '', true );
-
+		wp_enqueue_script( 'script_vendors', $vendors_uri, false, filemtime( $vendors_path ), true );
+		wp_enqueue_script( 'script_main', $scripts_uri, false, filemtime( $scripts_path ), true );
 	}
-	add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
+	add_action( 'wp_enqueue_scripts', 'bml_enqueue_scripts' );
 
-	function custom_login_style() {
-		wp_enqueue_style( 'custom_login_style', get_template_directory_uri() . '/assets/dist/css/main.min.css' );
+	// Enqueue theme stylesheet for login page
+	function bml_custom_login_style() {
+		$styles_uri = get_stylesheet_directory_uri() . '/assets/dist/css/main.min.css';
+		$styles_path = get_stylesheet_directory() . '/assets/dist/css/main.min.css';
+
+		wp_enqueue_style( 'custom_login_style', $styles_uri, false, filemtime( $styles_path ) );
 	}
-	add_action( 'login_enqueue_scripts', 'custom_login_style' );
+	add_action( 'login_enqueue_scripts', 'bml_custom_login_style' );
 
 ?>

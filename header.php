@@ -1,3 +1,9 @@
+<?php 
+
+	$google_analytics_tracking_id = get_field( 'google_analytics_tracking_id', 'option' );
+	$head_tags = get_field( 'head_tags', 'option' );
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -16,50 +22,25 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="<?php bloginfo(); ?>">
 
-<meta name="msapplication-TileColor" content="#000000">
-
-<meta name="theme-color" content="#000000">
-
 <?php wp_head(); ?>
 
-<?php
-
-	// Header variables
-	$google_analytics_tracking_id = get_field( 'google_analytics_tracking_id', 'option' );
-	$header_tags = get_field( 'header_tags', 'option' );
-
-	if ( $google_analytics_tracking_id ) :
-
-?>
-<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', '<?php echo $google_analytics_tracking_id ?>', 'auto');
-	ga('send', 'pageview');
-</script>
+<?php if ( $google_analytics_tracking_id ) : ?>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_tracking_id; ?>"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', '<?php echo $google_analytics_tracking_id; ?>');
+	</script>
 <?php endif; ?>
 
-<?php echo ( $header_tags ? $header_tags : '' ); ?>
+<?php echo $head_tags ? $head_tags : ''; ?>
 
 </head>
 
 <body <?php body_class( 'js-body' ); ?>>
-	<header class="c-header" role="banner">
-		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo(); ?></a></h1>
-		<nav class="o-site_nav" role="navigation">
-			<?php 
-				wp_nav_menu( array( 
-					'theme_location' => 'main_menu', 
-					'menu_class' => 'o-site_nav-menu',
-					'walker' => new Site_Nav_Walker()
-				) );
-			?>
-		</nav>
-		<?php get_search_form(); ?>
-	</header>
+
+	<?php get_template_part( 'partials/global/header' ); ?>
 
 	<br><hr><br>
 

@@ -5,48 +5,59 @@
 	** ***** ----------------------------------------------- ***** */
 
 	// Add thumbnails column to admin post view
-	function posts_columns( $defaults ){
+	function bml_posts_columns( $defaults ){
 		$defaults[ 'my_post_thumbs' ] = __( 'Image', 'bymattlee' );
 		return $defaults;
 	}
-	add_filter( 'manage_posts_columns', 'posts_columns', 5 );
+	add_filter( 'manage_posts_columns', 'bml_posts_columns', 5 );
 
 	// Add thumbnails for each post to admin post view
-	function posts_custom_columns( $column_name, $id ){
+	function bml_posts_custom_columns( $column_name, $id ){
 		if ( $column_name === 'my_post_thumbs' ){
 			echo the_post_thumbnail( 'admin_thumb' );
 		}
 	}
-	add_action( 'manage_posts_custom_column', 'posts_custom_columns', 5, 2 );
+	add_action( 'manage_posts_custom_column', 'bml_posts_custom_columns', 5, 2 );
 
 	// Remove widgets from dashboard
-	function remove_dashboard_widgets() {
+	function bml_remove_dashboard_widgets() {
 		remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
 		remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
 	}
-	add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
+	add_action( 'wp_dashboard_setup', 'bml_remove_dashboard_widgets' );
 
-	// Remove comments column from post and page screens
-	function remove_comments_column( $columns ) {
-
-		unset( $columns[ 'comments' ] );
-
-		return $columns;
+	// Remove comment support from posts and pages
+	function bml_remove_comments_support() {
+		remove_post_type_support('post', 'comments');
+		remove_post_type_support('page', 'comments');
 	}
-	add_filter( 'manage_edit-post_columns', 'remove_comments_column' );
-	add_filter( 'manage_edit-page_columns', 'remove_comments_column' );
+	add_action( 'init', 'bml_remove_comments_support' );
 
-	// Remove Yoast SEO columns from post and page screens
-	function remove_yoast_seo_columns( $columns ) {
-
-		unset( $columns[ 'wpseo-score' ] );
-		unset( $columns[ 'wpseo-title' ] );
-		unset( $columns[ 'wpseo-metadesc' ] );
-		unset( $columns[ 'wpseo-focuskw' ] );
-
-		return $columns;
+	// Remove comments tab from the admin
+	function bml_remove_comments_menu_page() {
+		remove_menu_page( 'edit-comments.php' );
 	}
-	// add_filter( 'manage_edit-post_columns', 'remove_yoast_seo_columns' );
-	// add_filter( 'manage_edit-page_columns', 'remove_yoast_seo_columns' );
+	add_action( 'admin_menu', 'bml_remove_comments_menu_page' );
+
+	// Remove comments meta boxes on post and page edit screens
+	function bml_remove_comment_meta_boxes() {
+		remove_meta_box( 'commentsdiv', 'page', 'normal' );
+		remove_meta_box( 'commentsdiv', 'post', 'normal' );
+		remove_meta_box( 'commentstatusdiv', 'post', 'normal' );
+	}
+	add_action( 'do_meta_boxes', 'bml_remove_comment_meta_boxes' );
+
+	// Remove comments activity on dashboard
+	function bml_remove_dashboard_comment_activity() {
+		echo '<style type="text/css">li.comment-count, li.comment-mod-count, #latest-comments, #wp-admin-bar-comments { display:none; }</style>';
+	}
+	add_action( 'admin_head', 'bml_remove_dashboard_comment_activity' );
+
+	// Remove comments from admin bar
+	function bml_remove_comments_from_admin_bar() {
+		global $wp_admin_bar;
+		$wp_admin_bar->remove_menu('comments');
+	}
+	add_action( 'wp_before_admin_bar_render', 'bml_remove_comments_from_admin_bar' );
 
 ?>

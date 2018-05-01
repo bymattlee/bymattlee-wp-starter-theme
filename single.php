@@ -4,9 +4,9 @@
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php get_template_part( 'partials/single', 'content' );  ?>
+		<?php get_template_part( 'partials/post/single' ); ?>
 
-		<?php the_post_pagination(); ?>
+		<?php bml_the_post_pagination(); ?>
 
 	<?php endwhile; ?>
 

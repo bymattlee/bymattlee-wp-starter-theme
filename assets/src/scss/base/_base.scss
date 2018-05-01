@@ -149,7 +149,7 @@ figure {
 textarea {
 	border: 0.1rem solid $white;
 	border-radius: 0;
-	font-family: $font-family-primary;
+	font-family: $font-family-secondary;
 	resize: none;
 }
 
@@ -175,7 +175,7 @@ button {
 	background: transparent;
 	border: 0;
 	cursor: pointer;
-	font-family: $font-family-primary;
+	font-family: $font-family-secondary;
 	line-height: normal;
 	outline: 0;
 	padding: 0;
@@ -184,7 +184,7 @@ button {
 input {
 	border: 0.1rem solid $white;
 	border-radius: 0;
-	font-family: $font-family-primary;
+	font-family: $font-family-secondary;
 	outline: none;
 	padding: 0.5rem 1rem;
 }

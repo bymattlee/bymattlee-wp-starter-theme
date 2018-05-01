@@ -5,7 +5,7 @@
 	** ***** ----------------------------------------------- ***** */
 
 	// Create custom post type
-	function create_book_cpt() {
+	function bml_create_book_cpt() {
 
 		$labels = array(
 			'name'					=> _x( 'Books', 'post type general name', 'bymattlee' ),
@@ -41,13 +41,14 @@
 			'supports'				=> array( 'title', 'editor', 'thumbnail', 'revisions' )
 		);
 
-		register_post_type( 'book', $args );
+		register_post_type( 'bml-book', $args );
 
 	}
 
-	add_action( 'init', 'create_book_cpt' );
+	add_action( 'init', 'bml_create_book_cpt' );
 
-	function create_book_taxonomies() {
+	function bml_create_book_taxonomies() {
+		
 		// Add new taxonomy, make it hierarchical (like categories)
 		$labels = array(
 			'name'					=> _x( 'Genres', 'taxonomy general name', 'bymattlee' ),
@@ -72,7 +73,7 @@
 			'rewrite'				=> array( 'slug' => 'genre' ),
 		);
 
-		register_taxonomy( 'genre', array( 'book' ), $args );
+		register_taxonomy( 'bml-genre', array( 'bml-book' ), $args );
 
 		// Add new taxonomy, NOT hierarchical (like tags)
 		$labels = array(
@@ -104,9 +105,9 @@
 			'rewrite'				=> array( 'slug' => 'writer' ),
 		);
 
-		register_taxonomy( 'writer', 'book', $args );
+		register_taxonomy( 'bml-writer', 'bml-book', $args );
 	}
 
-	add_action( 'init', 'create_book_taxonomies', 0 );
+	add_action( 'init', 'bml_create_book_taxonomies', 0 );
 	
 ?>
