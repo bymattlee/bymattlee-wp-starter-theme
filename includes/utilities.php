@@ -10,13 +10,13 @@
 		// If there is a next or previous page, display archive pagination block
 		if ( get_next_posts_link() || get_previous_posts_link() ) {
 
-			$markup  = '<div>';
+			$markup  = '<div class="c-archive_pagination">';
 
 			if ( get_next_posts_link() ) {
 				$next_posts_page_link = get_next_posts_page_link();
 
 				$markup .= '<div>';
-				$markup .= '<a href="' . $next_posts_page_link . '">' . __( 'Next Page &raquo;', 'bymattlee' ) . '</a>';
+				$markup .= '<a href="' . $next_posts_page_link . '" class="c-archive_pagination-item">' . __( 'Next Page &raquo;', 'bymattlee' ) . '</a>';
 				$markup .= '</div>';
 			}
 
@@ -24,7 +24,7 @@
 				$previous_posts_page_link = get_previous_posts_page_link();
 
 				$markup .= '<div>';
-				$markup .= '<a href="' . $previous_posts_page_link . '">' . __( '&laquo; Previous Page', 'bymattlee' ) . '</a>';
+				$markup .= '<a href="' . $previous_posts_page_link . '" class="c-archive_pagination-item">' . __( '&laquo; Previous Page', 'bymattlee' ) . '</a>';
 				$markup .= '</div>';
 			}
 
@@ -64,6 +64,34 @@
 			echo $markup;
 
 		}
+
+	}
+
+	// Get page URL by page slug
+	function bml_get_page_url_by_slug( $slug ) {
+		return get_permalink( get_page_by_path( $slug ) );
+	}
+
+	// Print the image's srcset for lazyload
+	function bml_the_image_srcset( $image_id ) {
+
+		if ( !$image_id ) return;
+
+		$image_labels = [ 'size_400', 'size_600', 'size_800', 'size_1000', 'size_1200', 'size_1400', 'size_1600', 'size_1800', 'full' ];
+		$image_set = [];
+
+		foreach ( $image_labels as $image_label ) {
+
+			$image = wp_get_attachment_image_src( $image_id, $image_label );
+			$image_url = $image[0];
+			$image_width = $image[1];
+
+			$image_set[] =  $image_url . ' ' . ( $image_width - 200 ) . 'w' ;
+		}
+
+		$image_set = array_unique( $image_set );
+
+		echo implode( ', ', $image_set );
 
 	}
 

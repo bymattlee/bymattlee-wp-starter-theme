@@ -25,6 +25,7 @@
 		function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 
 			global $wp_query;
+			
 			$item_output = '';
 			$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
 
@@ -39,8 +40,10 @@
 				$list_classes[] = $classes[0];
 			}
 
-			// If initial class array contains 'current-menu-item', add current marker to the list tag class array
-			if ( in_array( 'current-menu-item', $classes ) ) {
+			// If initial class array contains 'current-menu-item' or 'current-menu-ancestor', add current marker to the list tag class array
+			// Also check if current post type slug matches the menu item, if so, add current marker (but disregard category nav items)
+			if ( in_array( 'current-menu-item', $classes ) 
+				|| in_array( 'current-menu-ancestor', $classes ) ) {
 				$list_classes[] = 'o-site_nav-menu_list_item--current';
 			}
 

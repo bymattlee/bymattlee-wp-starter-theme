@@ -34,6 +34,15 @@
 		// Enable featured post and thumbnail sizes
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'admin_thumb', 100, 100, true );
+		add_image_size( 'size_200', 200 );
+		add_image_size( 'size_400', 400 );
+		add_image_size( 'size_600', 600 );
+		add_image_size( 'size_800', 800 );
+		add_image_size( 'size_1000', 1000 );
+		add_image_size( 'size_1200', 1200 );
+		add_image_size( 'size_1400', 1400 );
+		add_image_size( 'size_1600', 1600 );
+		add_image_size( 'size_1800', 1800 );
 
 	}
 	add_action( 'after_setup_theme', 'bml_theme_setup' );
@@ -58,16 +67,32 @@
 
 		if ( is_home() ) {
 
-			// Remove blog class
+			// Replace blog class with news and add 'p-' prefix
 			$blog_key = array_search( 'blog', $classes );
 			if ( $blog_key > -1 ) {
-				unset( $classes[ $blog_key ] );
+				$classes[ $blog_key ] = 'p-news';
 			}
 
 			// Add 'p-' prefix to home class
 			$home_key = array_search( 'home', $classes );
 			if ( $home_key > -1 ) {
 				$classes[ $home_key ] = 'p-' . $classes[ $home_key ];
+			}
+
+		} elseif ( is_front_page() ) {
+
+			// Add 'p-' prefix to home class
+			$home_key = array_search( 'home', $classes );
+			if ( $home_key > -1 ) {
+				$classes[ $home_key ] = 'p-' . $classes[ $home_key ];
+			}
+
+		} elseif ( is_404() ) {
+
+			// Add 'p-' prefix to error 404 class
+			$error_key = array_search( 'error404', $classes );
+			if ( $error_key > -1 ) {
+				$classes[ $error_key ] = 'p-' . $classes[ $error_key ];
 			}
 
 		} elseif ( is_page() || is_singular() ) {
