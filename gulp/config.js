@@ -75,13 +75,15 @@ module.exports = {
 	},
 	deploy: {
 		src: './',
+		root: './',
 		exclude: [
 			'.DS_Store',
 			'node_modules',
 			'acf-export.json',
 			'LICENSE.md',
 			'README.md',
-			'hostSettings.json'
+			'hostSettings.json',
+			'assets/src/vendors'
 		]
 	},
 };
