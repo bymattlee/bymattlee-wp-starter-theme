@@ -83,8 +83,8 @@ $letter-spacing-loose: 0.1rem;
 
 // Line Height
 $line-height-tight: 1;
-$line-height-normal: 1.2;
-$line-height-loose: 1.5;
+$line-height-normal: 1.4;
+$line-height-loose: 1.8;
 
 
 /* ***** Transition
@@ -137,6 +137,7 @@ $bp-small: px-to-em(768);
 $bp-medium: px-to-em(900);
 $bp-large: px-to-em(1100);
 $bp-xlarge: px-to-em(1300);
+$bp-xxlarge: px-to-em(1600);
 
 
 /* ***** Z-Index
