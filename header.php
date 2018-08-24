@@ -44,4 +44,4 @@
 
 	<br><hr><br>
 
-	<section class="l-content clearfix">
+	<section class="l-content u-clearfix">

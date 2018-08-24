@@ -74,6 +74,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 @import "objects/site_nav";
+@import "objects/rich_text_editor";
 @import "objects/button";
 @import "objects/embed";
 
@@ -83,7 +84,6 @@
 
 @import "components/header";
 @import "components/footer";
-@import "components/rich_text_editor";
 @import "components/archive_pagination";
 @import "components/site_alert";
 

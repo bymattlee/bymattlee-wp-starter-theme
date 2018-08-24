@@ -127,6 +127,7 @@ blockquote.right {
 body {
 	&.login {
 		background: $grey-dark--2;
+		display: block;
 
 		#login {
 			max-width: 36rem;
@@ -155,6 +156,7 @@ body {
 		.message,
 		#login_error {
 			background: $grey-dark--3;
+			box-shadow: none;
 		}
 
 		label {
@@ -171,7 +173,7 @@ body {
 		}
 
 		form {
-			margin-top: 20px;
+			margin-top: 2rem;
 			padding: 0;
 
 			.input,
@@ -180,7 +182,7 @@ body {
 				border: 0.1rem solid $grey-dark--4;
 				box-shadow: none;
 				color: $grey-light--c;
-				padding: 5px 10px;
+				padding: 0.1rem 1rem;
 			}
 
 			input[type="checkbox"] {
