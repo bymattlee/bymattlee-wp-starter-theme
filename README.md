@@ -35,9 +35,13 @@ To enable deployment, create `hostSettings.json` and store in the `gulp` directo
 ```
 $ gulp watch
 ```
-##### Development Build - Build Project
+##### Development Build - Build Project With Sourcemaps
 ```
 $ gulp
+```
+##### Staging Build - Build Project Without Sourcemaps
+```
+$ gulp --staging
 ```
 ##### Production Build - Build Project Without Sourcemaps
 ```
