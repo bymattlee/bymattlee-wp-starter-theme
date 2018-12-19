@@ -3,17 +3,16 @@
 # ByMattLee WP Starter Theme
 * A starter Wordpress theme that includes base Wordpress template files and optimized theme setup
 * Theme is stripped down and does not contain any styles
-* Uses Gulp as the build tool and Bower to manage front-end packages
+* Uses Gulp 4 as the build tool and Bower to manage front-end packages
 
 ## Installation
-##### 1. Install Node 7.10.1: <https://nodejs.org/en/blog/release/v7.10.1/>
-Only compatible with Node 7.10.1 and below. Upgrade TBD.
+##### 1. Install Node: <https://nodejs.org/en/>
 ##### 2. Install all dependencies and build project
 ```
 $ npm install
 ```
 ##### 3. Update Gulp Config
-All Gulp settings can be found in `gulp/config.js`. To connect BrowserSync to the local development environment to enable browser reload, update `line 63` to local development address
+All Gulp settings can be found in `gulp/config.js`. To connect BrowserSync to the local development environment to enable browser reload, update `line 74` to local development address
 ##### 4. Enable Deployment
 To enable deployment, create `hostSettings.json` and store in the `gulp` directory. This file should not be checked in as it contains sensitive information. Sample `hostSettings.json`:
 ```

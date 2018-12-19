@@ -11,15 +11,21 @@ var browserSync = require('browser-sync'),
 
 /*
 ** -- Initialize BrowserSync
+** -- Watch *.php files for changes
+** -- Use proxy specified in config (development server must be running)
 ** -- Initialize watch for styles, scripts, images, svgs and asset files
 ** -- Force browser reload when changes are made to images, svgs and asset files
 */
-gulp.task('watch', ['browserSync'], function() {
+gulp.task('watch', function() {
 
-	gulp.watch(config.styles.src, ['styles']);
-	gulp.watch(config.scripts.src, ['scripts:main']);
-	gulp.watch(config.images.src, ['images']).on('change', reload);
-	gulp.watch(config.svgs.src, ['svgs']).on('change', reload);
-	gulp.watch(config.copy.src, ['copy']).on('change', reload);
+	browserSync.init(config.browserSync.files, {
+        proxy: config.browserSync.proxy
+    });
+
+	gulp.watch(config.styles.src, gulp.series('styles'));
+	gulp.watch(config.scripts.src, gulp.series('scripts:main'));
+	gulp.watch(config.images.src, gulp.series('images')).on('change', reload);
+	gulp.watch(config.svgs.src, gulp.series('svgs')).on('change', reload);
+	gulp.watch(config.copy.src, gulp.series('copy')).on('change', reload);
 
 });
