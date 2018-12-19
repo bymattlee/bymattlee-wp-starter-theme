@@ -162,6 +162,13 @@ textarea {
 }
 
 select {
+	background-color: transparent;
+	border: 0.1rem solid $white;
+	border-radius: 0;
+	color: inherit;
+	font-family: $font-family-primary;
+	outline: 0;
+	padding: 1rem;
 	width: 100%;
 }
 
@@ -185,7 +192,7 @@ button {
 	color: inherit;
 	cursor: pointer;
 	font-family: $font-family-secondary;
-	line-height: normal;
+	line-height: $line-height-normal;
 	outline: 0;
 	padding: 0;
 }

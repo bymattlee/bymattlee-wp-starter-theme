@@ -61,6 +61,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 @import "vendors/wordpress";
+@import "vendors/lazysizes";
 
 
 /* ***** Layout
@@ -91,6 +92,7 @@
 /* ***** Utilities
 ** ***** ----------------------------------------------- ***** */
 
+@import "utilities/animation";
 @import "utilities/display";
 @import "utilities/flexbox";
 @import "utilities/show";
