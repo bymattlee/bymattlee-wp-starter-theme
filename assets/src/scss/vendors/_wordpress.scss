@@ -129,6 +129,14 @@ body {
 		background: $grey-dark--2;
 		display: block;
 
+		&.interim-login {
+			h1 {
+				a {
+					width: 10rem;
+				}
+			}
+		}
+
 		#login {
 			max-width: 36rem;
 			padding: 10vh 2rem 0;
@@ -200,14 +208,6 @@ body {
 
 		#backtoblog {
 			display: none;
-		}
-
-		&.interim-login {
-			h1 {
-				a {
-					width: 10rem;
-				}
-			}
 		}
 	}
 }
