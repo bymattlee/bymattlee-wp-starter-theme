@@ -19,7 +19,7 @@
 		padding: 1.5rem;
 
 		&:hover {
-			.l-not_device & {
+			@media (hover: hover) {
 				color: $grey-light--c;
 			}
 		}
