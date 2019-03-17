@@ -17,8 +17,8 @@
   "devDependencies": {
     "svgxuse": "^1.2.6",
     "sanitize-css": "^8.0.0",
-    "gsap": "^2.0.2",
-    "lazysizes": "^4.1.5"
+    "gsap": "^2.1.2",
+    "lazysizes": "^4.1.6"
   },
   "overrides": {
     "lazysizes": {
