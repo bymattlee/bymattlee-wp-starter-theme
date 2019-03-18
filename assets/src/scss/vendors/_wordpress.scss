@@ -221,8 +221,7 @@ body {
 		border-radius: 0;
 		box-shadow: none;
 		text-shadow: none;
-
-		@include transition-background-color-normal;
+		transition: background-color $transition-slow;
 
 		&:hover {
 			background: $black;
