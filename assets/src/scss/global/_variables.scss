@@ -37,37 +37,28 @@ $font-family-primary: "Montserrat", Arial, Helvetica, Sans-Serif;
 $font-family-secondary: "Open Sans", Arial, Helvetica, Sans-Serif;
 
 // Font globals
-$font-body: $font-family-secondary;
-$font-headline: $font-family-primary;
+$font-family-body: $font-family-secondary;
+$font-family-headline: $font-family-primary;
 
 // Font Sizes
 $font-size-base: 62.5%;
 
-$font-size-smaller: 1rem;
-$font-size-small: 1.2rem;
 $font-size-normal: 1.4rem;
-$font-size-large: 1.6rem;
-$font-size-larger: 2rem;
+$font-size-normal--small-up: 1.6rem;
 
-$font-size-smaller-small: 1.2rem;
-$font-size-small-small: 1.4rem;
-$font-size-normal-small: 1.6rem;
-$font-size-large-small: 1.8rem;
-$font-size-larger-small: 2.2rem;
-
-$font-size-h1: 2.6rem;
-$font-size-h2: 2rem;
+$font-size-h1: 3rem;
+$font-size-h2: 2.4rem;
 $font-size-h3: 1.8rem;
 $font-size-h4: 1.4rem;
 $font-size-h5: 1.2rem;
 $font-size-h6: 1rem;
 
-$font-size-h1-small: 3.2rem;
-$font-size-h2-small: 2.4rem;
-$font-size-h3-small: 2rem;
-$font-size-h4-small: 1.6rem;
-$font-size-h5-small: 1.4rem;
-$font-size-h6-small: 1.2rem;
+$font-size-h1--small-up: 3.6rem;
+$font-size-h2--small-up: 3rem;
+$font-size-h3--small-up: 2.4rem;
+$font-size-h4--small-up: 1.8rem;
+$font-size-h5--small-up: 1.4rem;
+$font-size-h6--small-up: 1.2rem;
 
 // Font Weights
 $font-weight-light: 200;
@@ -129,7 +120,7 @@ $ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 
-/* ***** Media Queries
+/* ***** Breakpoints
 ** ***** ----------------------------------------------- ***** */
 
 $bp-xsmall: px-to-em(480);

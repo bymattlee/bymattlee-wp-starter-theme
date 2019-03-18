@@ -13,11 +13,14 @@
 	width: 100%;
 	z-index: $z-index-9;
 
-	&-link {
+	&-link,
+	&-message {
 		color: $white;
 		display: block;
 		padding: 1.5rem;
+	}
 
+	&-link {
 		&:hover {
 			@media (hover: hover) {
 				color: $grey-light--c;
