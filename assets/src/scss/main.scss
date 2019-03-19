@@ -38,68 +38,68 @@
 /* ***** Tools
 ** ***** ----------------------------------------------- ***** */
 
-@import "tools/functions";
-@import "tools/mixin-background";
-@import "tools/mixin-layout";
-@import "tools/mixin-text";
+@import "1-tools/functions";
+@import "1-tools/mixin-background";
+@import "1-tools/mixin-layout";
+@import "1-tools/mixin-text";
 
 
 /* ***** Settings
 ** ***** ----------------------------------------------- ***** */
 
-@import "settings/colors";
-@import "settings/typography";
-@import "settings/layout";
-@import "settings/transition";
-@import "settings/z-index";
+@import "2-settings/colors";
+@import "2-settings/typography";
+@import "2-settings/layout";
+@import "2-settings/transition";
+@import "2-settings/z-index";
 
 
 /* ***** Vendors
 ** ***** ----------------------------------------------- ***** */
 
-@import "vendors/wordpress";
-@import "vendors/lazysizes";
+@import "3-vendors/wordpress";
+@import "3-vendors/lazysizes";
 
 
 /* ***** Elements
 ** ***** ----------------------------------------------- ***** */
 
-@import "elements/base";
-@import "elements/heading";
-@import "elements/anchor";
-@import "elements/paragraph";
-@import "elements/list";
-@import "elements/button";
-@import "elements/media";
-@import "elements/form";
-@import "elements/blockquote";
-@import "elements/hr";
-@import "elements/table";
+@import "4-elements/base";
+@import "4-elements/heading";
+@import "4-elements/anchor";
+@import "4-elements/paragraph";
+@import "4-elements/list";
+@import "4-elements/button";
+@import "4-elements/media";
+@import "4-elements/form";
+@import "4-elements/blockquote";
+@import "4-elements/hr";
+@import "4-elements/table";
 
 
 /* ***** Layout
 ** ***** ----------------------------------------------- ***** */
 
-@import "layout/base";
-@import "layout/grid";
+@import "5-layout/base";
+@import "5-layout/grid";
 
 
 /* ***** Objects
 ** ***** ----------------------------------------------- ***** */
 
-@import "objects/site_nav";
-@import "objects/rich_text_editor";
-@import "objects/button";
-@import "objects/embed";
+@import "6-objects/site_nav";
+@import "6-objects/rich_text_editor";
+@import "6-objects/button";
+@import "6-objects/embed";
 
 
 /* ***** Components
 ** ***** ----------------------------------------------- ***** */
 
-@import "components/header";
-@import "components/footer";
-@import "components/archive_pagination";
-@import "components/site_alert";
+@import "7-components/header";
+@import "7-components/footer";
+@import "7-components/archive_pagination";
+@import "7-components/site_alert";
 
 
 /* ***** Utilities
@@ -123,5 +123,5 @@
 /* ***** Misc
 ** ***** ----------------------------------------------- ***** */
 
-@import "misc/hacks";
-@import "misc/print";
+@import "9-misc/hacks";
+@import "9-misc/print";
