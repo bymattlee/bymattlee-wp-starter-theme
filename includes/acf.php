@@ -4,7 +4,7 @@
 	** ***** ACF
 	** ***** ----------------------------------------------- ***** */
 
-	if( function_exists( 'acf_add_options_page' ) ) {
+	if ( function_exists( 'acf_add_options_page' ) ) {
 
 		// Add Theme Options tab to WP Admin
 		acf_add_options_page( array(

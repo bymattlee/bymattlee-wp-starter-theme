@@ -40,6 +40,20 @@
 				'required'  => true,
 			),
 
+			// Require Classic Editor plugin
+			array(
+				'name'      => 'Classic Editor',
+				'slug'      => 'classic-editor',
+				'required'  => true,
+			),
+
+			// Require WP Migrate DB plugin
+			array(
+				'name'      => 'WP Migrate DB',
+				'slug'      => 'wp-migrate-db',
+				'required'  => true,
+			),
+
 		);
 
 		$config = array(

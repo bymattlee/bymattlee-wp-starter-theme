@@ -7,7 +7,7 @@
 	// Register menus
 	register_nav_menus(
 		array(
-			'main_menu'	=> __( 'Main Menu', 'bymattlee' ),
+			'primary_menu' => __( 'Primary Menu', 'bymattlee' ),
 			'footer_menu' => __( 'Footer Menu', 'bymattlee' ),
 		)
 	);
@@ -36,21 +36,18 @@
 			$list_classes = array( 'o-site_nav-menu_list_item', 'js-site_nav-menu_list_item' );
 
 			// If custom classes are used, add to the list tag class array
-			if ( $classes[0] != '' ) {
-				$list_classes[] = $classes[0];
-			}
+			if ( $classes[0] != '' ) $list_classes[] = $classes[0];
 
-			// If initial class array contains 'current-menu-item' or 'current-menu-ancestor', add current marker to the list tag class array
+			// If initial class array contains 'current-menu-item', 'current-menu-ancestor' or 'current-page-ancestor', add current marker to the list tag class array
 			// Also check if current post type slug matches the menu item, if so, add current marker (but disregard category nav items)
 			if ( in_array( 'current-menu-item', $classes ) 
-				|| in_array( 'current-menu-ancestor', $classes ) ) {
+				|| in_array( 'current-menu-ancestor', $classes )
+				|| in_array( 'current-page-ancestor', $classes ) ) {
 				$list_classes[] = 'o-site_nav-menu_list_item--current';
 			}
 
 			// If class array contains 'menu-item-has-children', rename to 'has_submenu' and add to the list tag class array
-			if ( in_array( 'menu-item-has-children', $classes ) ) {
-				$list_classes[] = 'o-site_nav-menu_list_item--has_submenu';
-			}
+			if ( in_array( 'menu-item-has-children', $classes ) ) $list_classes[] = 'o-site_nav-menu_list_item--has_submenu';
 
 			$list_classes = esc_attr( implode( ' ', $list_classes ) );
 

@@ -38,7 +38,7 @@ var addSrc = require('gulp-add-src'),
 ** -- Print bundled file size
 ** -- Inject styles into page
 */
-gulp.task('styles', function () {
+gulp.task('styles:main', function () {
 
 	var bowerFiles = mainBowerFiles({
 		filter: '**/*.css',
@@ -46,7 +46,7 @@ gulp.task('styles', function () {
 	});
 	console.log('Bower Files: ', bowerFiles);
 
-	return gulp.src(config.styles.src)
+	return gulp.src(config.styles.mainSrc)
 		.pipe(plumber())
 		.pipe(
 			postcss([
@@ -82,3 +82,54 @@ gulp.task('styles', function () {
 		}));
 
 });
+
+/*
+** -- Lint scss file with Stylelint
+** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
+** -- Compile scss files
+** -- Autoprefix necessary properties
+** -- Minify
+** -- Add ByMattLee header to bundled file
+** -- Print bundled file size
+** -- Inject styles into page
+*/
+gulp.task('styles:editor', function () {
+
+	return gulp.src(config.styles.editorSrc)
+		.pipe(plumber())
+		.pipe(
+			postcss([
+				stylelint(),
+				reporter({
+					clearMessages: true
+				})
+			], {
+				syntax: scss 
+			})
+		)
+		.pipe(gif(isDevelopment, sourcemaps.init()))
+			.pipe(sass().on('error', sass.logError))
+			.pipe(autoprefixer())
+			.pipe(cleanCSS({
+				inline: ['all'],
+				rebase: false
+			}))
+			.pipe(concat('editor_styles.css'))
+			.pipe(rename({
+				suffix: '.min'
+			}))
+			.pipe(header(config.fileHeader.join('\n')))
+			.pipe(size({
+				title: 'Compressed File Size:',
+				showFiles: true
+			}))
+		.pipe(gif(isDevelopment, sourcemaps.write('./')))
+		.pipe(gulp.dest(config.styles.dest))
+		.pipe(browserSync.stream({
+			match: '**/*.css'
+		}));
+
+});
+
+// Styles task
+gulp.task('styles', gulp.parallel('styles:main', 'styles:editor'));

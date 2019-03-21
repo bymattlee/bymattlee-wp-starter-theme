@@ -26,7 +26,11 @@ module.exports = {
 		'*/\n'
 	],
 	styles: {
-		src: src + '/scss/**/*.scss',
+		mainSrc: [
+			src + '/scss/**/*.scss',
+			'!' + src + '/scss/editor_styles.scss'
+		],
+		editorSrc:  src + '/scss/editor_styles.scss',
 		dest: dest + '/css'
 	},
 	scripts: {
@@ -83,7 +87,8 @@ module.exports = {
 			'LICENSE.md',
 			'README.md',
 			'hostSettings.json',
-			'assets/src/vendors'
+			'assets/src/vendors',
+			'.git'
 		]
 	},
 };

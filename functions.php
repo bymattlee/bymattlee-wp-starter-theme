@@ -34,4 +34,7 @@
 	// Utility classes used by theme
 	require_once( get_template_directory() . '/includes/utilities.php' );
 
+	// Add custom editor styles to WYSIWYG
+	require_once( get_template_directory() . '/includes/editor_styles.php' );
+
 ?>

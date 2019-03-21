@@ -167,6 +167,14 @@ body {
 			box-shadow: none;
 		}
 
+		.message {
+			// border-color: $white; // Update with neutral color that matches brand
+		}
+
+		#login_error {
+			// border-color: $white; // Update with highlight color that matches brand
+		}
+
 		label {
 			color: $grey-light--a;
 		}

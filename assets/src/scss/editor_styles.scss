@@ -1,0 +1,129 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Editor Styles
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Imports
+** ***** ----------------------------------------------- ***** */
+
+@import "1-tools/mixin-text";
+@import "2-settings/colors";
+@import "2-settings/transition";
+@import "2-settings/typography";
+
+
+/* ***** Base Styles
+** ***** ----------------------------------------------- ***** */
+
+:root {
+	font-size: $font-size-base;
+}
+
+body {
+	font-family: $font-family-body;
+	font-size: $font-size-normal--small-up;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	line-height: $line-height-normal;
+}
+
+p {
+	line-height: $line-height-loose;
+	margin: 2rem 0;
+}
+
+ul,
+ol {
+	line-height: $line-height-loose;
+	margin: 2rem 0 2rem 3rem;
+	padding: 0;
+
+	&.u-unstyled {
+		list-style: none;
+		margin-left: 0;
+	}
+
+	li {
+		margin: 1rem 0;
+	}
+}
+
+a {
+	color: $link-text-color;
+	text-decoration: none;
+	transition: color $transition-slow;
+
+	&:hover {
+		@media (hover: hover) {
+			color: $link-hover-text-color;
+		}
+	}
+
+	&:active {
+		@media (hover: hover) {
+			color: $link-active-text-color;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-family-heading;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	font-size: $font-size-h1--small-up;
+}
+
+h2 {
+	font-size: $font-size-h2--small-up;
+}
+
+h3 {
+	font-size: $font-size-h3--small-up;
+}
+
+h4 {
+	font-size: $font-size-h4--small-up;
+}
+
+h5 {
+	font-size: $font-size-h5--small-up;
+}
+
+h6 {
+	font-size: $font-size-h6--small-up;
+}
+
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+	margin-top: 6rem;
+}
+
+blockquote {
+	border-left: 0.4rem solid $grey-dark--4;
+	margin: 3rem 2rem;
+	padding-left: 2rem;
+}
+
+hr {
+	border: 0;
+	border-top: 0.1rem solid $grey-light--c;
+	margin: 2rem 0;
+}
+
+
+/* ***** Custom Editor Styles
+** ***** ----------------------------------------------- ***** */
+
