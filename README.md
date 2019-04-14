@@ -95,7 +95,7 @@ $ gulp deploy --production
 * Use `--clean` flag to delete all files and directories that are not in the destination path
 
 ## Wordpress Requirements
-* Advanced Custom Fields PRO plugin is recommended to create custom fields and Option pages. Default settings can be imported from `acf-export.json`
+* Advanced Custom Fields PRO plugin is recommended to create custom fields and Option pages. Default settings can be imported from `acf-global-options.json`
 
 ## References
 * [ByMattLee Web Starter Files](https://github.com/bymattlee/bymattlee-web-starter-files)

@@ -6,27 +6,28 @@
 
 	if ( function_exists( 'acf_add_options_page' ) ) {
 
-		// Add Theme Options tab to WP Admin
+		// Add Global Options tab to WP Admin
 		acf_add_options_page( array(
-			'menu_title'	=> __( 'Theme Options', 'bymattlee' ),
-			'page_title' 	=> __( 'Theme Options', 'bymattlee' ),
-			'menu_slug' 	=> 'theme-options',
+			'menu_title'	=> __( 'Global Options', 'famehouse' ),
+			'page_title' 	=> __( 'Global Options', 'famehouse' ),
+			'menu_slug' 	=> 'global-options',
+			'position'	 	=> '31',
 			'capability'	=> 'edit_posts',
-			'icon_url'		=> 'dashicons-admin-tools',
-		));
-
-		// Add General Options section under the Theme Options tab
-		acf_add_options_sub_page( array(
-			'page_title' 	=> __( 'General Options', 'bymattlee' ),
-			'menu_title'	=> __( 'General', 'bymattlee' ),
-			'parent_slug'	=> 'theme-options',
+			'icon_url'		=> 'dashicons-admin-generic',
 		));
 		
-		// Add Social Options section under the Theme Options tab
+		// Add Social Options section under the Global Options tab
 		acf_add_options_sub_page( array(
 			'page_title' 	=> __( 'Social Options', 'bymattlee' ),
 			'menu_title'	=> __( 'Social', 'bymattlee' ),
-			'parent_slug'	=> 'theme-options',
+			'parent_slug'	=> 'global-options',
+		));
+
+		// Add Code Options section under the Global Options tab
+		acf_add_options_sub_page( array(
+			'page_title' 	=> __( 'Code Options', 'bymattlee' ),
+			'menu_title'	=> __( 'Code', 'bymattlee' ),
+			'parent_slug'	=> 'global-options',
 		));
 
 	}
