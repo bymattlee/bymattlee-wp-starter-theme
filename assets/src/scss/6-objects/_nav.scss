@@ -7,10 +7,21 @@
 	$this: &;
 
 	&-menu {
-
+		margin: 0;
 	}
 
 	&-menu_list_item {
+		display: inline-block;
+		margin-left: to-vw(10, $mobile-ratio-width);
+
+		@include mq("medium") {
+			margin-left: to-vw(15, $desktop-ratio-width);
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+
 		&--current {
 			#{$this}-menu_item {
 				color: $white;
@@ -19,7 +30,7 @@
 	}
 
 	&-menu_item {
-
+		display: inline-block;
 	}
 
 	&-sub_menu {

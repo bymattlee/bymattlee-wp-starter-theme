@@ -12,7 +12,7 @@
 	<?php endif; ?>
 	
 	<?php if ( get_the_content() ) : ?>
-		<div class="c-rich_text_editor js-rich_text_editor">
+		<div class="o-rich_text_editor js-rich_text_editor">
 			<?php the_content(); ?>
 		</div>
 	<?php endif; ?>

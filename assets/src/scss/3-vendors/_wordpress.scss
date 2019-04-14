@@ -6,38 +6,43 @@
 /* ***** Wordpress Generated Class Styles
 ** ***** ----------------------------------------------- ***** */
 
-.alignnone {
-	margin: 3rem 0;
+.alignnone,
+a img.alignnone {
+	margin: to-vw(30, $mobile-ratio-width) 0;
+
+	@include mq("medium") {
+		margin: to-vw(35, $desktop-ratio-width) 0;
+	}
 }
 
 .aligncenter,
 div.aligncenter {
 	display: block;
-	margin: 3rem auto;
+	margin: to-vw(30, $mobile-ratio-width) auto;
+
+	@include mq("medium") {
+		margin: to-vw(35, $desktop-ratio-width) auto;
+	}
 }
 
-.alignright {
-	float: right;
-	margin: 3rem 0 3rem 3rem;
-}
-
-.alignleft {
-	float: left;
-	margin: 3rem 3rem 3rem 0;
-}
-
+.alignright,
 a img.alignright {
 	float: right;
-	margin: 3rem 0 3rem 3rem;
+	margin: to-vw(30, $mobile-ratio-width) 0 to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
+
+	@include mq("medium") {
+		margin: to-vw(35, $desktop-ratio-width) 0 to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width);
+	}
 }
 
-a img.alignnone {
-	margin: 3rem 0;
-}
-
+.alignleft,
 a img.alignleft {
 	float: left;
-	margin: 3rem 3rem 3rem 0;
+	margin: to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) 0;
+
+	@include mq("medium") {
+		margin: to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) 0;
+	}
 }
 
 a img.aligncenter {
@@ -47,8 +52,12 @@ a img.aligncenter {
 }
 
 .wp-caption {
-	margin-bottom: 1.5rem;
+	margin-bottom: to-vw(15, $mobile-ratio-width);
 	max-width: 100%;
+
+	@include mq("medium") {
+		margin-bottom: to-vw(20, $desktop-ratio-width);
+	}
 }
 
 .wp-caption img {
@@ -58,14 +67,22 @@ a img.aligncenter {
 }
 
 .wp-caption .wp-caption-text {
-	font-size: 1.2rem;
+	font-size: to-vw(12, $mobile-ratio-width);
 	font-style: italic;
 	margin: 1rem 0 0;
+
+	@include mq("medium") {
+		font-size: to-vw(14, $desktop-ratio-width);
+	}
 }
 
 .wp-smiley {
 	margin: 0 !important;
-	max-height: 1rem;
+	max-height: to-vw(10, $mobile-ratio-width);
+
+	@include mq("medium") {
+		max-height: to-vw(15, $desktop-ratio-width);
+	}
 }
 
 .gallery dl {
@@ -73,20 +90,24 @@ a img.aligncenter {
 }
 
 .gallery-caption {
-	margin: -1.5rem 0 0 0;
+	margin: to-vw(-15, $mobile-ratio-width) 0 0 0;
+
+	@include mq("medium") {
+		margin: to-vw(-20, $desktop-ratio-width) 0 0 0;
+	}
 }
 
 blockquote.left {
 	float: left;
 	margin-left: 0;
-	margin-right: 2rem;
+	margin-right: to-vw(20, $mobile-ratio-width);
 	text-align: right;
 	width: 33%;
 }
 
 blockquote.right {
 	float: right;
-	margin-left: 2rem;
+	margin-left: to-vw(20, $mobile-ratio-width);
 	margin-right: 0;
 	text-align: left;
 	width: 33%;

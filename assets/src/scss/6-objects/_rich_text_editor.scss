@@ -10,7 +10,11 @@
 	h4,
 	h5,
 	h6 {
-		margin-bottom: 1.5rem;
+		margin-bottom: to-vw(10, $mobile-ratio-width);
+
+		@include mq("medium") {
+			margin-bottom: to-vw(15, $desktop-ratio-width);
+		}
 
 		&:first-child {
 			margin-top: 0;
@@ -27,10 +31,10 @@
 	* + h4,
 	* + h5,
 	* + h6 {
-		margin-top: 4rem;
+		margin-top: to-vw(30, $mobile-ratio-width);
 
-		@include mq("small") {
-			margin-top: 6rem;
+		@include mq("medium") {
+			margin-top: to-vw(40, $desktop-ratio-width);
 		}
 	}
 
@@ -45,10 +49,10 @@
 	}
 
 	.o-embed {
-		margin: 3rem 0;
+		margin: to-vw(30, $mobile-ratio-width) 0;
 
 		@include mq("small") {
-			margin: 5rem 0;
+			margin: to-vw(50, $desktop-ratio-width) 0;
 		}
 	}
 }

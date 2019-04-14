@@ -8,8 +8,9 @@
 
 @import "1-tools/mixin-text";
 @import "2-settings/colors";
-@import "2-settings/transition";
+@import "2-settings/layout";
 @import "2-settings/typography";
+@import "2-settings/transition";
 
 
 /* ***** Base Styles
@@ -21,7 +22,7 @@
 
 body {
 	font-family: $font-family-body;
-	font-size: $font-size-normal--small-up;
+	font-size: 1.4rem;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	line-height: $line-height-normal;
@@ -79,27 +80,27 @@ h6 {
 }
 
 h1 {
-	font-size: $font-size-h1--small-up;
+	font-size: 3.6rem;
 }
 
 h2 {
-	font-size: $font-size-h2--small-up;
+	font-size: 3rem;
 }
 
 h3 {
-	font-size: $font-size-h3--small-up;
+	font-size: 2.4rem;
 }
 
 h4 {
-	font-size: $font-size-h4--small-up;
+	font-size: 1.8rem;
 }
 
 h5 {
-	font-size: $font-size-h5--small-up;
+	font-size: 1.4rem;
 }
 
 h6 {
-	font-size: $font-size-h6--small-up;
+	font-size: 1.2rem;
 }
 
 * + h1,
