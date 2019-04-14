@@ -7,7 +7,7 @@
 
 			<?php get_template_part( 'partials/news/single' ); ?>
 
-			<?php bml_the_post_pagination(); ?>
+			<?php get_template_part( 'partials/global/pagination-single' ); ?>
 
 		<?php endwhile; ?>
 

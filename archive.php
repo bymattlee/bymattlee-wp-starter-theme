@@ -2,7 +2,6 @@
 
 <div class="l-container">
 	<main class="l-main" role="main">
-
 		<header>
 			<h1><?php the_archive_title(); ?></h1>
 		</header>
@@ -15,7 +14,7 @@
 
 			<?php endwhile; ?>
 
-			<?php bml_the_archive_pagination(); ?>
+			<?php get_template_part( 'partials/global/pagination-archive' ); ?>
 
 		<?php else : ?>
 

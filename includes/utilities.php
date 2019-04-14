@@ -27,76 +27,8 @@
 		echo $markup;
 	}
 
-	// Archive pagination
-	function bml_the_archive_pagination() {
-
-		// If there is a next or previous page, display archive pagination block
-		if ( get_next_posts_link() || get_previous_posts_link() ) {
-
-			$markup  = '<div class="c-archive_pagination">';
-
-			if ( get_next_posts_link() ) {
-				$next_posts_page_link = get_next_posts_page_link();
-
-				$markup .= '<div>';
-				$markup .= '<a href="' . $next_posts_page_link . '" class="c-archive_pagination-item">' . __( 'Next Page &raquo;', 'bymattlee' ) . '</a>';
-				$markup .= '</div>';
-			}
-
-			if ( get_previous_posts_link() ) {
-				$previous_posts_page_link = get_previous_posts_page_link();
-
-				$markup .= '<div>';
-				$markup .= '<a href="' . $previous_posts_page_link . '" class="c-archive_pagination-item">' . __( '&laquo; Previous Page', 'bymattlee' ) . '</a>';
-				$markup .= '</div>';
-			}
-
-			$markup .= '</div>';
-
-			echo $markup;
-
-		}
-	}
-
-	// Post pagination
-	function bml_the_post_pagination() {
-
-		// If there is a next or previous post, display post pagination block
-		if ( get_previous_post() || get_next_post() ) {
-
-			$markup  = '<div>';
-
-			if ( get_previous_post() ) {
-				$previous_post = get_previous_post();
-
-				$markup .= '<div>';
-				$markup .= '<a href="' . get_permalink( $previous_post->ID ) . '">' . __( '&laquo; Previous Post', 'bymattlee' ) . '</a>';
-				$markup .= '</div>';
-			}
-
-			if ( get_next_post() ) {
-				$next_post = get_next_post();
-
-				$markup .= '<div>';
-				$markup .= '<a href="' . get_permalink( $next_post->ID ) . '">' . __( 'Next Post &raquo;', 'bymattlee' ) . '</a>';
-				$markup .= '</div>';
-			}
-
-			$markup .= '</div>';
-
-			echo $markup;
-
-		}
-
-	}
-
-	// Get page URL by page slug
-	function bml_get_page_url_by_slug( $slug ) {
-		return get_permalink( get_page_by_path( $slug ) );
-	}
-
 	// Print the image's srcset for lazyload
-	function bml_the_image_srcset( $image_id ) {
+	function bml_the_image_srcset( $image_id, $echo = true ) {
 
 		if ( !$image_id ) return;
 
@@ -109,13 +41,28 @@
 			$image_url = $image[0];
 			$image_width = $image[1];
 
-			$image_set[] =  $image_url . ' ' . ( $image_width - 200 ) . 'w' ;
+			$image_set[] =  $image_url . ' ' . ( $image_width - 300 ) . 'w' ;
 		}
 
 		$image_set = array_unique( $image_set );
 
-		echo implode( ', ', $image_set );
+		if ( $echo ) {
+			echo implode( ', ', $image_set );
+		} else {
+			return implode( ', ', $image_set );
+		}
+		
+	}
 
+	// Get page URL by page slug
+	function bml_get_page_url_by_slug( $slug ) {
+		return get_permalink( get_page_by_path( $slug ) );
+	}
+
+	// Get page ID by page path
+	function bml_get_page_id_by_path( $path ) {
+		$page = get_page_by_path( $path );
+		return $page->ID;
 	}
 
 ?>
