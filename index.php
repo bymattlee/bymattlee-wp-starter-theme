@@ -1,29 +1,31 @@
 <?php get_header(); ?>
 
-<main class="l-main" role="main">
+<div class="l-container">
+	<main class="l-main" role="main">
+		<header>
+			<h1>Latest Posts</h1>
+		</header>
 
-	<header>
-		<h1>Latest Posts</h1>
-	</header>
+		<?php if ( have_posts() ) : ?>
 
-	<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'partials/post/preview' ); ?>
 
-			<?php get_template_part( 'partials/post/preview' ); ?>
+			<?php endwhile; ?>
 
-		<?php endwhile; ?>
+			<?php bml_the_archive_pagination(); ?>
 
-		<?php bml_the_archive_pagination(); ?>
+		<?php else : ?>
 
-	<?php else : ?>
+			<?php get_template_part( 'partials/global/not_found' ); ?>
 
-		<?php get_template_part( 'partials/global/not_found' ); ?>
+		<?php endif; ?>
 
-	<?php endif; ?>
+	</main>
 
-</main>
+	<?php get_sidebar(); ?>
 
-<?php get_sidebar(); ?>
+</div>
 
 <?php get_footer(); ?>
