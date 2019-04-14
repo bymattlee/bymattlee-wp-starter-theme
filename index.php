@@ -10,7 +10,7 @@
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'partials/post/preview' ); ?>
+				<?php get_template_part( 'partials/news/preview' ); ?>
 
 			<?php endwhile; ?>
 
