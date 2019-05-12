@@ -2,7 +2,7 @@
 	<div class="c-single_pagination">
 
 		<?php if ( get_next_post() ) : ?>
-			<?php $get_next_post = get_previous_post(); ?>
+			<?php $previous_post = get_next_post(); ?>
 			<a href="<?php echo get_permalink( $previous_post->ID ); ?>" class="c-single_pagination-item"><?php _e( '&laquo; Previous Post', 'bymattlee' ); ?></a>
 		<?php endif; ?>
 
