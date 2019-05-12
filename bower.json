@@ -18,7 +18,7 @@
     "svgxuse": "^1.2.6",
     "sanitize-css": "^8.0.0",
     "gsap": "^2.1.2",
-    "lazysizes": "^4.1.7"
+    "lazysizes": "^4.1.8"
   },
   "overrides": {
     "lazysizes": {
