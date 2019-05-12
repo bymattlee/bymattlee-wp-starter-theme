@@ -54,8 +54,8 @@
 		
 	}
 
-	// Get page URL by page slug
-	function bml_get_page_url_by_slug( $slug ) {
+	// Get page URL by page path
+	function bml_get_page_url_by_path( $slug ) {
 		return get_permalink( get_page_by_path( $slug ) );
 	}
 
