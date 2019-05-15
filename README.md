@@ -68,6 +68,8 @@ $ gulp deploy --production
 * `main.scss` gets compiled to `assets/dist/css/main.min.css`
 * All vendor CSS are managed by Bower in `assets/src/vendors` and are compiled to `main.min.css`
 * `.stylelintrc` contains the settings for Stylelint
+* Info about class namespacing can be found in `src/assets/scss/main.scss`
+* Default unit of measurement is **vw**
 
 ##### Scripts
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
