@@ -147,7 +147,7 @@ blockquote.right {
 
 body {
 	&.login {
-		background: map-deep-get($colors, grey-dark--2, value);
+		background: get-color(grey-dark--2);
 		display: block;
 
 		&.interim-login {
@@ -179,12 +179,12 @@ body {
 		form {
 			background: transparent;
 			box-shadow: none;
-			color: map-deep-get($colors, grey-light--a, value);
+			color: get-color(grey-light--a);
 		}
 
 		.message,
 		#login_error {
-			background: map-deep-get($colors, grey-dark--3, value);
+			background: get-color(grey-dark--3);
 			box-shadow: none;
 		}
 
@@ -197,14 +197,14 @@ body {
 		}
 
 		label {
-			color: map-deep-get($colors, grey-light--a, value);
+			color: get-color(grey-light--a);
 		}
 
 		#nav a {
-			color: map-deep-get($colors, grey-dark--6, value);
+			color: get-color(grey-dark--6);
 
 			&:hover {
-				color: map-deep-get($colors, white, value);
+				color: get-color(white);
 
 			}
 		}
@@ -216,22 +216,22 @@ body {
 			.input,
 			input[type="checkbox"] {
 				background: transparent;
-				border: 0.1rem solid map-deep-get($colors, grey-dark--4, value);
+				border: 0.1rem solid get-color(grey-dark--4);
 				box-shadow: none;
-				color: map-deep-get($colors, grey-light--c, value);
+				color: get-color(grey-light--c);
 				padding: 0.1rem 1rem;
 			}
 
 			input[type="checkbox"] {
 				&:checked {
 					&::before {
-						color: map-deep-get($colors, grey-light--c, value);
+						color: get-color(grey-light--c);
 					}
 				}
 			}
 
 			input {
-				@include autofill(map-deep-get($colors, grey-dark--4, value), map-deep-get($colors, grey-light--c, value), map-deep-get($colors, grey-dark--2, value));
+				@include autofill(get-color(grey-dark--4), get-color(grey-light--c), get-color(grey-dark--2));
 			}
 		}
 
@@ -245,7 +245,7 @@ body {
 	.button,
 	.button-primary:active,
 	.button-primary:focus {
-		background: map-deep-get($colors, grey-dark--4, value);
+		background: get-color(grey-dark--4);
 		border: none;
 		border-radius: 0;
 		box-shadow: none;
@@ -253,7 +253,7 @@ body {
 		transition: background-color $transition-slow;
 
 		&:hover {
-			background: map-deep-get($colors, black, value);
+			background: get-color(black);
 		}
 	}
 
