@@ -147,7 +147,7 @@ blockquote.right {
 
 body {
 	&.login {
-		background: $grey-dark--2;
+		background: map-deep-get($colors, grey-dark--2, value);
 		display: block;
 
 		&.interim-login {
@@ -179,12 +179,12 @@ body {
 		form {
 			background: transparent;
 			box-shadow: none;
-			color: $grey-light--a;
+			color: map-deep-get($colors, grey-light--a, value);
 		}
 
 		.message,
 		#login_error {
-			background: $grey-dark--3;
+			background: map-deep-get($colors, grey-dark--3, value);
 			box-shadow: none;
 		}
 
@@ -197,14 +197,14 @@ body {
 		}
 
 		label {
-			color: $grey-light--a;
+			color: map-deep-get($colors, grey-light--a, value);
 		}
 
 		#nav a {
-			color: $grey-dark--6;
+			color: map-deep-get($colors, grey-dark--6, value);
 
 			&:hover {
-				color: $white;
+				color: map-deep-get($colors, white, value);
 
 			}
 		}
@@ -216,22 +216,22 @@ body {
 			.input,
 			input[type="checkbox"] {
 				background: transparent;
-				border: 0.1rem solid $grey-dark--4;
+				border: 0.1rem solid map-deep-get($colors, grey-dark--4, value);
 				box-shadow: none;
-				color: $grey-light--c;
+				color: map-deep-get($colors, grey-light--c, value);
 				padding: 0.1rem 1rem;
 			}
 
 			input[type="checkbox"] {
 				&:checked {
 					&::before {
-						color: $grey-light--c;
+						color: map-deep-get($colors, grey-light--c, value);
 					}
 				}
 			}
 
 			input {
-				@include autofill($grey-dark--4, $grey-light--c, $grey-dark--2);
+				@include autofill(map-deep-get($colors, grey-dark--4, value), map-deep-get($colors, grey-light--c, value), map-deep-get($colors, grey-dark--2, value));
 			}
 		}
 
@@ -245,7 +245,7 @@ body {
 	.button,
 	.button-primary:active,
 	.button-primary:focus {
-		background: $grey-dark--4;
+		background: map-deep-get($colors, grey-dark--4, value);
 		border: none;
 		border-radius: 0;
 		box-shadow: none;
@@ -253,7 +253,7 @@ body {
 		transition: background-color $transition-slow;
 
 		&:hover {
-			background: $black;
+			background: map-deep-get($colors, black, value);
 		}
 	}
 

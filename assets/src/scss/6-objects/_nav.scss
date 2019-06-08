@@ -24,7 +24,7 @@
 
 		&--current {
 			#{$this}-menu_item {
-				color: $white;
+				color: map-deep-get($colors, white, value);
 			}
 		}
 	}
