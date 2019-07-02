@@ -33,7 +33,7 @@
     "gulp-changed": "^4.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^5.0.0",
+    "gulp-eslint": "^6.0.0",
     "gulp-header": "^2.0.7",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^6.0.0",
