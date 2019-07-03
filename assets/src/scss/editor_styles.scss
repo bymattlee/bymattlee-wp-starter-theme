@@ -25,17 +25,17 @@ body {
 	font-size: 1.4rem;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	line-height: $line-height-normal;
+	line-height: map-deep-get($line-height, normal, class);
 }
 
 p {
-	line-height: $line-height-loose;
+	line-height: map-deep-get($line-height, loose, value);
 	margin: 2rem 0;
 }
 
 ul,
 ol {
-	line-height: $line-height-loose;
+	line-height: map-deep-get($line-height, loose, value);
 	margin: 2rem 0 2rem 3rem;
 	padding: 0;
 
@@ -113,14 +113,14 @@ h6 {
 }
 
 blockquote {
-	border-left: 0.4rem solid $grey-dark--4;
+	border-left: 0.4rem solid get-color(grey-dark--4);
 	margin: 3rem 2rem;
 	padding-left: 2rem;
 }
 
 hr {
 	border: 0;
-	border-top: 0.1rem solid $grey-light--c;
+	border-top: 0.1rem solid get-color(grey-light--c);
 	margin: 2rem 0;
 }
 
