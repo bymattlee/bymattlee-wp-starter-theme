@@ -8,8 +8,8 @@
 
 		// Add Global Options tab to WP Admin
 		acf_add_options_page( array(
-			'menu_title'	=> __( 'Global Options', 'famehouse' ),
-			'page_title'	=> __( 'Global Options', 'famehouse' ),
+			'menu_title'	=> __( 'Global Options', 'bymattlee' ),
+			'page_title'	=> __( 'Global Options', 'bymattlee' ),
 			'menu_slug'		=> 'global-options',
 			'position'		=> '31',
 			'capability'	=> 'edit_posts',
