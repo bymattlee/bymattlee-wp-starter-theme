@@ -145,6 +145,9 @@ blockquote.right {
 /* ***** Custom Login Page Styles
 ** ***** ----------------------------------------------- ***** */
 
+$logo-height: 10rem;
+$logo-width: 10rem;
+
 body {
 	&.login {
 		background: get-color(grey-dark--2);
@@ -153,7 +156,8 @@ body {
 		&.interim-login {
 			h1 {
 				a {
-					width: 10rem;
+					height: $logo-height;
+					width: $logo-width;
 				}
 			}
 		}
@@ -170,8 +174,8 @@ body {
 			a {
 				background-image: url("../images/logo-bymattlee-login.svg");
 				background-size: cover;
-				height: 10rem;
-				width: 10rem;
+				height: $logo-height;
+				width: $logo-width;
 			}
 		}
 
@@ -186,14 +190,16 @@ body {
 		#login_error {
 			background: get-color(grey-dark--3);
 			box-shadow: none;
+			font-size: 1.4rem;
+			line-height: 1.4;
 		}
 
 		.message {
-			// border-color: $white; // Update with neutral color that matches brand
+			// border-color: get-color(white); // Update with neutral color that matches brand
 		}
 
 		#login_error {
-			// border-color: $white; // Update with highlight color that matches brand
+			// border-color: get-color(white); // Update with highlight color that matches brand
 		}
 
 		label {
@@ -258,7 +264,9 @@ body {
 	}
 
 	.button.button-large {
+		font-size: 1.3rem;
 		height: auto;
+		line-height: 2.8rem;
 		padding: 0.4rem 1.5rem 0.4rem;
 	}
 }
