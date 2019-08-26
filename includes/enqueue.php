@@ -22,7 +22,7 @@
 
 		// Replace jQuery
 		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.3.1.min.js', '', '', true );
+		wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.4.1.min.js', '', null, true );
 
 		// Scripts
 		wp_enqueue_script( 'script_vendors', $vendors_uri, false, filemtime( $vendors_path ), true );
