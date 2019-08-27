@@ -39,7 +39,7 @@
 
 			$image = wp_get_attachment_image_src( $image_id, $image_label );
 			$image_url = $image[0];
-			$image_width = $image[1];
+			$image_width = $image[1] <= 300 ? 301 : $image[1];
 
 			$image_set[] =  $image_url . ' ' . ( $image_width - 300 ) . 'w' ;
 		}

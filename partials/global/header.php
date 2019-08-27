@@ -2,7 +2,7 @@
 	<div class="l-container">
 		<h1>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<?php bml_the_svg( 'icon-bymattlee', '0 0 50 50', 'c-header-logo_svg' ); ?>
+				<?php bml_the_svg( 'icon-bymattlee', '0 0 50 50', 'c-header-logo_svg u-block' ); ?>
 				<?php bloginfo(); ?>
 			</a>
 		</h1>
