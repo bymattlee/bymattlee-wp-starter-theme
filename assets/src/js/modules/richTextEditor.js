@@ -25,9 +25,7 @@
 
 		return {
 			init: function() {
-				var $richTextEditorIframe = $('.js-rich_text_editor iframe');
-
-				$richTextEditorIframe.each(responsiveVideoWrap);
+				$('.js-rich_text_editor iframe').each(responsiveVideoWrap);
 			}
 		};
 		
