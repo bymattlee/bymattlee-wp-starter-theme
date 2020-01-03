@@ -17,7 +17,6 @@ module.exports = {
 		'**',
 		'**              {{ @bymattlee }}',
 		'**              {{ bymattlee.com }}',
-		'**              {{ creative_developer }}',
 		'**',
 		'**',
 		'**',
