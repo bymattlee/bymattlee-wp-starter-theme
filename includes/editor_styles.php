@@ -6,7 +6,7 @@
 
   // Include custom editor stylesheet
   function bml_custom_editor_stylesheet() {
-    add_editor_style( get_stylesheet_directory_uri() . '/assets/dist/css/editor_styles.min.css' );
+    add_editor_style( get_stylesheet_directory_uri() . '/assets/dist/css/editorStyles.min.css' );
   }
   add_action( 'admin_init', 'bml_custom_editor_stylesheet' );
 
@@ -36,6 +36,6 @@
     return $init_array;  
 
   } 
-  //add_filter( 'tiny_mce_before_init', 'bml_custom_editor_styles' );
+  // add_filter( 'tiny_mce_before_init', 'bml_custom_editor_styles' );
 
 ?>

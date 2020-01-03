@@ -114,7 +114,7 @@ gulp.task('styles:editor', function () {
         inline: ['all'],
         rebase: false
       }))
-      .pipe(concat('editor_styles.css'))
+      .pipe(concat('editorStyles.css'))
       .pipe(rename({
         suffix: '.min'
       }))

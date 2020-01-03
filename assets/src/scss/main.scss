@@ -52,7 +52,7 @@
 @import "2-settings/layout";
 @import "2-settings/typography";
 @import "2-settings/transition";
-@import "2-settings/z-index";
+@import "2-settings/zIndex";
 
 
 /* ***** Vendors
@@ -89,7 +89,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 @import "6-objects/nav";
-@import "6-objects/rich_text_editor";
+@import "6-objects/richTextEditor";
 @import "6-objects/button";
 @import "6-objects/embed";
 
@@ -99,8 +99,8 @@
 
 @import "7-components/header";
 @import "7-components/footer";
-@import "7-components/archive_pagination";
-@import "7-components/site_alert";
+@import "7-components/archivePagination";
+@import "7-components/siteAlert";
 
 
 /* ***** Utilities
@@ -123,7 +123,7 @@
 @import "8-utilities/position";
 @import "8-utilities/text";
 @import "8-utilities/width";
-@import "8-utilities/zindex";
+@import "8-utilities/zIndex";
 
 
 /* ***** Misc

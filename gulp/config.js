@@ -27,9 +27,9 @@ module.exports = {
   styles: {
     mainSrc: [
       src + '/scss/**/*.scss',
-      '!' + src + '/scss/editor_styles.scss'
+      '!' + src + '/scss/editorStyles.scss'
     ],
-    editorSrc:  src + '/scss/editor_styles.scss',
+    editorSrc:  src + '/scss/editorStyles.scss',
     dest: dest + '/css'
   },
   scripts: {
