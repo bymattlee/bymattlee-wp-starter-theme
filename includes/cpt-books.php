@@ -61,7 +61,7 @@
 			'update_item'			=> __( 'Update Genre', 'bymattlee' ),
 			'add_new_item'			=> __( 'Add New Genre', 'bymattlee' ),
 			'new_item_name'			=> __( 'New Genre Name', 'bymattlee' ),
-			'menu_name'				=> __( 'Genre', 'bymattlee' ),
+			'menu_name'				=> __( 'Genres', 'bymattlee' ),
 		);
 
 		$args = array(
