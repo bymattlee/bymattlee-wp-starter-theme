@@ -216,6 +216,7 @@ body {
 		}
 
 		form {
+			border: none;
 			margin-top: 2rem;
 			padding: 0;
 
@@ -223,6 +224,7 @@ body {
 			input[type="checkbox"] {
 				background: transparent;
 				border: 0.1rem solid get-color(grey-dark--4);
+				border-radius: 0;
 				box-shadow: none;
 				color: get-color(grey-light--c);
 				padding: 0.1rem 1rem;
