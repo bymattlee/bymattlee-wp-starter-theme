@@ -1,30 +1,30 @@
 <?php get_header(); ?>
 
 <div class="l-container">
-	<main class="l-main" role="main">
-		<header>
-			<h1>Latest Posts</h1>
-		</header>
+  <main class="l-main" role="main">
+    <header>
+      <h1>Latest Posts</h1>
+    </header>
 
-		<?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'partials/news/preview' ); ?>
+        <?php get_template_part( 'partials/news/preview' ); ?>
 
-			<?php endwhile; ?>
+      <?php endwhile; ?>
 
-			<?php get_template_part( 'partials/global/pagination-archive' ); ?>
+      <?php get_template_part( 'partials/global/pagination-archive' ); ?>
 
-		<?php else : ?>
+    <?php else : ?>
 
-			<?php get_template_part( 'partials/global/not_found' ); ?>
+      <?php get_template_part( 'partials/global/not_found' ); ?>
 
-		<?php endif; ?>
+    <?php endif; ?>
 
-	</main>
+  </main>
 
-	<?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
 </div>
 

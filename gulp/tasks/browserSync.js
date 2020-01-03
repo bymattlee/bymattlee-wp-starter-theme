@@ -4,8 +4,8 @@
 
 // Require all development dependencies
 var browserSync = require('browser-sync'),
-	config = require('../config'),
-	gulp = require('gulp');
+  config = require('../config'),
+  gulp = require('gulp');
 
 /*
 ** -- Initialize BrowserSync
@@ -14,8 +14,8 @@ var browserSync = require('browser-sync'),
 */
 gulp.task('browserSync', function() {
 
-    browserSync.init(config.browserSync.files, {
-        proxy: config.browserSync.proxy
-    });
+  browserSync.init(config.browserSync.files, {
+    proxy: config.browserSync.proxy
+  });
 
 });

@@ -4,55 +4,55 @@
 
 
 .o-rich_text_editor {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		margin-bottom: to-vw(10, $mobile-ratio-width);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: to-vw(10, $mobile-ratio-width);
 
-		@include mq("medium") {
-			margin-bottom: to-vw(15, $desktop-ratio-width);
-		}
+    @include mq("medium") {
+      margin-bottom: to-vw(15, $desktop-ratio-width);
+    }
 
-		&:first-child {
-			margin-top: 0;
-		}
+    &:first-child {
+      margin-top: 0;
+    }
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-	* + h1,
-	* + h2,
-	* + h3,
-	* + h4,
-	* + h5,
-	* + h6 {
-		margin-top: to-vw(30, $mobile-ratio-width);
+  * + h1,
+  * + h2,
+  * + h3,
+  * + h4,
+  * + h5,
+  * + h6 {
+    margin-top: to-vw(30, $mobile-ratio-width);
 
-		@include mq("medium") {
-			margin-top: to-vw(40, $desktop-ratio-width);
-		}
-	}
+    @include mq("medium") {
+      margin-top: to-vw(40, $desktop-ratio-width);
+    }
+  }
 
-	p {
-		&:first-child {
-			margin-top: 0;
-		}
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
 
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-	.o-embed {
-		margin: to-vw(30, $mobile-ratio-width) 0;
+  .o-embed {
+    margin: to-vw(30, $mobile-ratio-width) 0;
 
-		@include mq("small") {
-			margin: to-vw(50, $desktop-ratio-width) 0;
-		}
-	}
+    @include mq("small") {
+      margin: to-vw(50, $desktop-ratio-width) 0;
+    }
+  }
 }

@@ -8,137 +8,137 @@
 
 .alignnone,
 a img.alignnone {
-	margin: to-vw(30, $mobile-ratio-width) 0;
+  margin: to-vw(30, $mobile-ratio-width) 0;
 
-	@include mq("medium") {
-		margin: to-vw(35, $desktop-ratio-width) 0;
-	}
+  @include mq("medium") {
+    margin: to-vw(35, $desktop-ratio-width) 0;
+  }
 }
 
 .aligncenter,
 div.aligncenter {
-	display: block;
-	margin: to-vw(30, $mobile-ratio-width) auto;
+  display: block;
+  margin: to-vw(30, $mobile-ratio-width) auto;
 
-	@include mq("medium") {
-		margin: to-vw(35, $desktop-ratio-width) auto;
-	}
+  @include mq("medium") {
+    margin: to-vw(35, $desktop-ratio-width) auto;
+  }
 }
 
 .alignright,
 a img.alignright {
-	float: right;
-	margin: to-vw(30, $mobile-ratio-width) 0 to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
+  float: right;
+  margin: to-vw(30, $mobile-ratio-width) 0 to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
 
-	@include mq("medium") {
-		margin: to-vw(35, $desktop-ratio-width) 0 to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width);
-	}
+  @include mq("medium") {
+    margin: to-vw(35, $desktop-ratio-width) 0 to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width);
+  }
 }
 
 .alignleft,
 a img.alignleft {
-	float: left;
-	margin: to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) 0;
+  float: left;
+  margin: to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) 0;
 
-	@include mq("medium") {
-		margin: to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) 0;
-	}
+  @include mq("medium") {
+    margin: to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) 0;
+  }
 }
 
 a img.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wp-caption {
-	margin-bottom: to-vw(15, $mobile-ratio-width);
-	max-width: 100%;
+  margin-bottom: to-vw(15, $mobile-ratio-width);
+  max-width: 100%;
 
-	@include mq("medium") {
-		margin-bottom: to-vw(20, $desktop-ratio-width);
-	}
+  @include mq("medium") {
+    margin-bottom: to-vw(20, $desktop-ratio-width);
+  }
 }
 
 .wp-caption img {
-	border: 0 none;
-	margin: 0;
-	padding: 0;
+  border: 0 none;
+  margin: 0;
+  padding: 0;
 }
 
 .wp-caption .wp-caption-text {
-	font-size: to-vw(12, $mobile-ratio-width);
-	font-style: italic;
-	margin: 1rem 0 0;
+  font-size: to-vw(12, $mobile-ratio-width);
+  font-style: italic;
+  margin: 1rem 0 0;
 
-	@include mq("medium") {
-		font-size: to-vw(14, $desktop-ratio-width);
-	}
+  @include mq("medium") {
+    font-size: to-vw(14, $desktop-ratio-width);
+  }
 }
 
 .wp-smiley {
-	margin: 0 !important;
-	max-height: to-vw(10, $mobile-ratio-width);
+  margin: 0 !important;
+  max-height: to-vw(10, $mobile-ratio-width);
 
-	@include mq("medium") {
-		max-height: to-vw(15, $desktop-ratio-width);
-	}
+  @include mq("medium") {
+    max-height: to-vw(15, $desktop-ratio-width);
+  }
 }
 
 .gallery dl {
-	margin: 0;
+  margin: 0;
 }
 
 .gallery-caption {
-	margin: to-vw(-15, $mobile-ratio-width) 0 0 0;
+  margin: to-vw(-15, $mobile-ratio-width) 0 0 0;
 
-	@include mq("medium") {
-		margin: to-vw(-20, $desktop-ratio-width) 0 0 0;
-	}
+  @include mq("medium") {
+    margin: to-vw(-20, $desktop-ratio-width) 0 0 0;
+  }
 }
 
 blockquote.left {
-	float: left;
-	margin-left: 0;
-	margin-right: to-vw(20, $mobile-ratio-width);
-	text-align: right;
-	width: 33%;
+  float: left;
+  margin-left: 0;
+  margin-right: to-vw(20, $mobile-ratio-width);
+  text-align: right;
+  width: 33%;
 }
 
 blockquote.right {
-	float: right;
-	margin-left: to-vw(20, $mobile-ratio-width);
-	margin-right: 0;
-	text-align: left;
-	width: 33%;
+  float: right;
+  margin-left: to-vw(20, $mobile-ratio-width);
+  margin-right: 0;
+  text-align: left;
+  width: 33%;
 }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
-	height: 0.1rem;
-	overflow: hidden;
-	position: absolute !important;
-	width: 0.1rem;
+  clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+  height: 0.1rem;
+  overflow: hidden;
+  position: absolute !important;
+  width: 0.1rem;
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 0.3rem;
-	box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 1.4rem;
-	font-weight: 700;
-	height: auto;
-	left: 0.5rem;
-	line-height: normal;
-	padding: 1.5rem 2.3rem 1.4rem;
-	text-decoration: none;
-	top: 0.5rem;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+  background-color: #f1f1f1;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  height: auto;
+  left: 0.5rem;
+  line-height: normal;
+  padding: 1.5rem 2.3rem 1.4rem;
+  text-decoration: none;
+  top: 0.5rem;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
 }
 
 
@@ -149,126 +149,126 @@ $logo-height: 10rem;
 $logo-width: 10rem;
 
 body {
-	&.login {
-		background: get-color(grey-dark--2);
-		display: block;
+  &.login {
+    background: get-color(grey-dark--2);
+    display: block;
 
-		&.interim-login {
-			h1 {
-				a {
-					height: $logo-height;
-					width: $logo-width;
-				}
-			}
-		}
+    &.interim-login {
+      h1 {
+        a {
+          height: $logo-height;
+          width: $logo-width;
+        }
+      }
+    }
 
-		#login {
-			max-width: 36rem;
-			padding: 10vh 2rem 0;
-			width: auto;
-		}
+    #login {
+      max-width: 36rem;
+      padding: 10vh 2rem 0;
+      width: auto;
+    }
 
-		h1 {
-			margin-bottom: 4rem;
+    h1 {
+      margin-bottom: 4rem;
 
-			a {
-				background-image: url("../images/logo-bymattlee-login.svg");
-				background-size: cover;
-				height: $logo-height;
-				width: $logo-width;
-			}
-		}
+      a {
+        background-image: url("../images/logo-bymattlee-login.svg");
+        background-size: cover;
+        height: $logo-height;
+        width: $logo-width;
+      }
+    }
 
-		.message,
-		form {
-			background: transparent;
-			box-shadow: none;
-			color: get-color(grey-light--a);
-		}
+    .message,
+    form {
+      background: transparent;
+      box-shadow: none;
+      color: get-color(grey-light--a);
+    }
 
-		.message,
-		#login_error {
-			background: get-color(grey-dark--3);
-			box-shadow: none;
-			font-size: 1.4rem;
-			line-height: 1.4;
-		}
+    .message,
+    #login_error {
+      background: get-color(grey-dark--3);
+      box-shadow: none;
+      font-size: 1.4rem;
+      line-height: 1.4;
+    }
 
-		.message {
-			// border-color: get-color(white); // Update with neutral color that matches brand
-		}
+    .message {
+      // border-color: get-color(white); // Update with neutral color that matches brand
+    }
 
-		#login_error {
-			// border-color: get-color(white); // Update with highlight color that matches brand
-		}
+    #login_error {
+      // border-color: get-color(white); // Update with highlight color that matches brand
+    }
 
-		label {
-			color: get-color(grey-light--a);
-		}
+    label {
+      color: get-color(grey-light--a);
+    }
 
-		#nav a {
-			color: get-color(grey-dark--6);
+    #nav a {
+      color: get-color(grey-dark--6);
 
-			&:hover {
-				color: get-color(white);
+      &:hover {
+        color: get-color(white);
 
-			}
-		}
+      }
+    }
 
-		form {
-			border: none;
-			margin-top: 2rem;
-			padding: 0;
+    form {
+      border: none;
+      margin-top: 2rem;
+      padding: 0;
 
-			.input,
-			input[type="checkbox"] {
-				background: transparent;
-				border: 0.1rem solid get-color(grey-dark--4);
-				border-radius: 0;
-				box-shadow: none;
-				color: get-color(grey-light--c);
-				padding: 0.1rem 1rem;
-			}
+      .input,
+      input[type="checkbox"] {
+        background: transparent;
+        border: 0.1rem solid get-color(grey-dark--4);
+        border-radius: 0;
+        box-shadow: none;
+        color: get-color(grey-light--c);
+        padding: 0.1rem 1rem;
+      }
 
-			input[type="checkbox"] {
-				&:checked {
-					&::before {
-						color: get-color(grey-light--c);
-					}
-				}
-			}
+      input[type="checkbox"] {
+        &:checked {
+          &::before {
+            color: get-color(grey-light--c);
+          }
+        }
+      }
 
-			input {
-				@include autofill(get-color(grey-dark--4), get-color(grey-light--c), get-color(grey-dark--2));
-			}
-		}
+      input {
+        @include autofill(get-color(grey-dark--4), get-color(grey-light--c), get-color(grey-dark--2));
+      }
+    }
 
-		#backtoblog {
-			display: none;
-		}
-	}
+    #backtoblog {
+      display: none;
+    }
+  }
 }
 
 .wp-core-ui {
-	.button,
-	.button-primary:active,
-	.button-primary:focus {
-		background: get-color(grey-dark--4);
-		border: none;
-		border-radius: 0;
-		box-shadow: none;
-		text-shadow: none;
-		transition: background-color $transition-slow;
+  .button,
+  .button-primary:active,
+  .button-primary:focus {
+    background: get-color(grey-dark--4);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    transition: background-color $transition-slow;
 
-		&:hover {
-			background: get-color(black);
-		}
-	}
+    &:hover {
+      background: get-color(black);
+    }
+  }
 
-	.button.button-large {
-		font-size: 1.3rem;
-		height: auto;
-		line-height: 2.8rem;
-		padding: 0.4rem 1.5rem 0.4rem;
-	}
+  .button.button-large {
+    font-size: 1.3rem;
+    height: auto;
+    line-height: 2.8rem;
+    padding: 0.4rem 1.5rem 0.4rem;
+  }
 }

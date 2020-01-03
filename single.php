@@ -1,19 +1,19 @@
 <?php get_header(); ?>
 
 <div class="l-container">
-	<main class="l-main" role="main">
+  <main class="l-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'partials/news/single' ); ?>
+      <?php get_template_part( 'partials/news/single' ); ?>
 
-			<?php get_template_part( 'partials/global/pagination-single' ); ?>
+      <?php get_template_part( 'partials/global/pagination-single' ); ?>
 
-		<?php endwhile; ?>
+    <?php endwhile; ?>
 
-	</main>
+  </main>
 
-	<?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
 </div>
 

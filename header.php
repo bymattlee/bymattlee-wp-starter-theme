@@ -1,7 +1,7 @@
 <?php 
 
-	$google_analytics_tracking_id = get_field( 'google_analytics_tracking_id', 'option' );
-	$head_tags = get_field( 'head_tags', 'option' );
+  $google_analytics_tracking_id = get_field( 'google_analytics_tracking_id', 'option' );
+  $head_tags = get_field( 'head_tags', 'option' );
 
 ?>
 <!DOCTYPE html>
@@ -25,13 +25,13 @@
 <?php wp_head(); ?>
 
 <?php if ( $google_analytics_tracking_id ) : ?>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_tracking_id; ?>"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', '<?php echo $google_analytics_tracking_id; ?>');
-	</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_tracking_id; ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<?php echo $google_analytics_tracking_id; ?>');
+  </script>
 <?php endif; ?>
 
 <?php echo $head_tags ? $head_tags : ''; ?>
@@ -40,8 +40,8 @@
 
 <body <?php body_class( 'js-body' ); ?>>
 
-	<?php get_template_part( 'partials/global/header' ); ?>
+  <?php get_template_part( 'partials/global/header' ); ?>
 
-	<br><hr><br>
+  <br><hr><br>
 
-	<section class="l-content u-clearfix">
+  <section class="l-content u-clearfix">

@@ -18,54 +18,54 @@
 ** ***** ----------------------------------------------- ***** */
 
 :root {
-	font-size: $font-size-base;
+  font-size: $font-size-base;
 }
 
 body {
-	font-family: $font-family-body;
-	font-size: 1.4rem;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	line-height: map-deep-get($line-height, normal, class);
+  font-family: $font-family-body;
+  font-size: 1.4rem;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: map-deep-get($line-height, normal, class);
 }
 
 p {
-	line-height: map-deep-get($line-height, loose, value);
-	margin: 2rem 0;
+  line-height: map-deep-get($line-height, loose, value);
+  margin: 2rem 0;
 }
 
 ul,
 ol {
-	line-height: map-deep-get($line-height, loose, value);
-	margin: 2rem 0 2rem 3rem;
-	padding: 0;
+  line-height: map-deep-get($line-height, loose, value);
+  margin: 2rem 0 2rem 3rem;
+  padding: 0;
 
-	&.u-unstyled {
-		list-style: none;
-		margin-left: 0;
-	}
+  &.u-unstyled {
+    list-style: none;
+    margin-left: 0;
+  }
 
-	li {
-		margin: 1rem 0;
-	}
+  li {
+    margin: 1rem 0;
+  }
 }
 
 a {
-	color: $link-text-color;
-	text-decoration: none;
-	transition: color $transition-slow;
+  color: $link-text-color;
+  text-decoration: none;
+  transition: color $transition-slow;
 
-	&:hover {
-		@media (hover: hover) {
-			color: $link-hover-text-color;
-		}
-	}
+  &:hover {
+    @media (hover: hover) {
+      color: $link-hover-text-color;
+    }
+  }
 
-	&:active {
-		@media (hover: hover) {
-			color: $link-active-text-color;
-		}
-	}
+  &:active {
+    @media (hover: hover) {
+      color: $link-active-text-color;
+    }
+  }
 }
 
 h1,
@@ -74,34 +74,34 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-family-heading;
-	margin: 0;
-	padding: 0;
-	text-rendering: optimizeLegibility;
+  font-family: $font-family-heading;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
 }
 
 h1 {
-	font-size: 3.6rem;
+  font-size: 3.6rem;
 }
 
 h2 {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 h3 {
-	font-size: 2.4rem;
+  font-size: 2.4rem;
 }
 
 h4 {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h5 {
-	font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 h6 {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 * + h1,
@@ -110,19 +110,19 @@ h6 {
 * + h4,
 * + h5,
 * + h6 {
-	margin-top: 6rem;
+  margin-top: 6rem;
 }
 
 blockquote {
-	border-left: 0.4rem solid get-color(grey-dark--4);
-	margin: 3rem 2rem;
-	padding-left: 2rem;
+  border-left: 0.4rem solid get-color(grey-dark--4);
+  margin: 3rem 2rem;
+  padding-left: 2rem;
 }
 
 hr {
-	border: 0;
-	border-top: 0.1rem solid get-color(grey-light--c);
-	margin: 2rem 0;
+  border: 0;
+  border-top: 0.1rem solid get-color(grey-light--c);
+  margin: 2rem 0;
 }
 
 

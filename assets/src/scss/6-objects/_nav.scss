@@ -4,36 +4,36 @@
 
 
 .o-nav {
-	$this: &;
+  $this: &;
 
-	&-menu {
-		margin: 0;
-	}
+  &-menu {
+    margin: 0;
+  }
 
-	&-menu_list_item {
-		display: inline-block;
-		margin-left: to-vw(10, $mobile-ratio-width);
+  &-menu_list_item {
+    display: inline-block;
+    margin-left: to-vw(10, $mobile-ratio-width);
 
-		@include mq("medium") {
-			margin-left: to-vw(15, $desktop-ratio-width);
-		}
+    @include mq("medium") {
+      margin-left: to-vw(15, $desktop-ratio-width);
+    }
 
-		&:first-child {
-			margin-left: 0;
-		}
+    &:first-child {
+      margin-left: 0;
+    }
 
-		&--current {
-			#{$this}-menu_item {
-				color: get-color(white);
-			}
-		}
-	}
+    &--current {
+      #{$this}-menu_item {
+        color: get-color(white);
+      }
+    }
+  }
 
-	&-menu_item {
-		display: inline-block;
-	}
+  &-menu_item {
+    display: inline-block;
+  }
 
-	&-sub_menu {
+  &-sub_menu {
 
-	}
+  }
 }

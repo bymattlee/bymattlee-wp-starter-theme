@@ -1,14 +1,14 @@
 <?php $footer_tags = get_field( 'footer_tags', 'option' ); ?>
 
-	</section>
+  </section>
 
-	<br><hr><br>
+  <br><hr><br>
 
-	<?php get_template_part( 'partials/global/footer' ); ?>
+  <?php get_template_part( 'partials/global/footer' ); ?>
 
-	<?php wp_footer(); ?>
+  <?php wp_footer(); ?>
 
-	<?php echo $footer_tags ? $footer_tags : ''; ?>
-	
+  <?php echo $footer_tags ? $footer_tags : ''; ?>
+  
 </body>
 </html>

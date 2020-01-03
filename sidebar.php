@@ -3,7 +3,7 @@
 <br><hr><br>
 
 <aside role="complementary">
-	<?php dynamic_sidebar( 'default_sidebar' ); ?>
+  <?php dynamic_sidebar( 'default_sidebar' ); ?>
 </aside>
 
 <?php endif; ?>

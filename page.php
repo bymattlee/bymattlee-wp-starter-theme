@@ -1,17 +1,17 @@
 <?php get_header(); ?>
 
 <div class="l-container">
-	<main class="l-main" role="main">
+  <main class="l-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'partials/page/default' ); ?>
+      <?php get_template_part( 'partials/page/default' ); ?>
 
-		<?php endwhile; ?>
+    <?php endwhile; ?>
 
-	</main>
+  </main>
 
-	<?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
 </div>
 
