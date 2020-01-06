@@ -44,4 +44,4 @@
 
   <br><hr><br>
 
-  <section class="l-content u-clearfix">
+  <section class="u-flex1">

@@ -1,4 +1,4 @@
-<header class="c-header" role="banner">
+<header class="c-header u-mb30 u-mb30-md" role="banner">
   <div class="l-container">
     <h1>
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">

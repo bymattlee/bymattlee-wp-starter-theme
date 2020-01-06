@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="l-container">
-  <main class="l-main" role="main">
+  <main role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
 

@@ -6,37 +6,37 @@
 /* ***** Imports
 ** ***** ----------------------------------------------- ***** */
 
-@import "1-tools/functions";
-@import "1-tools/mixin-text";
-@import "2-settings/colors";
-@import "2-settings/layout";
-@import "2-settings/typography";
-@import "2-settings/transition";
+@import '1-tools/functions';
+@import '1-tools/mixin-text';
+@import '2-settings/colors';
+@import '2-settings/layout';
+@import '2-settings/text';
+@import '2-settings/transition';
 
 
 /* ***** Base Styles
 ** ***** ----------------------------------------------- ***** */
 
 :root {
-  font-size: $font-size-base;
+  font-size: $fontSizeBase;
 }
 
 body {
-  font-family: $font-family-body;
+  font-family: get-font-family('body');
   font-size: 1.4rem;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: map-deep-get($line-height, normal, class);
+  line-height: map-get($lineHeight, 'normal');
 }
 
 p {
-  line-height: map-deep-get($line-height, loose, value);
+  line-height: map-get($lineHeight, loose);
   margin: 2rem 0;
 }
 
 ul,
 ol {
-  line-height: map-deep-get($line-height, loose, value);
+  line-height: map-get($lineHeight, loose);
   margin: 2rem 0 2rem 3rem;
   padding: 0;
 
@@ -51,19 +51,19 @@ ol {
 }
 
 a {
-  color: $link-text-color;
+  color: $linkColor;
   text-decoration: none;
-  transition: color $transition-slow;
+  transition: color $transitionSlow;
 
   &:hover {
     @media (hover: hover) {
-      color: $link-hover-text-color;
+      color: $linkHoverColor;
     }
   }
 
   &:active {
     @media (hover: hover) {
-      color: $link-active-text-color;
+      color: $linkActiveColor;
     }
   }
 }
@@ -74,7 +74,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-heading;
+  font-family: get-font-family('heading');
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -114,14 +114,14 @@ h6 {
 }
 
 blockquote {
-  border-left: 0.4rem solid get-color(grey-dark--4);
+  border-left: 0.4rem solid get-color('greyDark4');
   margin: 3rem 2rem;
   padding-left: 2rem;
 }
 
 hr {
   border: 0;
-  border-top: 0.1rem solid get-color(grey-light--c);
+  border-top: 0.1rem solid get-color('greyLightC');
   margin: 2rem 0;
 }
 

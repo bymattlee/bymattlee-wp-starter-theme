@@ -3,17 +3,16 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.o-rich_text_editor {
+.o-richTextEditor {
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-bottom: to-vw(10, $mobile-ratio-width);
-
-    @include mq("medium") {
-      margin-bottom: to-vw(15, $desktop-ratio-width);
+    margin-bottom: get-size(10);
+    @include mq('md') {
+      margin-bottom: get-size(15, tue);
     }
 
     &:first-child {
@@ -31,10 +30,9 @@
   * + h4,
   * + h5,
   * + h6 {
-    margin-top: to-vw(30, $mobile-ratio-width);
-
-    @include mq("medium") {
-      margin-top: to-vw(40, $desktop-ratio-width);
+    margin-top: get-size(30);
+    @include mq('md') {
+      margin-top: get-size(40, true);
     }
   }
 
@@ -49,10 +47,9 @@
   }
 
   .o-embed {
-    margin: to-vw(30, $mobile-ratio-width) 0;
-
-    @include mq("small") {
-      margin: to-vw(50, $desktop-ratio-width) 0;
+    margin: get-size(30) 0;
+    @include mq('sm') {
+      margin: get-size(50, true) 0;
     }
   }
 }

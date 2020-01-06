@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="l-container">
-  <main class="l-main" role="main">
+  <main role="main">
     <header>
       <h1>Latest Posts</h1>
     </header>

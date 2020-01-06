@@ -10,12 +10,11 @@
     margin: 0;
   }
 
-  &-menu_list_item {
+  &-menuListItem {
     display: inline-block;
-    margin-left: to-vw(10, $mobile-ratio-width);
-
-    @include mq("medium") {
-      margin-left: to-vw(15, $desktop-ratio-width);
+    margin-left: get-size(10);
+    @include mq('md') {
+      margin-left: get-size(15, true);
     }
 
     &:first-child {
@@ -23,17 +22,17 @@
     }
 
     &--current {
-      #{$this}-menu_item {
-        color: get-color(white);
+      #{$this}-menuItem {
+        color: get-color('white');
       }
     }
   }
 
-  &-menu_item {
+  &-menuItem {
     display: inline-block;
   }
 
-  &-sub_menu {
+  &-subMenu {
 
   }
 }

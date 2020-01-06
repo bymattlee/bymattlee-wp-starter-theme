@@ -1,10 +1,9 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Components/Archive Pagination Styles
+** ***** Utilities/Visibility
 ** ***** ----------------------------------------------- ***** */
 
 
-.c-archivePagination {
-  &-item {
-
-  }
-}
+$visibilityUtilities: (
+  'visible': ( visibility: visible ),
+  'invisible': ( visibility: hidden )
+);

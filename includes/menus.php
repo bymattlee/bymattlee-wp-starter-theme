@@ -18,7 +18,7 @@
     // Rename sub menu class name
     function start_lvl( &$output, $depth = 0, $args = array() ) {
       $indent = str_repeat("\t", $depth);
-      $output .= "\n$indent<ul class=\"o-nav-sub_menu\">";
+      $output .= "\n$indent<ul class=\"o-nav-subMenu\">";
     }
 
     // Add main/sub classes to li's and links
@@ -33,7 +33,7 @@
       $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
       // Define new array of classes with new naming structure
-      $list_classes = array( 'o-nav-menu_list_item', 'js-nav-menu_list_item' );
+      $list_classes = array( 'o-nav-menuListItem', 'js-nav-menuListItem' );
 
       // If custom classes are used, add to the list tag class array
       if ( $classes[0] != '' ) $list_classes[] = $classes[0];
@@ -43,11 +43,11 @@
       if ( in_array( 'current-menu-item', $classes ) 
         || in_array( 'current-menu-ancestor', $classes )
         || in_array( 'current-page-ancestor', $classes ) ) {
-        $list_classes[] = 'o-nav-menu_list_item--current';
+        $list_classes[] = 'o-nav-menuListItem--current';
       }
 
       // If class array contains 'menu-item-has-children', rename to 'has_submenu' and add to the list tag class array
-      if ( in_array( 'menu-item-has-children', $classes ) ) $list_classes[] = 'o-nav-menu_list_item--has_submenu';
+      if ( in_array( 'menu-item-has-children', $classes ) ) $list_classes[] = 'o-nav-menuListItem--hasSubmenu';
 
       $list_classes = esc_attr( implode( ' ', $list_classes ) );
 
@@ -60,7 +60,7 @@
       $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
       $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
       $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-      $attributes .= ' class="o-nav-menu_item"';
+      $attributes .= ' class="o-nav-menuItem"';
 
       // Build content inside of anchor tag
       $anchor_content = apply_filters( 'the_title', $item->title, $item->ID );

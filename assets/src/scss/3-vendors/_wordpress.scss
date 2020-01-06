@@ -8,40 +8,40 @@
 
 .alignnone,
 a img.alignnone {
-  margin: to-vw(30, $mobile-ratio-width) 0;
+  margin: get-size(30) 0;
 
-  @include mq("medium") {
-    margin: to-vw(35, $desktop-ratio-width) 0;
+  @include mq('md') {
+    margin: get-size(35, true) 0;
   }
 }
 
 .aligncenter,
 div.aligncenter {
   display: block;
-  margin: to-vw(30, $mobile-ratio-width) auto;
+  margin: get-size(30) auto;
 
-  @include mq("medium") {
-    margin: to-vw(35, $desktop-ratio-width) auto;
+  @include mq('md') {
+    margin: get-size(35, true) auto;
   }
 }
 
 .alignright,
 a img.alignright {
   float: right;
-  margin: to-vw(30, $mobile-ratio-width) 0 to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
+  margin: get-size(30) 0 get-size(30) get-size(30);
 
-  @include mq("medium") {
-    margin: to-vw(35, $desktop-ratio-width) 0 to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width);
+  @include mq('md') {
+    margin: get-size(35, true) 0 get-size(35, true) get-size(35, true);
   }
 }
 
 .alignleft,
 a img.alignleft {
   float: left;
-  margin: to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) to-vw(30, $mobile-ratio-width) 0;
+  margin: get-size(30) get-size(30) get-size(30) 0;
 
-  @include mq("medium") {
-    margin: to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) to-vw(35, $desktop-ratio-width) 0;
+  @include mq('md') {
+    margin: get-size(35, true) get-size(35, true) get-size(35, true) 0;
   }
 }
 
@@ -52,11 +52,11 @@ a img.aligncenter {
 }
 
 .wp-caption {
-  margin-bottom: to-vw(15, $mobile-ratio-width);
+  margin-bottom: get-size(15);
   max-width: 100%;
 
-  @include mq("medium") {
-    margin-bottom: to-vw(20, $desktop-ratio-width);
+  @include mq('md') {
+    margin-bottom: get-size(20, true);
   }
 }
 
@@ -67,21 +67,21 @@ a img.aligncenter {
 }
 
 .wp-caption .wp-caption-text {
-  font-size: to-vw(12, $mobile-ratio-width);
+  font-size: get-font-size(12);
   font-style: italic;
   margin: 1rem 0 0;
 
-  @include mq("medium") {
-    font-size: to-vw(14, $desktop-ratio-width);
+  @include mq('md') {
+    font-size: get-font-size(14, true);
   }
 }
 
 .wp-smiley {
   margin: 0 !important;
-  max-height: to-vw(10, $mobile-ratio-width);
+  max-height: get-size(10);
 
-  @include mq("medium") {
-    max-height: to-vw(15, $desktop-ratio-width);
+  @include mq('md') {
+    max-height: get-size(15, true);
   }
 }
 
@@ -90,24 +90,24 @@ a img.aligncenter {
 }
 
 .gallery-caption {
-  margin: to-vw(-15, $mobile-ratio-width) 0 0 0;
+  margin: get-size(-15) 0 0 0;
 
-  @include mq("medium") {
-    margin: to-vw(-20, $desktop-ratio-width) 0 0 0;
+  @include mq('md') {
+    margin: get-size(-20, true) 0 0 0;
   }
 }
 
 blockquote.left {
   float: left;
   margin-left: 0;
-  margin-right: to-vw(20, $mobile-ratio-width);
+  margin-right: get-size(20);
   text-align: right;
   width: 33%;
 }
 
 blockquote.right {
   float: right;
-  margin-left: to-vw(20, $mobile-ratio-width);
+  margin-left: get-size(20);
   margin-right: 0;
   text-align: left;
   width: 33%;
@@ -145,19 +145,19 @@ blockquote.right {
 /* ***** Custom Login Page Styles
 ** ***** ----------------------------------------------- ***** */
 
-$logo-height: 10rem;
-$logo-width: 10rem;
+$logoHeight: 10rem;
+$logoWidth: 10rem;
 
 body {
   &.login {
-    background: get-color(grey-dark--2);
+    background: get-color('greyDark2');
     display: block;
 
     &.interim-login {
       h1 {
         a {
-          height: $logo-height;
-          width: $logo-width;
+          height: $logoHeight;
+          width: $logoWidth;
         }
       }
     }
@@ -172,10 +172,10 @@ body {
       margin-bottom: 4rem;
 
       a {
-        background-image: url("../images/logo-bymattlee-login.svg");
+        background-image: url('../images/logo-bymattlee-login.svg');
         background-size: cover;
-        height: $logo-height;
-        width: $logo-width;
+        height: $logoHeight;
+        width: $logoWidth;
       }
     }
 
@@ -183,34 +183,34 @@ body {
     form {
       background: transparent;
       box-shadow: none;
-      color: get-color(grey-light--a);
+      color: get-color('greyLightA');
     }
 
     .message,
     #login_error {
-      background: get-color(grey-dark--3);
+      background: get-color('greyDark3');
       box-shadow: none;
       font-size: 1.4rem;
       line-height: 1.4;
     }
 
     .message {
-      // border-color: get-color(white); // Update with neutral color that matches brand
+      // border-color: get-color('white'); // Update with neutral color that matches brand
     }
 
     #login_error {
-      // border-color: get-color(white); // Update with highlight color that matches brand
+      // border-color: get-color('white'); // Update with highlight color that matches brand
     }
 
     label {
-      color: get-color(grey-light--a);
+      color: get-color('greyLightA');
     }
 
     #nav a {
-      color: get-color(grey-dark--6);
+      color: get-color('greyDark6');
 
       &:hover {
-        color: get-color(white);
+        color: get-color('white');
 
       }
     }
@@ -221,25 +221,25 @@ body {
       padding: 0;
 
       .input,
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         background: transparent;
-        border: 0.1rem solid get-color(grey-dark--4);
+        border: 0.1rem solid get-color('greyDark4');
         border-radius: 0;
         box-shadow: none;
-        color: get-color(grey-light--c);
+        color: get-color('greyLightC');
         padding: 0.1rem 1rem;
       }
 
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         &:checked {
           &::before {
-            color: get-color(grey-light--c);
+            color: get-color('greyLightC');
           }
         }
       }
 
       input {
-        @include autofill(get-color(grey-dark--4), get-color(grey-light--c), get-color(grey-dark--2));
+        @include autofill(get-color('greyDark4'), get-color('greyLightC'), get-color('greyDark2'));
       }
     }
 
@@ -253,15 +253,15 @@ body {
   .button,
   .button-primary:active,
   .button-primary:focus {
-    background: get-color(grey-dark--4);
+    background: get-color('greyDark4');
     border: none;
     border-radius: 0;
     box-shadow: none;
     text-shadow: none;
-    transition: background-color $transition-slow;
+    transition: background-color $transitionSlow;
 
     &:hover {
-      background: get-color(black);
+      background: get-color('black');
     }
   }
 
