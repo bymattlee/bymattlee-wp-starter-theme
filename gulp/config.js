@@ -30,7 +30,16 @@ module.exports = {
       '!' + src + '/scss/editorStyles.scss'
     ],
     editorSrc:  src + '/scss/editorStyles.scss',
-    dest: dest + '/css'
+    dest: dest + '/css',
+    purgeContent: [
+      './**/*.php',
+      src + '/js/modules/**/*.js'
+    ],
+    purgeWhitelistPatterns: [
+      /body/,
+      /richTextEditor/,
+      /wp-core-ui/
+    ]
   },
   scripts: {
     src: [

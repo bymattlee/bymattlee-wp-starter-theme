@@ -16,6 +16,7 @@ var addSrc = require('gulp-add-src'),
   mainBowerFiles = require('main-bower-files'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
+  purgecss = require('gulp-purgecss'),
   rename = require('gulp-rename'),
   reporter = require('postcss-reporter'),
   sass = require('gulp-sass'),
@@ -71,6 +72,10 @@ gulp.task('styles:main', function () {
         suffix: '.min'
       }))
       .pipe(header(config.fileHeader.join('\n')))
+      .pipe(gif(isProduction, purgecss({
+        content: config.styles.purgeContent,
+        whitelistPatternsChildren: config.styles.purgeWhitelistPatterns
+      })))
       .pipe(size({
         title: 'Compressed File Size:',
         showFiles: true

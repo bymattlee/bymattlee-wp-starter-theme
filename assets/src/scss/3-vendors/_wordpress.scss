@@ -6,139 +6,134 @@
 /* ***** Wordpress Generated Class Styles
 ** ***** ----------------------------------------------- ***** */
 
-.alignnone,
-a img.alignnone {
-  margin: get-size(30) 0;
-
-  @include mq('md') {
-    margin: get-size(35, true) 0;
+// Add body wrapper to work with purgecss whitelist
+body {
+  .alignnone,
+  a img.alignnone {
+    margin: get-size(30) 0;
+    @include mq('md') {
+      margin: get-size(35, true) 0;
+    }
   }
-}
 
-.aligncenter,
-div.aligncenter {
-  display: block;
-  margin: get-size(30) auto;
-
-  @include mq('md') {
-    margin: get-size(35, true) auto;
+  .aligncenter,
+  div.aligncenter {
+    display: block;
+    margin: get-size(30) auto;
+    @include mq('md') {
+      margin: get-size(35, true) auto;
+    }
   }
-}
 
-.alignright,
-a img.alignright {
-  float: right;
-  margin: get-size(30) 0 get-size(30) get-size(30);
-
-  @include mq('md') {
-    margin: get-size(35, true) 0 get-size(35, true) get-size(35, true);
+  .alignright,
+  a img.alignright {
+    float: right;
+    margin: get-size(30) 0 get-size(30) get-size(30);
+    @include mq('md') {
+      margin: get-size(35, true) 0 get-size(35, true) get-size(35, true);
+    }
   }
-}
 
-.alignleft,
-a img.alignleft {
-  float: left;
-  margin: get-size(30) get-size(30) get-size(30) 0;
-
-  @include mq('md') {
-    margin: get-size(35, true) get-size(35, true) get-size(35, true) 0;
+  .alignleft,
+  a img.alignleft {
+    float: left;
+    margin: get-size(30) get-size(30) get-size(30) 0;
+    @include mq('md') {
+      margin: get-size(35, true) get-size(35, true) get-size(35, true) 0;
+    }
   }
-}
 
-a img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wp-caption {
-  margin-bottom: get-size(15);
-  max-width: 100%;
-
-  @include mq('md') {
-    margin-bottom: get-size(20, true);
+  a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
 
-.wp-caption img {
-  border: 0 none;
-  margin: 0;
-  padding: 0;
-}
-
-.wp-caption .wp-caption-text {
-  font-size: get-font-size(12);
-  font-style: italic;
-  margin: 1rem 0 0;
-
-  @include mq('md') {
-    font-size: get-font-size(14, true);
+  .wp-caption {
+    margin-bottom: get-size(15);
+    max-width: 100%;
+    @include mq('md') {
+      margin-bottom: get-size(20, true);
+    }
   }
-}
 
-.wp-smiley {
-  margin: 0 !important;
-  max-height: get-size(10);
-
-  @include mq('md') {
-    max-height: get-size(15, true);
+  .wp-caption img {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
   }
-}
 
-.gallery dl {
-  margin: 0;
-}
-
-.gallery-caption {
-  margin: get-size(-15) 0 0 0;
-
-  @include mq('md') {
-    margin: get-size(-20, true) 0 0 0;
+  .wp-caption .wp-caption-text {
+    font-size: get-font-size(12);
+    font-style: italic;
+    margin: 1rem 0 0;
+    @include mq('md') {
+      font-size: get-font-size(14, true);
+    }
   }
-}
 
-blockquote.left {
-  float: left;
-  margin-left: 0;
-  margin-right: get-size(20);
-  text-align: right;
-  width: 33%;
-}
+  .wp-smiley {
+    margin: 0 !important;
+    max-height: get-size(10);
+    @include mq('md') {
+      max-height: get-size(15, true);
+    }
+  }
 
-blockquote.right {
-  float: right;
-  margin-left: get-size(20);
-  margin-right: 0;
-  text-align: left;
-  width: 33%;
-}
+  .gallery dl {
+    margin: 0;
+  }
 
-/* Text meant only for screen readers. */
-.screen-reader-text {
-  clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
-  height: 0.1rem;
-  overflow: hidden;
-  position: absolute !important;
-  width: 0.1rem;
-}
+  .gallery-caption {
+    margin: get-size(-15) 0 0 0;
+    @include mq('md') {
+      margin: get-size(-20, true) 0 0 0;
+    }
+  }
 
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 0.3rem;
-  box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
-  display: block;
-  font-size: 1.4rem;
-  font-weight: 700;
-  height: auto;
-  left: 0.5rem;
-  line-height: normal;
-  padding: 1.5rem 2.3rem 1.4rem;
-  text-decoration: none;
-  top: 0.5rem;
-  width: auto;
-  z-index: 100000; /* Above WP toolbar. */
+  blockquote.left {
+    float: left;
+    margin-left: 0;
+    margin-right: get-size(20);
+    text-align: right;
+    width: 33%;
+  }
+
+  blockquote.right {
+    float: right;
+    margin-left: get-size(20);
+    margin-right: 0;
+    text-align: left;
+    width: 33%;
+  }
+
+  /* Text meant only for screen readers. */
+  .screen-reader-text {
+    clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+    height: 0.1rem;
+    overflow: hidden;
+    position: absolute !important;
+    width: 0.1rem;
+  }
+
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    height: auto;
+    left: 0.5rem;
+    line-height: normal;
+    padding: 1.5rem 2.3rem 1.4rem;
+    text-decoration: none;
+    top: 0.5rem;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+  }
 }
 
 
@@ -148,7 +143,7 @@ blockquote.right {
 $logoHeight: 10rem;
 $logoWidth: 10rem;
 
-body {
+body { /* stylelint-disable-line no-duplicate-selectors */
   &.login {
     background: get-color('greyDark2');
     display: block;
@@ -208,7 +203,6 @@ body {
 
     #nav a {
       color: get-color('greyDark6');
-
       &:hover {
         color: get-color('white');
 
@@ -259,7 +253,6 @@ body {
     box-shadow: none;
     text-shadow: none;
     transition: background-color $transitionSlow;
-
     &:hover {
       background: get-color('black');
     }
