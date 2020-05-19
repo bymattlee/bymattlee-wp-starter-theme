@@ -3,8 +3,7 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var addSrc = require('gulp-add-src'),
-  autoprefixer = require('gulp-autoprefixer'),
+var autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
   cleanCSS = require('gulp-clean-css'),
   concat = require('gulp-concat'),
@@ -13,7 +12,6 @@ var addSrc = require('gulp-add-src'),
   gulp = require('gulp'),
   gutil = require('gulp-util'),
   header = require('gulp-header'),
-  mainBowerFiles = require('main-bower-files'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
   purgecss = require('gulp-purgecss'),
@@ -41,12 +39,6 @@ var addSrc = require('gulp-add-src'),
 */
 gulp.task('styles:main', function () {
 
-  var bowerFiles = mainBowerFiles({
-    filter: '**/*.css',
-    includeDev: true
-  });
-  console.log('Bower Files: ', bowerFiles);
-
   return gulp.src(config.styles.mainSrc)
     .pipe(plumber())
     .pipe(
@@ -59,7 +51,6 @@ gulp.task('styles:main', function () {
         syntax: scss 
       })
     )
-    .pipe(addSrc.prepend(bowerFiles))
     .pipe(gif(isDevelopment, sourcemaps.init()))
       .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer())

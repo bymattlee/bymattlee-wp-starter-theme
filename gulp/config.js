@@ -42,12 +42,11 @@ module.exports = {
     ]
   },
   scripts: {
-    src: [
-      src + '/js/define.js',
-      src + '/js/modules/**/*.js',
-      src + '/js/main.js'
+    src: src + '/js/main.js',
+    watchSrc: [
+      src + '/js/**/*.js',
+      '!' + src + '/js/vendors/modernizr.js'
     ],
-    srcVendors: src + '/js/vendors/*.js',
     dest:  dest + '/js',
     modernizr: {
       src: [
@@ -59,7 +58,9 @@ module.exports = {
           'setClasses'
         ]
       }
-    }
+    },
+    modernizrDest: src + '/js/vendors',
+    modernizrFileSrc: src + '/js/vendors/modernizr.js'
   },
   images: {
     src: src + '/images/**/*',

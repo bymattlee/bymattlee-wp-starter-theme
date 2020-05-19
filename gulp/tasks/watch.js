@@ -21,7 +21,7 @@ gulp.task('watch',
 
     gulp.watch(config.styles.mainSrc, gulp.series('styles:main'));
     gulp.watch(config.styles.editorSrc, gulp.series('styles:editor'));
-    gulp.watch(config.scripts.src, gulp.series('scripts:main'));
+    gulp.watch(config.scripts.watchSrc, gulp.series('scripts:watch'));
     gulp.watch(config.images.src, gulp.series('images')).on('change', reload);
     gulp.watch(config.svgs.src, gulp.series('svgs')).on('change', reload);
     gulp.watch(config.copy.src, gulp.series('copy')).on('change', reload);

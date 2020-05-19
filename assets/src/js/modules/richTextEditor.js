@@ -2,33 +2,23 @@
 ** ***** Rich Text Editor JS
 ** ***** ----------------------------------------------- ***** */
 
-/* global Main */
-(function($){
-  'use strict';
 
-  Main.modules.richTextEditor = function() {
+const responsiveVideoWrap = () => {
+  const iframes = document.querySelectorAll('.js-rich_text_editor iframe');
 
-    var responsiveVideoWrap = function() {
+  iframes.forEach(iframe => {
+    const iframeSrc = iframe.getAttribute('src');
+    if (iframeSrc.includes('youtube')) {
+      const embedWrapper = document.createElement('div');
+      embedWrapper.classList.add('o-embed');
+      iframe.parentNode.insertBefore(embedWrapper, iframe);
+      embedWrapper.appendChild(iframe);
+    }
+  });
+}
 
-        var $this = $(this),
-          thisSrc = $this.attr('src');
+const init = () => {
+  responsiveVideoWrap();
+}
 
-        if (thisSrc.indexOf('youtube') > -1 ||
-          thisSrc.indexOf('vevo') > -1 || 
-          thisSrc.indexOf('vimeo') > -1 || 
-          thisSrc.indexOf('itunes') > -1 || 
-          thisSrc.indexOf('facebook') > -1) {
-          $this.wrap('<div class="o-embed"></div>');
-        }
-
-      };
-
-    return {
-      init: function() {
-        $('.js-rich_text_editor iframe').each(responsiveVideoWrap);
-      }
-    };
-    
-  };
-
-})(jQuery);
+export { init };

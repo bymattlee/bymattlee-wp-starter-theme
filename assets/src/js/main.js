@@ -1,14 +1,11 @@
-/* ***** ----------------------------------------------- ***** **
-** ***** Main JS
-** ***** ----------------------------------------------- ***** */
+// ***** ----------------------------------------------- ***** **
+// ** ***** Main JS
+// ** ***** ----------------------------------------------- ***** 
 
-/* global Main */
-(function($){
-  'use strict';
+import { init as globalInit } from './modules/global.js';
+import { init as richTextEditorInit } from './modules/richTextEditor.js';
+import { init as mobileLockInit } from './modules/mobileLock.js';
 
-  /* Init */
-  $(function(){
-    Main.modules.init();
-  });
-
-})(jQuery);
+globalInit();
+richTextEditorInit();
+mobileLockInit();

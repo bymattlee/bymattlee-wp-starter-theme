@@ -15,14 +15,12 @@
 
   // Enqueue theme scripts
   function bml_enqueue_scripts() {
-    $vendors_uri = get_stylesheet_directory_uri() . '/assets/dist/js/vendors.min.js';
-    $vendors_path = get_stylesheet_directory() . '/assets/dist/js/vendors.min.js';
     $scripts_uri = get_stylesheet_directory_uri() . '/assets/dist/js/main.min.js';
     $scripts_path = get_stylesheet_directory() . '/assets/dist/js/main.min.js';
 
     // Replace jQuery
     wp_deregister_script( 'jquery' );
-    wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.4.1.min.js', '', null, true );
+    // wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.4.1.min.js', '', null, true );
 
     // Scripts
     wp_enqueue_script( 'script_vendors', $vendors_uri, false, filemtime( $vendors_path ), true );
