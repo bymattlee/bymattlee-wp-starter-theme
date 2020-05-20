@@ -2,16 +2,15 @@
 /* ***** Gulp - Copy
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var changed = require('gulp-changed'),
-  config = require('../config'),
-  gulp = require('gulp');
+import changed from 'gulp-changed';
+import config from '../config';
+import gulp from 'gulp';
 
 // Copy all asset files to dist directory (fonts, swfs, videos, etc)
-gulp.task('copy', function() {
-
+function copy() {
   return gulp.src(config.copy.src)
     .pipe(changed(config.copy.dest))
     .pipe(gulp.dest(config.copy.dest));
+}
 
-});
+export default copy;

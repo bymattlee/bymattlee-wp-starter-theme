@@ -2,20 +2,18 @@
 /* ***** Gulp - Images
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var changed = require('gulp-changed'),
-  config = require('../config'),
-  gulp = require('gulp'),
-  imagemin = require('gulp-imagemin'),
-  imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-  size = require('gulp-size');
+import changed from 'gulp-changed';
+import config from '../config';
+import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
+import imageminJpegRecompress from 'imagemin-jpeg-recompress';
+import size from 'gulp-size';
 
 /*
 ** -- Check if image is already in dist directory and has changed
 ** -- Optimize image for production
 */
-gulp.task('images', function() {
-
+function images() {
   return gulp.src(config.images.src)
     .pipe(changed(config.images.dest))
     .pipe(imagemin([
@@ -29,5 +27,6 @@ gulp.task('images', function() {
       showFiles: true
     }))
     .pipe(gulp.dest(config.images.dest));
+}
 
-});
+export default images;
