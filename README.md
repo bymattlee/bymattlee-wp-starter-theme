@@ -31,21 +31,25 @@ To enable deployment, create `hostSettings.json` and store in the `gulpfile.babe
 ```
 
 ## Use
-##### Initialize Gulp watch
+##### Build Files For Development And Initialize Gulp Watch
+```
+$ gulp
+```
+##### Initialize Gulp Watch
 ```
 $ gulp watch
 ```
 ##### Development Build - Build Project With Sourcemaps
 ```
-$ gulp
+$ gulp build
 ```
 ##### Staging Build - Build Project Without Sourcemaps
 ```
-$ gulp --staging
+$ gulp build --staging
 ```
 ##### Production Build - Build Project Without Sourcemaps
 ```
-$ gulp --production
+$ gulp build --production
 ```
 ##### Deploy To Staging
 ```
