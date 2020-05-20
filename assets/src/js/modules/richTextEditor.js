@@ -2,8 +2,7 @@
 ** ***** Rich Text Editor JS
 ** ***** ----------------------------------------------- ***** */
 
-
-const responsiveVideoWrap = () => {
+function responsiveVideoWrap() {
   const iframes = document.querySelectorAll('.js-rich_text_editor iframe');
 
   iframes.forEach(iframe => {
@@ -17,7 +16,7 @@ const responsiveVideoWrap = () => {
   });
 }
 
-const init = () => {
+function init() {
   responsiveVideoWrap();
 }
 
