@@ -7,7 +7,7 @@ import config from '../config';
 import gulp from 'gulp';
 
 // Copy all asset files to dist directory (fonts, swfs, videos, etc)
-function copy() {
+const copy = () => {
   return gulp.src(config.copy.src)
     .pipe(changed(config.copy.dest))
     .pipe(gulp.dest(config.copy.dest));

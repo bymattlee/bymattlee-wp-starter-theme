@@ -35,7 +35,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 ** -- Print bundled file size
 ** -- Inject styles into page
 */
-function stylesMain() {
+const stylesMain = () => {
   return gulp.src(config.styles.mainSrc)
     .pipe(plumber())
     .pipe(
@@ -85,7 +85,7 @@ function stylesMain() {
 ** -- Print bundled file size
 ** -- Inject styles into page
 */
-function stylesEditor() {
+const stylesEditor = () => {
   return gulp.src(config.styles.editorSrc)
     .pipe(plumber())
     .pipe(

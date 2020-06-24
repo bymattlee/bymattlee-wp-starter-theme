@@ -13,7 +13,7 @@ import size from 'gulp-size';
 ** -- Check if image is already in dist directory and has changed
 ** -- Optimize image for production
 */
-function images() {
+const images = () => {
   return gulp.src(config.images.src)
     .pipe(changed(config.images.dest))
     .pipe(imagemin([

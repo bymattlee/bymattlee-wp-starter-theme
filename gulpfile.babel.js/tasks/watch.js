@@ -11,7 +11,6 @@ import images from './images.js';
 import { stylesMain, stylesEditor } from './styles.js';
 import svgs from './svgs.js';
 import { scriptsWatch } from './scripts.js';
-import watch from 'gulp-watch';
 
 /*
 ** -- Initialize BrowserSync
@@ -20,7 +19,7 @@ import watch from 'gulp-watch';
 ** -- Initialize watch for styles, scripts, images, svgs and asset files
 ** -- Force browser reload when changes are made to images, svgs and asset files
 */
-function watchChanges() {
+const watchChanges = () => {
   gulp.watch(config.styles.mainSrc, gulp.series(stylesMain));
   gulp.watch(config.styles.editorSrc, gulp.series(stylesEditor));
   gulp.watch(config.scripts.watchSrc, gulp.series(scriptsWatch));
