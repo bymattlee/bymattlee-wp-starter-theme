@@ -3,8 +3,8 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Global variables
-var src = 'assets/src',
-  dest = 'assets/dist';
+const src = 'assets/src';
+const dest = 'assets/dist';
 
 // Contains all main configurations for Gulp
 module.exports = {
@@ -85,19 +85,5 @@ module.exports = {
   browserSync: {
     files: '**/*.php',
     proxy: 'local.bymattleedev.test'
-  },
-  deploy: {
-    src: './',
-    root: './',
-    exclude: [
-      '.DS_Store',
-      'node_modules',
-      'acf-export.json',
-      'LICENSE.md',
-      'README.md',
-      'hostSettings.json',
-      'assets/src/vendors',
-      '.git'
-    ]
-  },
+  }
 };

@@ -1,69 +1,40 @@
 [![ByMattLee](http://hosted.bymattlee.com/github/bymattlee-logo.png)](http://bymattlee.com)
 
 # ByMattLee WP Starter Theme
-* A starter Wordpress theme that includes base Wordpress template files and optimized theme setup
-* Theme is stripped down and does not contain any styles
-* Uses Gulp 4 as the build tool
+A starter boilerplate WordPress theme that includes Gulp as the build tool for asset optimization.
 
 ## Installation
 ##### 1. Install Node: <https://nodejs.org/en/>
-##### 2. Install all dependencies and build project
+##### 2. Install all dependencies
 ```
 $ npm install
 ```
 ##### 3. Update Gulp Config
-All Gulp settings can be found in `gulpfile.babel.js/config.js`. To connect BrowserSync to the local development environment to enable browser reload, update `browserSync.proxy` to local development address
-##### 4. Enable Deployment
-To enable deployment, create `hostSettings.json` and store in the `gulpfile.babel.js` directory. This file should not be checked in as it contains sensitive information. Sample `hostSettings.json`:
-```
-{
-	"staging": {
-		"hostname": "X",
-		"username": "X",
-		"destination": "X"
-	},
-	"production": {
-		"hostname": "X",
-		"username": "X",
-		"destination": "X"
-	}
-}
-```
+All Gulp settings can be found in `gulpfile.babel.js/config.js`. To connect BrowserSync to the local development environment to enable browser reload, update `browserSync.proxy` to local development address.
 
 ## Use
-##### Build Files For Development And Initialize Gulp Watch
+##### Build Files For Development And Initialize Watch
 ```
-$ gulp
+$ npm run dev
 ```
-##### Initialize Gulp Watch
+##### Build Files For Staging
 ```
-$ gulp watch
+$ npm run stage
 ```
-##### Development Build - Build Project With Sourcemaps
+##### Build Files For Production
 ```
-$ gulp build
-```
-##### Staging Build - Build Project Without Sourcemaps
-```
-$ gulp build --staging
-```
-##### Production Build - Build Project Without Sourcemaps
-```
-$ gulp build --production
-```
-##### Deploy To Staging
-```
-$ gulp deploy --staging
-```
-##### Deploy To Production
-```
-$ gulp deploy --production
+$ npm run prod
 ```
 
 ## General Features
 * Browser reload when PHP, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
 * Uses Modernizr to detect flexbox and SVG compatibility. If flexbox and/or SVG are not supported, a message will display asking the user to upgrade to latest version of the browser
+
+##### WordPress
+* Includes base WordPress template files and optimized theme setup
+* Theme is stripped down and does not contain any custom styles
+* Advanced Custom Fields PRO plugin is recommended to create custom fields and Option pages. Default settings can be imported from `acf-global-options.json`
 
 ##### Styles
 * Includes linter (Stylelint), autoprefixer, minification and sourcemap creation
@@ -74,16 +45,14 @@ $ gulp deploy --production
 * Info about class namespacing can be found in `src/assets/scss/main.scss`
 * Default unit of measurement is **vw**
 * Utilizes a custom utility-first CSS approach; available classes can be found in `assets/src/scss/8-utilities`
-* Production builds will remove unused CSS (PurgeCSS)
+* Unused CSS (PurgeCSS) will be removed in staging and production builds
 
 ##### Scripts
 * Utilizes ES2015+ syntax and modules with Babel transpiling
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
-* JS files located in the `assets/src/js` directory will be bundled into `assets/dist/js/main.min.js` when built
-* `main.js` in `assets/src/js` serves as the main JS file that includes and runs all modules
+* `main.js` in `src/assets/js` serves as the main JS file that includes and runs all modules and will be compiled to `dist/assets/js/main.min.js`
 * All local modules should be placed in `src/assets/js/modules`
 * All vendor JS can be manually added to `src/assets/js/vendors` if not found on NPM 
-* When adding new devDependencies to Bower, rebuild scripts to ensure they are compiled into `vendors.min.js`
 * `.eslintrc` contains the settings for ESLint
 
 ##### Images
@@ -96,10 +65,3 @@ $ gulp deploy --production
 
 ##### Other Assets
 * All assets (fonts, videos, swfs, etc) under `assets/src` will be copied to `assets/dist` on build
-
-##### Deploy
-* Deploys theme directory via SSH
-* Use `--clean` flag to delete all files and directories that are not in the destination path
-
-## Wordpress Requirements
-* Advanced Custom Fields PRO plugin is recommended to create custom fields and Option pages. Default settings can be imported from `acf-global-options.json`

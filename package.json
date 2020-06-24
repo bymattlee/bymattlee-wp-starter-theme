@@ -6,8 +6,10 @@
   "author": "Matt Lee <matt@bymattlee.com>",
   "main": "gulpfile.js",
   "scripts": {
-    "preinstall": "npm install -g gulp",
-    "postinstall": "gulp"
+    "start": "npm run dev",
+    "dev": "NODE_ENV=development gulp",
+    "stage": "NODE_ENV=staging gulp build",
+    "prod": "NODE_ENV=production gulp build"
   },
   "keywords": [
     "ByMattLee",
@@ -42,18 +44,15 @@
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-modernizr": "^4.0.0",
-    "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-purgecss": "^2.3.0",
     "gulp-rename": "^2.0.0",
-    "gulp-rsync": "0.0.9",
     "gulp-sass": "^4.1.0",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.1",
     "imagemin-jpeg-recompress": "^7.0.0",
     "postcss-reporter": "^6.0.1",
