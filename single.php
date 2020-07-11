@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="l-container">
+<div class="l-container l-container--small">
   <main role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>

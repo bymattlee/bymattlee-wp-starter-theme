@@ -4,9 +4,11 @@
   "description": "ByMattLee WP Starter Theme",
   "homepage": "http://bymattlee.com",
   "author": "Matt Lee <matt@bymattlee.com>",
-  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
-    "start": "npm run dev",
+    "start": "yarn dev",
     "dev": "NODE_ENV=development gulp",
     "stage": "NODE_ENV=staging gulp build",
     "prod": "NODE_ENV=production gulp build"

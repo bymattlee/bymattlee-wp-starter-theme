@@ -4,26 +4,29 @@
 A starter boilerplate WordPress theme that includes Gulp as the build tool for asset optimization.
 
 ## Installation
-##### 1. Install Node: <https://nodejs.org/en/>
-##### 2. Install all dependencies
+##### 1. Install Node >=12.0.0: <https://nodejs.org/>
+##### 2. Install Yarn: <https://yarnpkg.com/>
+##### 3. Install all dependencies
 ```
-$ npm install
+$ yarn
 ```
-##### 3. Update Gulp Config
+
+## Configuration
+##### Update Gulp Config
 All Gulp settings can be found in `gulpfile.babel.js/config.js`. To connect BrowserSync to the local development environment to enable browser reload, update `browserSync.proxy` to local development address.
 
 ## Use
 ##### Build Files For Development And Initialize Watch
 ```
-$ npm run dev
+$ yarn dev
 ```
 ##### Build Files For Staging
 ```
-$ npm run stage
+$ yarn stage
 ```
 ##### Build Files For Production
 ```
-$ npm run prod
+$ yarn prod
 ```
 
 ## General Features
@@ -43,7 +46,7 @@ $ npm run prod
 * `main.scss` gets compiled to `assets/dist/css/main.min.css`
 * `.stylelintrc` contains the settings for Stylelint
 * Info about class namespacing can be found in `src/assets/scss/main.scss`
-* Default unit of measurement is **vw**
+* Default unit of measurement is **rem** and can be switched in `get-size()` in `assets/src/scss/1-tools/_functions.scss`
 * Utilizes a custom utility-first CSS approach; available classes can be found in `assets/src/scss/8-utilities`
 * Unused CSS (PurgeCSS) will be removed in staging and production builds
 
@@ -52,7 +55,7 @@ $ npm run prod
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
 * `main.js` in `src/assets/js` serves as the main JS file that includes and runs all modules and will be compiled to `dist/assets/js/main.min.js`
 * All local modules should be placed in `src/assets/js/modules`
-* All vendor JS can be manually added to `src/assets/js/vendors` if not found on NPM 
+* All vendor JS can be manually added to `src/assets/js/vendors` if not found on Yarn 
 * `.eslintrc` contains the settings for ESLint
 
 ##### Images

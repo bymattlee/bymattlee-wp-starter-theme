@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<div class="l-container">
+<div class="l-container l-container--small">
   <main role="main">
 
     <header>
-      <h1><?php printf( __( 'Search: %s', 'bymattlee' ), get_search_query() ); ?></h1>
+      <h1 class="u-h2"><?php printf( __( 'Search: %s', 'bymattlee' ), get_search_query() ); ?></h1>
     </header>
     
     <?php if ( have_posts() ) : ?>

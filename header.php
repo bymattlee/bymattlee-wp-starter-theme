@@ -42,6 +42,4 @@
 
   <?php get_template_part( 'partials/global/header' ); ?>
 
-  <br><hr><br>
-
-  <section class="u-flex1">
+  <section class="u-flex1 u-py40 u-py80-md">

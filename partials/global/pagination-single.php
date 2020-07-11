@@ -1,5 +1,5 @@
 <?php if ( get_next_post() || get_previous_post() ) : ?>
-  <div>
+  <div class="u-mt40 u-mt60-md">
 
     <?php if ( get_next_post() ) : ?>
       <?php $previous_post = get_next_post(); ?>

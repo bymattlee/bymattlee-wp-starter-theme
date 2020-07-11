@@ -2,8 +2,6 @@
 
   </section>
 
-  <br><hr><br>
-
   <?php get_template_part( 'partials/global/footer' ); ?>
 
   <?php wp_footer(); ?>

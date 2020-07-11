@@ -1,6 +1,6 @@
-<article>
+<article class="u-mt30 u-mt60-md">
   <?php if ( has_post_thumbnail() ) : ?>
-    <figure>
+    <figure class="u-mb20 u-mb40-md">
       <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
         <img data-srcset="<?php bml_the_image_srcset( get_post_thumbnail_id() ); ?>" data-sizes="auto" class="lazyload" alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>" title="<?php echo get_the_title( get_post_thumbnail_id() ); ?>" width="<?php echo wp_get_attachment_metadata( get_post_thumbnail_id() )[ 'width' ]; ?>">
       </a>
