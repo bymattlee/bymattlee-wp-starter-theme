@@ -68,7 +68,7 @@
     "stylelint-order": "^4.1.0"
   },
   "dependencies": {
-    "gsap": "^3.3.4",
+    "gsap": "^3.6.0",
     "inobounce": "^0.2.0",
     "lazysizes": "^5.2.2",
     "object-fit-images": "^3.2.4",
