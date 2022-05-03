@@ -84,6 +84,6 @@ module.exports = {
   },
   browserSync: {
     files: '**/*.php',
-    proxy: 'local.bymattleedev.test'
+    proxy: 'localhost:10008'
   }
 };
