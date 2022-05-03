@@ -10,7 +10,7 @@ import gulp from 'gulp';
 import images from './images.js';
 import { stylesMain, stylesEditor } from './styles.js';
 import svgs from './svgs.js';
-import { scriptsWatch } from './scripts.js';
+import scripts from './scripts.js';
 
 /*
 ** -- Initialize BrowserSync
@@ -22,7 +22,7 @@ import { scriptsWatch } from './scripts.js';
 const watchChanges = () => {
   gulp.watch(config.styles.mainSrc, gulp.series(stylesMain));
   gulp.watch(config.styles.editorSrc, gulp.series(stylesEditor));
-  gulp.watch(config.scripts.watchSrc, gulp.series(scriptsWatch));
+  gulp.watch(config.scripts.watchSrc, gulp.series(scripts));
   gulp.watch(config.images.src, gulp.series(images)).on('change', browserSync.reload);
   gulp.watch(config.svgs.src, gulp.series(svgs)).on('change', browserSync.reload);
   gulp.watch(config.copy.src, gulp.series(copy)).on('change', browserSync.reload);
