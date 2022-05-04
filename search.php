@@ -1,30 +1,30 @@
 <?php get_header(); ?>
 
-<div class="l-container l-container--small">
-  <main role="main">
-
+<div class="l-container u-grid u-gap-60 md:u-grid-cols-3 md:u-gap-80">
+  <main class="md:u-col-span-2" role="main">
     <header>
       <h1 class="u-h2"><?php printf( __( 'Search: %s', 'bymattlee' ), get_search_query() ); ?></h1>
     </header>
-    
-    <?php if ( have_posts() ) : ?>
 
-      <?php while ( have_posts() ) : the_post(); ?>
+    <div class="u-mt-20 md:u-mt-40">
 
-        <?php get_template_part( 'partials/news/preview' ); ?>
+      <?php if ( have_posts() ) : ?>
 
-      <?php endwhile; ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'partials/global/pagination-archive' ); ?>
+          <?php get_template_part( 'partials/news/preview' ); ?>
 
-    <?php else : ?>
+        <?php endwhile; ?>
 
-      <?php get_template_part( 'partials/global/not_found' ); ?>
+        <?php get_template_part( 'partials/global/pagination-archive' ); ?>
 
-      <?php get_search_form(); ?>
+      <?php else : ?>
 
-    <?php endif; ?>
+        <?php get_template_part( 'partials/global/not_found' ); ?>
 
+      <?php endif; ?>
+
+    </div>
   </main>
 
   <?php get_sidebar(); ?>

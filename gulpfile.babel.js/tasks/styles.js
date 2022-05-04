@@ -21,6 +21,7 @@ import scss from 'postcss-scss';
 import size from 'gulp-size';
 import sourcemaps from 'gulp-sourcemaps';
 import stylelint from 'stylelint';
+import tailwindcss from 'tailwindcss';
 
 // Set default sass compiler
 const sass = gulpSass(dartSass);
@@ -30,9 +31,9 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 
 /*
 ** -- Lint scss files with Stylelint
-** -- Add Bower files to the build
 ** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
 ** -- Compile scss files
+** -- Apply Tailwind styles
 ** -- Autoprefix necessary properties
 ** -- Minify
 ** -- Add ByMattLee header to bundled file
@@ -46,32 +47,43 @@ const stylesMain = () => {
       postcss([
         stylelint(),
         reporter({
-          clearMessages: true
+          clearReportedMessages: true
         })
       ], {
         syntax: scss 
       })
     )
     .pipe(gif(isDevelopment, sourcemaps.init()))
-      .pipe(sass().on('error', sass.logError))
-      .pipe(autoprefixer())
-      .pipe(cleanCSS({
-        inline: ['all'],
-        rebase: false
-      }))
-      .pipe(concat('main.css'))
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(header(config.fileHeader.join('\n')))
-      .pipe(gif(!isDevelopment, purgecss({
-        content: config.styles.purgeContent,
-        whitelistPatternsChildren: config.styles.purgeWhitelistPatterns
-      })))
-      .pipe(size({
-        title: 'Compressed File Size:',
-        showFiles: true
-      }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(
+      postcss([
+        tailwindcss(config.styles.tailwindConfig),
+        reporter({
+          clearReportedMessages: true
+        }),
+      ], {
+        syntax: scss 
+      })
+    )
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({
+      inline: ['all'],
+      rebase: false
+    }))
+    .pipe(concat('main.css'))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(header(config.fileHeader.join('\n')))
+    .pipe(gif(!isDevelopment, purgecss({
+      content: config.styles.purgeContent,
+      defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+      whitelistPatternsChildren: config.styles.purgeWhitelistPatterns
+    })))
+    .pipe(size({
+      title: 'Compressed File Size:',
+      showFiles: true
+    }))
     .pipe(gif(isDevelopment, sourcemaps.write('./')))
     .pipe(gulp.dest(config.styles.dest))
     .pipe(browserSync.stream({
@@ -103,21 +115,21 @@ const stylesEditor = () => {
       })
     )
     .pipe(gif(isDevelopment, sourcemaps.init()))
-      .pipe(sass().on('error', sass.logError))
-      .pipe(autoprefixer())
-      .pipe(cleanCSS({
-        inline: ['all'],
-        rebase: false
-      }))
-      .pipe(concat('editorStyles.css'))
-      .pipe(rename({
-        suffix: '.min'
-      }))
-      .pipe(header(config.fileHeader.join('\n')))
-      .pipe(size({
-        title: 'Compressed File Size:',
-        showFiles: true
-      }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(cleanCSS({
+      inline: ['all'],
+      rebase: false
+    }))
+    .pipe(concat('editorStyles.css'))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(header(config.fileHeader.join('\n')))
+    .pipe(size({
+      title: 'Compressed File Size:',
+      showFiles: true
+    }))
     .pipe(gif(isDevelopment, sourcemaps.write('./')))
     .pipe(gulp.dest(config.styles.dest))
     .pipe(browserSync.stream({

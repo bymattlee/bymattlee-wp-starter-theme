@@ -2,40 +2,36 @@
 ** ***** Editor Styles
 ** ***** ----------------------------------------------- ***** */
 
-/* ***** Imports
+/* ***** Variables
 ** ***** ----------------------------------------------- ***** */
 
-@import '1-tools/functions';
-@import '1-tools/mixin-text';
-@import '2-settings/colors';
-@import '2-settings/layout';
-@import '2-settings/text';
-@import '2-settings/transition';
+$systemFontFamily: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
 
 /* ***** Base Styles
 ** ***** ----------------------------------------------- ***** */
 
 :root {
-  font-size: $fontSizeBase;
+  font-size: 62.5%;
 }
 
 body {
-  font-family: get-font-family('body');
+  font-family: $systemFontFamily;
   font-size: 1.4rem;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: map-get($lineHeight, 'normal');
+  line-height: 1.4;
 }
 
 p {
-  line-height: map-get($lineHeight, loose);
+  line-height: 1.8;
   margin: 2rem 0;
 }
 
 ul,
 ol {
-  line-height: map-get($lineHeight, loose);
+  line-height: 1.8;
   margin: 2rem 0 2rem 3rem;
   padding: 0;
 
@@ -50,19 +46,17 @@ ol {
 }
 
 a {
-  color: $linkColor;
-  text-decoration: none;
-  transition: color $transitionSlow;
+  color: #000;
 
   &:hover {
     @media (hover: hover) {
-      color: $linkHoverColor;
+      color: #aaa;
     }
   }
 
   &:active {
     @media (hover: hover) {
-      color: $linkActiveColor;
+      color: #000;
     }
   }
 }
@@ -73,7 +67,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: get-font-family('heading');
+  font-family: $systemFontFamily;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -113,14 +107,14 @@ h6 {
 }
 
 blockquote {
-  border-left: 0.4rem solid get-color('greyDark4');
+  border-left: 0.2rem solid #444;
   margin: 3rem 2rem;
   padding-left: 2rem;
 }
 
 hr {
   border: 0;
-  border-top: 0.1rem solid get-color('greyLightC');
+  border-top: 0.1rem solid #ccc;
   margin: 2rem 0;
 }
 

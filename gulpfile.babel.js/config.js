@@ -3,8 +3,8 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Global variables
-const src = 'assets/src';
-const dest = 'assets/dist';
+const src = './assets/src';
+const dest = './assets/dist';
 
 // Contains all main configurations for Gulp
 module.exports = {
@@ -24,6 +24,9 @@ module.exports = {
     '**',
     '*/\n'
   ],
+  wordpress: {
+    src: './**/*.php',
+  },
   styles: {
     mainSrc: [
       src + '/scss/**/*.scss',
@@ -31,15 +34,12 @@ module.exports = {
     ],
     editorSrc:  src + '/scss/editorStyles.scss',
     dest: dest + '/css',
+    tailwindConfig: './tailwind.config.js',
     purgeContent: [
       './**/*.php',
       src + '/js/modules/**/*.js'
     ],
-    purgeWhitelistPatterns: [
-      /body/,
-      /richTextEditor/,
-      /wp-core-ui/
-    ]
+    purgeWhitelistPatterns: [/body/ ]
   },
   scripts: {
     src: src + '/js/main.js',
@@ -67,7 +67,6 @@ module.exports = {
     dest:  dest
   },
   browserSync: {
-    files: '**/*.php',
     proxy: 'localhost:10008'
   }
 };

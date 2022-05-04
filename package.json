@@ -32,6 +32,7 @@
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.17.10",
     "@babel/register": "^7.17.7",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "acorn": "^8.7.1",
     "babel-eslint": "^10.1.0",
     "browser-sync": "^2.27.9",
@@ -67,7 +68,8 @@
     "sass": "^1.51.0",
     "stylelint": "^14.8.1",
     "stylelint-config-standard": "^25.0.0",
-    "stylelint-order": "^5.0.0"
+    "stylelint-order": "^5.0.0",
+    "tailwindcss": "^3.0.24"
   },
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",

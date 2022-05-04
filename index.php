@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="l-container l-container--small">
-  <main role="main">
+<div class="l-container u-grid u-gap-60 md:u-grid-cols-3 md:u-gap-80">
+  <main class="md:u-col-span-2" role="main">
     <header>
       <h1 class="u-h2">Latest Posts</h1>
     </header>
 
-    <div class="u-mt20 u-mt40-md">
+    <div class="u-mt-20 md:u-mt-40">
 
       <?php if ( have_posts() ) : ?>
 
@@ -25,7 +25,6 @@
       <?php endif; ?>
 
     </div>
-
   </main>
 
   <?php get_sidebar(); ?>

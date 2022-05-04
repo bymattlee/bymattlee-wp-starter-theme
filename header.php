@@ -5,7 +5,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html class="u-h-full" <?php language_attributes(); ?>>
 
 <head>
 
@@ -42,4 +42,4 @@
 
   <?php get_template_part( 'partials/global/header' ); ?>
 
-  <section class="u-flex1 u-py40 u-py80-md">
+  <section class="u-flex-1 u-py-40 md:u-py-80">
