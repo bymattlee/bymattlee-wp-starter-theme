@@ -60,7 +60,7 @@
       $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
       $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
       $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-      $attributes .= ' class="o-nav-menuItem"';
+      $attributes .= ' class="o-nav-menuItem js-nav-menuItem"';
 
       // Build content inside of anchor tag
       $anchor_content = apply_filters( 'the_title', $item->title, $item->ID );

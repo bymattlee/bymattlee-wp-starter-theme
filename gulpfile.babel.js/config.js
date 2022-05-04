@@ -37,7 +37,7 @@ module.exports = {
     tailwindConfig: './tailwind.config.js',
     purgeContent: [
       './**/*.php',
-      src + '/js/modules/**/*.js'
+      src + '/js/components/**/*.js'
     ],
     purgeWhitelistPatterns: [/body/ ]
   },

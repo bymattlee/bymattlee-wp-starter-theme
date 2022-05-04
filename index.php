@@ -1,34 +1,36 @@
 <?php get_header(); ?>
 
-<div class="l-container u-grid u-gap-60 md:u-grid-cols-3 md:u-gap-80">
-  <main class="md:u-col-span-2" role="main">
-    <header>
-      <h1 class="u-h2">Latest Posts</h1>
-    </header>
+<div data-router-wrapper>
+  <div class="l-container u-grid u-gap-60 md:u-grid-cols-3 md:u-gap-80" data-router-view="index">
+    <main class="md:u-col-span-2" role="main">
+      <header>
+        <h1 class="u-h2">Latest Posts</h1>
+      </header>
 
-    <div class="u-mt-20 md:u-mt-40">
+      <div class="u-mt-20 md:u-mt-40">
 
-      <?php if ( have_posts() ) : ?>
+        <?php if ( have_posts() ) : ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php get_template_part( 'partials/news/preview' ); ?>
+            <?php get_template_part( 'partials/news/preview' ); ?>
 
-        <?php endwhile; ?>
+          <?php endwhile; ?>
 
-        <?php get_template_part( 'partials/global/pagination-archive' ); ?>
+          <?php get_template_part( 'partials/global/pagination-archive' ); ?>
 
-      <?php else : ?>
+        <?php else : ?>
 
-        <?php get_template_part( 'partials/global/not_found' ); ?>
+          <?php get_template_part( 'partials/global/not_found' ); ?>
 
-      <?php endif; ?>
+        <?php endif; ?>
 
-    </div>
-  </main>
+      </div>
+    </main>
 
-  <?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
 
+  </div>
 </div>
 
 <?php get_footer(); ?>

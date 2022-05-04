@@ -44,7 +44,7 @@
   }
 
   .u-rich-text {
-    * {
+    > * {
       &:first-child {
         @apply u-mt-0;
       }

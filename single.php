@@ -1,20 +1,22 @@
 <?php get_header(); ?>
 
-<div class="l-container u-grid u-gap-60 md:u-grid-cols-3 md:u-gap-80">
-  <main class="md:u-col-span-2" role="main">
+<div data-router-wrapper>
+  <div class="l-container u-grid u-gap-60 md:u-grid-cols-3 md:u-gap-80" data-router-view="single">
+    <main class="md:u-col-span-2" role="main">
 
-    <?php while ( have_posts() ) : the_post(); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
 
-      <?php get_template_part( 'partials/news/single' ); ?>
+        <?php get_template_part( 'partials/news/single' ); ?>
 
-      <?php get_template_part( 'partials/global/pagination-single' ); ?>
+        <?php get_template_part( 'partials/global/pagination-single' ); ?>
 
-    <?php endwhile; ?>
+      <?php endwhile; ?>
 
-  </main>
+    </main>
 
-  <?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
 
+  </div>
 </div>
 
 <?php get_footer(); ?>
