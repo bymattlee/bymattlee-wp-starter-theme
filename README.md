@@ -30,7 +30,7 @@ $ yarn prod
 ```
 
 ## General Features
-* Features [Gulp](https://gulpjs.com/) as the build pipeline that renders HTML, compiles styles and scripts, and optimizes assets.
+* Features [Gulp](https://gulpjs.com/) as the build pipeline that compiles styles and scripts, and optimizes assets
 * Browser reload when PHP, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
 
