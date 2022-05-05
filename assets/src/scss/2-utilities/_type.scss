@@ -85,7 +85,7 @@
     * + h4,
     * + h5,
     * + h6 {
-      @apply u-mt-30 sm:u-mt-35;
+      @apply u-mt-40 sm:u-mt-50;
     }
 
     a {
@@ -99,12 +99,12 @@
     }
 
     p {
-      @apply u-leading-loose u-my-20 sm:u-my-25;
+      @apply u-leading-loose u-my-20 sm:u-my-30;
     }
 
     ul,
     ol {
-      @apply u-leading-loose u-mt-20 u-mr-0 u-mb-20 u-ml-30 sm:u-mt-25 sm:u-mb-25 sm:u-ml-35;
+      @apply u-leading-loose u-my-20 u-mr-0 u-ml-30 sm:u-my-30 sm:u-ml-35;
 
       ul,
       ol {
@@ -125,7 +125,7 @@
     }
 
     blockquote {
-      @apply u-border-l-2 u-pl-30;
+      @apply u-border-l-2 u-my-30 u-mx-20 u-pl-30;
     }
 
     .o-button {
@@ -133,7 +133,7 @@
     }
 
     .emoji {
-      @apply u-w-20;
+      @apply u-inline-block u-w-20;
     }
   }
 }

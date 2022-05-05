@@ -116,6 +116,16 @@ const stylesEditor = () => {
     )
     .pipe(gif(isDevelopment, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
+    .pipe(
+      postcss([
+        tailwindcss(config.styles.tailwindConfig),
+        reporter({
+          clearReportedMessages: true
+        }),
+      ], {
+        syntax: scss 
+      })
+    )
     .pipe(autoprefixer())
     .pipe(cleanCSS({
       inline: ['all'],

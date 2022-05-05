@@ -7,7 +7,7 @@
 
   <?php if ( get_the_title() ) : ?>
     <header data-s2r-el>
-      <h1 class="u-h2"><?php the_title(); ?></h1>
+      <h1 class="u-h1"><?php the_title(); ?></h1>
     </header>
   <?php endif; ?>
   

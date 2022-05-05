@@ -40,6 +40,9 @@ module.exports = {
         'Montserrat',
         ...fontFallbacks,
       ],
+      fallback: [
+        ...fontFallbacks,
+      ],
     },
     fontSize: {
       '0': '0',

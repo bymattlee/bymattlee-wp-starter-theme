@@ -4,7 +4,7 @@
   <div class="l-container u-grid u-gap-60 md:u-grid-cols-3 md:u-gap-80" data-router-view="archive">
     <main class="md:u-col-span-2" role="main" data-s2r="group">
       <header>
-        <h1 class="u-h2" data-s2r-el="block-fade-up"><?php the_archive_title(); ?></h1>
+        <h1 class="u-h1" data-s2r-el="block-fade-up"><?php the_archive_title(); ?></h1>
       </header>
 
       <div class="u-mt-20 md:u-mt-40" data-s2r-el="stagger-fade-up" data-s2r-delay="0.2">
