@@ -43,6 +43,10 @@
     @apply u-text-12 sm:u-text-14;
   }
 
+  .u-text-body {
+    @apply u-font-body u-leading-normal u-text-14 sm:u-text-16;
+  }
+
   .u-rich-text {
     > * {
       &:first-child {
@@ -89,13 +93,7 @@
     }
 
     a {
-      @apply u-underline;
-
-      &:hover {
-        @media (hover: hover) {
-          @apply u-no-underline;
-        }
-      }
+      @include text-underline;
     }
 
     p {

@@ -91,8 +91,8 @@ body {
 /* ***** Custom Login Page Styles
 ** ***** ----------------------------------------------- ***** */
 
-$logoHeight: 10rem;
 $logoWidth: 10rem;
+$logoHeight: 10rem;
 
 body { /* stylelint-disable-line no-duplicate-selectors */
   &.login {
@@ -110,7 +110,7 @@ body { /* stylelint-disable-line no-duplicate-selectors */
     #login {
       @apply u-w-auto u-px-20 u-pb-0;
       max-width: 36rem;
-      padding-top: 10vh;
+      padding-top: 15vh;
     }
 
     h1 {
@@ -147,10 +147,7 @@ body { /* stylelint-disable-line no-duplicate-selectors */
     }
 
     #nav a {
-      @apply u-text-grey-dark-6;
-      &:hover {
-        @apply u-text-white;
-      }
+      @apply u-text-grey-dark-6 hover:u-text-white;
     }
 
     form {

@@ -25,7 +25,10 @@ module.exports = {
     '*/\n'
   ],
   wordpress: {
-    src: './**/*.php',
+    src: [
+      './**/*.php',
+      './tailwind.config.js',
+    ],
   },
   styles: {
     mainSrc: [
@@ -39,7 +42,7 @@ module.exports = {
       './**/*.php',
       src + '/js/components/**/*.js'
     ],
-    purgeWhitelistPatterns: [/body/ ]
+    purgeWhitelistPatterns: [/body/]
   },
   scripts: {
     src: src + '/js/main.js',

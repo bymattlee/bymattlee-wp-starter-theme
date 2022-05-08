@@ -19,8 +19,7 @@ const images = () => {
     .pipe(imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imageminJpegRecompress(),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo()
+      imagemin.optipng({ optimizationLevel: 5 })
     ]))
     .pipe(size({
       title: 'Optimized File Size:',

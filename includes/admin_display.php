@@ -5,9 +5,9 @@
   ** ***** ----------------------------------------------- ***** */
 
   // Add thumbnails column to admin post view
-  function bml_posts_columns( $defaults ){
-    $defaults[ 'my_post_thumbs' ] = __( 'Image', 'bymattlee' );
-    return $defaults;
+  function bml_posts_columns( $columns ){
+    $columns[ 'my_post_thumbs' ] = __( 'Image', 'bymattlee' );
+    return $columns;
   }
   add_filter( 'manage_posts_columns', 'bml_posts_columns', 5 );
 
