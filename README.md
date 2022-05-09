@@ -54,8 +54,8 @@ ___
 * Includes [Highway](https://highway.js.org/) for seamless page transitions
 * Includes a custom framework for reuseable content animations
 * Includes [Alpine.js](https://alpinejs.dev/) for declarative DOM manipulation
-* `main.js` in `src/assets/js` serves as the main JS file that includes and runs all modules and will be compiled to `dist/assets/js/main.min.js`
-* All local modules should be placed in `src/assets/js/modules`
+* `main.js` in `src/assets/js` serves as the main JS file that includes and runs all components and will be compiled to `dist/assets/js/main.min.js`
+* All local components should be placed in `src/assets/js/components`
 * All vendor JS can be manually added to `src/assets/js/vendors` if not found on Yarn 
 * `.eslintrc` contains the settings for ESLint
 
