@@ -41,8 +41,7 @@ module.exports = {
     purgeContent: [
       './**/*.php',
       src + '/js/components/**/*.js'
-    ],
-    purgeWhitelistPatterns: [/body/]
+    ]
   },
   scripts: {
     src: src + '/js/main.js',

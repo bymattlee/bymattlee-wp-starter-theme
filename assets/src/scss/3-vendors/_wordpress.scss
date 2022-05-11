@@ -6,6 +6,8 @@
 ** ***** ----------------------------------------------- ***** */
 
 // Add body wrapper to work with purgecss whitelist
+
+/*! purgecss start ignore */
 body {
   .alignnone,
   a img.alignnone {
@@ -211,3 +213,5 @@ body { /* stylelint-disable-line no-duplicate-selectors */
     }
   }
 }
+
+/*! purgecss end ignore */
