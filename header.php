@@ -27,6 +27,7 @@
 <?php if ( $google_analytics_tracking_id ) : ?>
   <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_analytics_tracking_id; ?>"></script>
   <script>
+    const gaId = '<?php echo $google_analytics_tracking_id; ?>';
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
