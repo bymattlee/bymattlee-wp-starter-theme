@@ -4,7 +4,7 @@
 A starter boilerplate WordPress theme [Gulp](https://gulpjs.com/), [Tailwind CSS](https://tailwindcss.com/), [rollup.js](https://rollupjs.org/), [Alpine.js](https://alpinejs.dev/) and [Highway](https://highway.js.org/).
 ___
 ## Installation
-##### 1. Install Node >=14.17.0: <https://nodejs.org/>
+##### 1. Install Node 16.17.1 LTS: <https://nodejs.org/>
 ##### 2. Install Yarn: <https://yarnpkg.com/>
 ##### 3. Install all dependencies
 ```
