@@ -37,5 +37,5 @@ svg {
 
 input,
 textarea {
-  @apply u-bg-transparent u-text-body u-outline-none focus-visible:u-outline-none;
+  @apply u-bg-transparent u-text-body u-rounded-none u-outline-none focus-visible:u-outline-none;
 }
