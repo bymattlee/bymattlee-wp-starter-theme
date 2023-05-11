@@ -2,7 +2,7 @@
 
 # ByMattLee WP Starter Theme
 
-A starter boilerplate WordPress theme [Gulp](https://gulpjs.com/), [Tailwind CSS](https://tailwindcss.com/), [rollup.js](https://rollupjs.org/), [Alpine.js](https://alpinejs.dev/) and [Taxi.js](https://taxi.js.org/).
+A starter boilerplate WordPress theme featuring [Gulp](https://gulpjs.com/), [Tailwind CSS](https://tailwindcss.com/), [rollup.js](https://rollupjs.org/), [Alpine.js](https://alpinejs.dev/) and [Taxi.js](https://taxi.js.org/).
 
 ---
 
@@ -108,7 +108,7 @@ $ yarn prod
 
 ```scss
 svg {
-    @apply inline-block fill-current;
+    @apply u-inline-block u-fill-current;
 }
 ```
 
