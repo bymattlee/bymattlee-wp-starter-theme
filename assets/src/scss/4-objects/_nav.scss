@@ -5,11 +5,11 @@
 .o-nav {
   $this: &;
 
-  &-menu {
+  &__menu {
     @apply u-m-0;
   }
 
-  &-menuListItem {
+  &__menu-list-item {
     @apply u-inline-block u-ml-10 md:u-ml-15;
 
     &:first-child {
@@ -17,17 +17,16 @@
     }
 
     &--current {
-      #{$this}-menuItem {
+      #{$this}__menu-item {
         @apply u-text-white;
       }
     }
   }
 
-  &-menuItem {
+  &__menu-item {
     @apply u-inline-block u-font-heading u-text-14 u-uppercase;
   }
 
-  &-subMenu {
-
+  &__sub-menu {
   }
 }
