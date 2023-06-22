@@ -3,8 +3,8 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Global variables
-const src = './assets/src';
-const dest = './assets/dist';
+const src = './assets/src'
+const dest = './assets/dist'
 
 // Contains all main configurations for Gulp
 module.exports = {
@@ -22,26 +22,17 @@ module.exports = {
     '**',
     '**',
     '**',
-    '*/\n'
+    '*/\n',
   ],
   wordpress: {
-    src: [
-      './**/*.php',
-      './tailwind.config.js',
-    ],
+    src: ['./**/*.php', './tailwind.config.js'],
   },
   styles: {
-    mainSrc: [
-      src + '/scss/**/*.scss',
-      '!' + src + '/scss/editorStyles.scss'
-    ],
-    editorSrc:  src + '/scss/editorStyles.scss',
+    mainSrc: [src + '/scss/**/*.scss', '!' + src + '/scss/editorStyles.scss'],
+    editorSrc: src + '/scss/editorStyles.scss',
     dest: dest + '/css',
     tailwindConfig: './tailwind.config.js',
-    purgeContent: [
-      './**/*.php',
-      src + '/js/components/**/*.js'
-    ]
+    purgeContent: ['./**/*.php', src + '/js/components/**/*.js'],
   },
   scripts: {
     src: src + '/js/main.js',
@@ -50,25 +41,25 @@ module.exports = {
   },
   images: {
     src: src + '/images/**/*',
-    dest: dest + '/images'
+    dest: dest + '/images',
   },
   svgs: {
     src: src + '/svgs/*.svg',
-    dest:  dest + '/svgs',
-    sprite: 'sprite.svg'
+    dest: dest + '/svgs',
+    sprite: 'sprite.svg',
   },
   copy: {
     src: [
       src + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
       '!' + src + '/svgs/*.svg',
-      '!' + src + '/vendors/**/*'
+      '!' + src + '/vendors/**/*',
     ],
-    dest:  dest
+    dest: dest,
   },
   clean: {
-    dest:  dest
+    dest: dest,
   },
   browserSync: {
-    proxy: 'localhost:10008'
-  }
-};
+    proxy: 'localhost:10008',
+  },
+}

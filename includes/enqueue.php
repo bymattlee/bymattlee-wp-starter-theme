@@ -23,7 +23,6 @@
     // wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.4.1.min.js', '', null, true );
 
     // Scripts
-    wp_enqueue_script( 'script_vendors', $vendors_uri, false, filemtime( $vendors_path ), true );
     wp_enqueue_script( 'script_main', $scripts_uri, false, filemtime( $scripts_path ), true );
   }
   add_action( 'wp_enqueue_scripts', 'bml_enqueue_scripts' );
